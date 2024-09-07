@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    // side-bar 관련된 css variables
+    --tds-side-bar-inner-small-bar-width: 72px;
+    // --tds-side-bar-inner-right-bar-width: 240px;
+    --tds-side-bar-width: 300px;
+  }
+
+  :root {
+    --tds-primary-default-color: 240 5% 12%;
+    --tds-primary-foreground-color: 214 9% 85%;
+    --tds-primary-active-color: 237 81% 63%;
+
+    // --tds-secondary-default-color: 216 6% 16%;
+    // --tds-secondary-foreground-color: 217 7% 57%;
+  }
+
+  .light {
+  }
+}
