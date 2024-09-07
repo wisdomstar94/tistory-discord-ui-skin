@@ -15,8 +15,8 @@ export function SideBar() {
             "w-side-bar-inner-small-bar-width h-full flex flex-wrap flex-shrink-0 gap-2 relative z-[2]"
           )}
         >
-          <s_sidebar>
-            <ul className="w-full flex flex-wrap relative items-start content-start">
+          <ul className="w-full flex flex-wrap relative items-start content-start">
+            <s_sidebar>
               <s_sidebar_element>
                 <tt_html_comment>방명록</tt_html_comment>
                 <li className="group w-full flex fle-wrap relative p-2 box-border">
@@ -63,8 +63,8 @@ export function SideBar() {
                   />
                 </li>
               </s_sidebar_element>
-            </ul>
-          </s_sidebar>
+            </s_sidebar>
+          </ul>
         </div>
         <div
           className={cn(
