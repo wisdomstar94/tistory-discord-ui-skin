@@ -1,4 +1,16 @@
 import type { Config } from "tailwindcss";
+import type { PluginCreator } from "tailwindcss/types/config";
+
+const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {
+  matchUtilities(
+    {
+      "text-shadow": (value) => ({
+        textShadow: value,
+      }),
+    },
+    { values: theme("textShadow") }
+  );
+};
 
 export default {
   content: ["./src/**/*.{ts,tsx,css,scss}"],
@@ -24,7 +36,12 @@ export default {
           DEFAULT: "hsl(var(--tds-tistory-primary-color))",
         },
       },
+      textShadow: {
+        sm: "1px 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "2px 2px 2px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
+      },
     },
   },
-  plugins: [],
+  plugins: [textShadowPlugin],
 } satisfies Config;

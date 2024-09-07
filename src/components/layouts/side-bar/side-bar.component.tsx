@@ -171,7 +171,25 @@ export function SideBar() {
             "w-full h-full flex flex-wrap gap-2 relative",
             "bg-white/5"
           )}
-        ></div>
+        >
+          {/* blog profile */}
+          <div className="w-full relative h-[136px]">
+            {/* back */}
+            <div className="w-full h-full absolute top-0 left-0">
+              <img
+                src="[##_image_##]"
+                alt="프로필사진"
+                className="w-full h-full relative object-cover object-center"
+              />
+            </div>
+            {/* front */}
+            <div className="w-full h-full relative box-border p-4">
+              <div className="text-shadow shadow-primary-color text-sm font-bold text-white">
+                [##_blogger_##]
+              </div>
+            </div>
+          </div>
+        </div>
       </aside>
     </>
   );
