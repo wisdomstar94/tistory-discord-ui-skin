@@ -17,6 +17,12 @@ export default {
         "primary-active-color": {
           DEFAULT: "hsl(var(--tds-primary-active-color))",
         },
+        "secondary-color": {
+          DEFAULT: "hsl(var(--tds-secondary-color))",
+        },
+        "tistory-primary-color": {
+          DEFAULT: "hsl(var(--tds-tistory-primary-color))",
+        },
       },
     },
   },
