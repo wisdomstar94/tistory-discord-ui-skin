@@ -4,6 +4,7 @@ import { cn } from "@/utils/cn";
 import { NotebookPen, Plus, Search, Settings } from "lucide-react";
 import "./side-bar.scss";
 import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
+import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
 
 export function SideBar() {
   return (
@@ -33,6 +34,12 @@ export function SideBar() {
                     }
                     hoverTitle={"티스토리 홈"}
                   />
+                </li>
+              </s_sidebar_element>
+              <s_sidebar_element>
+                <tt_html_comment>[small] 구분 선 (divider)</tt_html_comment>
+                <li className="w-full block relative box-border">
+                  <SmallSideBarDivider />
                 </li>
               </s_sidebar_element>
               <s_sidebar_element>
