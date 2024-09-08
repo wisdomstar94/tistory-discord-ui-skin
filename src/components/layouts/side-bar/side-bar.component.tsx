@@ -74,7 +74,7 @@ export function SideBar() {
                         const a = document.querySelector('#side-bar-guest-book-a');
                         if (a === null) return;
 
-                        a.parentElement?.classList.add('menu-active');
+                        a.parentElement?.parentElement?.classList.add('menu-active');
                       })();
                     `}
                   />

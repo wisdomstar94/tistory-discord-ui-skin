@@ -13,6 +13,7 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/uuid": "^10.0.0",
     "@wisdomstar94/torytis": "^1",
     "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
@@ -26,6 +27,7 @@
     "vite": "^5.4.3"
   },
   "dependencies": {
-    "lucide-react": "^0.439.0"
+    "lucide-react": "^0.439.0",
+    "uuid": "^10.0.0"
   }
 }
