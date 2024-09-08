@@ -22,18 +22,19 @@ export default {
         "side-bar-width": "var(--tds-side-bar-width)",
       },
       colors: {
-        "primary-color": {
-          DEFAULT: "hsl(var(--tds-primary-default-color))",
-          foreground: "hsl(var(--tds-primary-foreground-color))",
+        primary: {
+          DEFAULT: "hsl(var(--tds-primary))",
+          foreground: "hsl(var(--tds-primary-foreground))",
+          active: "hsl(var(--tds-primary-active))",
         },
-        "primary-active-color": {
-          DEFAULT: "hsl(var(--tds-primary-active-color))",
+        "primary-2": {
+          DEFAULT: "hsl(var(--tds-primary-2))",
         },
-        "secondary-color": {
-          DEFAULT: "hsl(var(--tds-secondary-color))",
+        "primary-tistory": {
+          DEFAULT: "hsl(var(--tds-primary-tistory))",
         },
-        "tistory-primary-color": {
-          DEFAULT: "hsl(var(--tds-tistory-primary-color))",
+        secondary: {
+          DEFAULT: "hsl(var(--tds-secondary))",
         },
       },
       textShadow: {

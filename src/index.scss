@@ -11,13 +11,15 @@
   }
 
   :root {
-    --tds-primary-default-color: 240 5% 12%;
-    --tds-primary-foreground-color: 214 9% 85%;
-    --tds-primary-active-color: 237 81% 63%;
+    --tds-primary: 240 5% 12%;
+    --tds-primary-active: 237 81% 63%;
+    --tds-primary-foreground: 216 7% 56%;
 
-    --tds-secondary-color: 141 59% 38%;
+    --tds-primary-tistory: 3 96% 63%;
 
-    --tds-tistory-primary-color: 3 96% 63%;
+    --tds-primary-2: 216 6% 16%;
+
+    --tds-secondary: 141 59% 38%;
 
     // --tds-secondary-default-color: 216 6% 16%;
     // --tds-secondary-foreground-color: 217 7% 57%;

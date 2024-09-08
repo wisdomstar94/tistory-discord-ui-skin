@@ -1,0 +1,33 @@
+ul.tt_category {
+  width: 100%;
+  display: block;
+  position: relative;
+
+  > li {
+    width: 100%;
+    display: block;
+    position: relative;
+
+    a.link_tit {
+      @apply text-base flex px-3 py-2 box-border items-center rounded-md;
+      width: calc(100% - (8px * 2));
+      margin: 0 8px;
+
+      &::before {
+        // content: url("/images/text-search.svg");
+        content: "";
+        mask-image: url("./images/text-search.svg");
+        // mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        @apply inline-block w-[20px] h-[20px] bg-primary-foreground mr-2;
+        // font-size: 30px;
+        // line-height: 30px;;
+      }
+
+      &:hover {
+        @apply bg-white/5;
+      }
+    }
+  }
+}
