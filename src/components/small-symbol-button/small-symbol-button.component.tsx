@@ -13,6 +13,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
     hoverTitle,
     isActive = false,
     isRoundedActive = false,
+    isHoverMinimumActive = false,
   } = props;
 
   const popoverId = `id-${v4()}`;
@@ -44,7 +45,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
               {icon}
             </div>
 
-            <div className="h-full flex items-center justify-start absolute left-full top-0">
+            <div className="h-full flex items-center justify-start absolute left-full-append-6 top-0">
               <div
                 id={popoverId}
                 className={cn(
@@ -55,7 +56,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
               >
                 <div
                   className={cn(
-                    "ml-6 whitespace-nowrap",
+                    "whitespace-nowrap",
                     "text-white/90",
                     "inline-flex relative"
                     // "hidden group-hover/side-item-a:inline-flex"
@@ -82,12 +83,25 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
                 </div>
               </div>
             </div>
+
+            <div className="h-0 absolute top-[50%] -left-3 flex flex-wrap items-center content-center justify-start">
+              {isActive && (
+                <div className="w-[4px] h-[36px] rounded-tr-md rounded-br-md bg-white/80 relative" />
+              )}
+
+              {!isActive && isHoverMinimumActive && (
+                <div
+                  className={cn(
+                    "rounded-tr-md rounded-br-md bg-white/60 relative",
+                    "transition-all !duration-300",
+                    "-ml-1 group-hover/side-item-a:ml-0",
+                    "w-0 group-hover/side-item-a:w-1",
+                    "h-0 group-hover/side-item-a:h-5"
+                  )}
+                />
+              )}
+            </div>
           </a>
-        </div>
-        <div className="h-0 absolute top-[50%] left-0 flex flex-wrap items-center content-center justify-start">
-          {isActive && (
-            <div className="w-[4px] h-[36px] rounded-tr-md rounded-br-md bg-white/80 relative" />
-          )}
         </div>
       </div>
       <Script

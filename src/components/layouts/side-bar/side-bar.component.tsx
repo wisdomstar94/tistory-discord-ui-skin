@@ -33,6 +33,7 @@ export function SideBar() {
                       <TistoryLogo className="text-white/80 w-[24px] h-[24px] inline-flex" />
                     }
                     hoverTitle={"티스토리 홈"}
+                    isHoverMinimumActive={true}
                   />
                 </li>
               </s_sidebar_element>
@@ -71,6 +72,7 @@ export function SideBar() {
                     aClassName="hover:bg-primary-active group-[.menu-active]:bg-primary-active"
                     icon={<NotebookPen className="text-white/80" />}
                     hoverTitle={"방명록"}
+                    isHoverMinimumActive={true}
                   />
                   <Script
                     html={`
@@ -120,6 +122,7 @@ export function SideBar() {
                       <Settings className="text-secondary group-hover/side-item-a:text-white/80 transition-all" />
                     }
                     hoverTitle={"블로그 관리"}
+                    isHoverMinimumActive={true}
                   />
                 </li>
               </s_sidebar_element>

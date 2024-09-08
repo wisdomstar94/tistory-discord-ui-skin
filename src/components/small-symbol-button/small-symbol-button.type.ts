@@ -10,5 +10,6 @@ export declare namespace ISmallSymbolButton {
     hoverTitle: ReactNode;
     isActive?: boolean;
     isRoundedActive?: boolean;
+    isHoverMinimumActive?: boolean;
   };
 }
