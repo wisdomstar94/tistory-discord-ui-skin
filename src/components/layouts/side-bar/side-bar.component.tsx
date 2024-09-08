@@ -102,6 +102,12 @@ export function SideBar() {
                 </li>
               </s_sidebar_element>
               <s_sidebar_element>
+                <tt_html_comment>[small] 구분 선 (divider)</tt_html_comment>
+                <li className="w-full block relative box-border">
+                  <SmallSideBarDivider />
+                </li>
+              </s_sidebar_element>
+              <s_sidebar_element>
                 <tt_html_comment>
                   [small] 블로그 관리 페이지 버튼
                 </tt_html_comment>
