@@ -3,6 +3,7 @@ import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
 import { NotebookPen, Plus, Search, Settings } from "lucide-react";
 import "./side-bar.scss";
+import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
 
 export function SideBar() {
   return (
@@ -22,68 +23,48 @@ export function SideBar() {
             <s_sidebar>
               <s_sidebar_element>
                 <tt_html_comment>[small] 티스토리 홈 버튼</tt_html_comment>
-                <li className="group w-full flex fle-wrap relative px-3 py-1 box-border">
-                  <a
-                    href="https://www.tistory.com/"
+                <li className="w-full flex fle-wrap relative box-border">
+                  <SmallSymbolButton
                     id="side-bar-tistory-home-a"
-                    className={cn(
-                      "group/side-item-a",
-                      "cursor-pointer",
-                      "w-full block aspect-square relative transition-all",
-                      "bg-white/5 hover:bg-primary-tistory group-[.menu-active]:bg-primary-tistory",
-                      "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]"
-                    )}
-                  >
-                    <div className="w-full h-full relative flex flex-wrap items-center justify-center">
+                    href="https://www.tistory.com/"
+                    aClassName="hover:bg-primary-tistory group-[.menu-active]:bg-primary-tistory"
+                    icon={
                       <TistoryLogo className="text-white/80 w-[24px] h-[24px] inline-flex" />
-                    </div>
-
-                    <div className="h-full flex items-center justify-start absolute left-full top-0">
-                      <div
-                        className={cn(
-                          "ml-4 whitespace-nowrap px-6 py-2.5 text-xs rounded-lg",
-                          "text-white/90",
-                          "bg-primary",
-                          "hidden group-hover/side-item-a:inline-flex"
-                        )}
-                      >
-                        티스토리 홈
-                      </div>
-                    </div>
-                  </a>
+                    }
+                    hoverTitle={"티스토리 홈"}
+                  />
+                </li>
+              </s_sidebar_element>
+              <s_sidebar_element>
+                <tt_html_comment>[small] 블로그 홈 버튼</tt_html_comment>
+                <li className="w-full flex fle-wrap relative box-border">
+                  <SmallSymbolButton
+                    id="side-bar-blog-home-a"
+                    href="/"
+                    icon={
+                      <>
+                        <img
+                          src="[##_image_##]"
+                          alt="프로필사진"
+                          className="w-full h-full relative object-cover object-center"
+                        />
+                      </>
+                    }
+                    hoverTitle={"블로그 홈"}
+                    isActive={true}
+                  />
                 </li>
               </s_sidebar_element>
               <s_sidebar_element>
                 <tt_html_comment>[small] 방명록 버튼</tt_html_comment>
-                <li className="group w-full flex fle-wrap relative px-3 py-1 box-border">
-                  <a
-                    href="/guestbook"
+                <li className="group w-full flex fle-wrap relative box-border">
+                  <SmallSymbolButton
                     id="side-bar-guest-book-a"
-                    className={cn(
-                      "group/side-item-a",
-                      "cursor-pointer",
-                      "w-full block aspect-square relative transition-all",
-                      "bg-white/5 hover:bg-primary-active group-[.menu-active]:bg-primary-active",
-                      "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]"
-                    )}
-                  >
-                    <div className="w-full h-full relative flex flex-wrap items-center justify-center">
-                      <NotebookPen className="text-white/80" />
-                    </div>
-
-                    <div className="h-full flex items-center justify-start absolute left-full top-0">
-                      <div
-                        className={cn(
-                          "ml-4 whitespace-nowrap px-6 py-2.5 text-xs rounded-lg",
-                          "text-white/90",
-                          "bg-primary",
-                          "hidden group-hover/side-item-a:inline-flex"
-                        )}
-                      >
-                        방명록
-                      </div>
-                    </div>
-                  </a>
+                    href="/guestbook"
+                    aClassName="hover:bg-primary-active group-[.menu-active]:bg-primary-active"
+                    icon={<NotebookPen className="text-white/80" />}
+                    hoverTitle={"방명록"}
+                  />
                   <Script
                     html={`
                       (function(){
@@ -101,70 +82,32 @@ export function SideBar() {
               </s_sidebar_element>
               <s_sidebar_element>
                 <tt_html_comment>[small] 글 작성 페이지 버튼</tt_html_comment>
-                <li className="group w-full flex fle-wrap relative px-3 py-1 box-border">
-                  <a
+                <li className="group w-full flex fle-wrap relative box-border">
+                  <SmallSymbolButton
+                    id="side-bar-manage-post-a"
                     href="/manage/post"
-                    id="side-bar-guest-book-a"
-                    className={cn(
-                      "group/side-item-a",
-                      "cursor-pointer",
-                      "w-full block aspect-square relative transition-all",
-                      "bg-white/5 hover:bg-secondary group-[.menu-active]:bg-secondary",
-                      "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]"
-                    )}
-                  >
-                    <div className="w-full h-full relative flex flex-wrap items-center justify-center">
+                    aClassName="hover:bg-secondary group-[.menu-active]:bg-secondary"
+                    icon={
                       <Plus className="text-secondary group-hover/side-item-a:text-white/80 transition-all" />
-                    </div>
-
-                    <div className="h-full flex items-center justify-start absolute left-full top-0">
-                      <div
-                        className={cn(
-                          "ml-4 whitespace-nowrap px-6 py-2.5 text-xs rounded-lg",
-                          "text-white/90",
-                          "bg-primary",
-                          "hidden group-hover/side-item-a:inline-flex"
-                        )}
-                      >
-                        글 작성
-                      </div>
-                    </div>
-                  </a>
+                    }
+                    hoverTitle={"글 작성"}
+                  />
                 </li>
               </s_sidebar_element>
               <s_sidebar_element>
                 <tt_html_comment>
                   [small] 블로그 관리 페이지 버튼
                 </tt_html_comment>
-                <li className="group w-full flex fle-wrap relative px-3 py-1 box-border">
-                  <a
-                    href="/manage"
+                <li className="group w-full flex fle-wrap relative box-border">
+                  <SmallSymbolButton
                     id="side-bar-blog-manage-a"
-                    className={cn(
-                      "group/side-item-a",
-                      "cursor-pointer",
-                      "w-full block aspect-square relative transition-all",
-                      "bg-white/5 hover:bg-secondary group-[.menu-active]:bg-secondary",
-                      "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]"
-                    )}
-                  >
-                    <div className="w-full h-full relative flex flex-wrap items-center justify-center">
+                    href="/manage"
+                    aClassName="hover:bg-secondary group-[.menu-active]:bg-secondary"
+                    icon={
                       <Settings className="text-secondary group-hover/side-item-a:text-white/80 transition-all" />
-                    </div>
-
-                    <div className="h-full flex items-center justify-start absolute left-full top-0">
-                      <div
-                        className={cn(
-                          "ml-4 whitespace-nowrap px-6 py-2.5 text-xs rounded-lg",
-                          "text-white/90",
-                          "bg-primary",
-                          "hidden group-hover/side-item-a:inline-flex"
-                        )}
-                      >
-                        블로그 관리
-                      </div>
-                    </div>
-                  </a>
+                    }
+                    hoverTitle={"블로그 관리"}
+                  />
                 </li>
               </s_sidebar_element>
             </s_sidebar>
