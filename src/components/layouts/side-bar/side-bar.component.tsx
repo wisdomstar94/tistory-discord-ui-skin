@@ -58,7 +58,7 @@ export function SideBar() {
                         />
                       </>
                     }
-                    hoverTitle={"블로그 홈"}
+                    hoverTitle={"[##_blogger_##]"}
                     isActive={true}
                   />
                 </li>

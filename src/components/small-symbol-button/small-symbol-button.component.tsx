@@ -31,6 +31,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
             href={href}
             id={id}
             className={cn(
+              "other/side-item-a",
               "group/side-item-a",
               "cursor-pointer",
               "w-full block aspect-square relative transition-all",
@@ -44,64 +45,69 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
             <div className="w-full h-full relative flex flex-wrap items-center justify-center rounded-[12px] overflow-hidden">
               {icon}
             </div>
+          </a>
 
-            <div className="h-full flex items-center justify-start absolute left-full-append-6 top-0">
+          <div className="h-0 absolute top-[50%] left-0 flex flex-wrap items-center content-center justify-start">
+            {isActive && (
+              <div className="w-[4px] h-[36px] rounded-tr-md rounded-br-md bg-white/80 relative" />
+            )}
+
+            {!isActive && isHoverMinimumActive && (
               <div
-                id={popoverId}
                 className={cn(
-                  "animate-x-fade-out group-hover/side-item-a:animate-x-fade-in",
-                  // "side-item-a:animate-x-fade-in",
-                  "!animate-duration-0ms"
+                  "rounded-tr-md rounded-br-md bg-white/60 relative",
+                  "transition-all !duration-300",
+                  "-ml-1 other-hover-[side-item-a]:ml-0",
+                  "w-0 other-hover-[side-item-a]:w-1",
+                  "h-0 other-hover-[side-item-a]:h-5"
+                )}
+              />
+            )}
+          </div>
+
+          <div className="h-full flex items-center justify-start absolute left-full-append-3 top-0">
+            <div
+              id={popoverId}
+              className={cn(
+                "animate-x-fade-out other-hover-[side-item-a]:animate-x-fade-in",
+                // "side-item-a:animate-x-fade-in",
+                "!animate-duration-0ms"
+              )}
+            >
+              <div
+                className={cn(
+                  "whitespace-nowrap",
+                  "text-white/90",
+                  "inline-flex relative"
+                  // "hidden group-hover/side-item-a:inline-flex"
                 )}
               >
                 <div
                   className={cn(
-                    "whitespace-nowrap",
-                    "text-white/90",
-                    "inline-flex relative"
-                    // "hidden group-hover/side-item-a:inline-flex"
+                    "h-0 absolute top-[50%] right-[100%] flex items-center content-center justify-end"
                   )}
                 >
                   <div
-                    className={cn(
-                      "h-0 absolute top-[50%] right-[100%] flex items-center content-center justify-end"
-                    )}
-                  >
-                    <div
-                      className="w-[8px] h-[12px] bg-primary"
-                      style={{ clipPath: "polygon(100% 0, 0 50%, 100% 100%)" }}
-                    />
-                  </div>
-                  <div
-                    className={cn(
-                      "px-6 py-2.5 text-xs rounded-lg relative",
-                      "bg-primary"
-                    )}
-                  >
-                    {hoverTitle}
-                  </div>
+                    className="w-[8px] h-[12px] bg-primary"
+                    style={{ clipPath: "polygon(100% 0, 0 50%, 100% 100%)" }}
+                  />
+                </div>
+                <div
+                  className={cn(
+                    "flex flex-wrap px-3 py-1 text-base rounded-lg relative",
+                    "bg-primary max-w-[200px]"
+                  )}
+                >
+                  <div className="w-full">{hoverTitle}</div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="h-0 absolute top-[50%] -left-3 flex flex-wrap items-center content-center justify-start">
-              {isActive && (
-                <div className="w-[4px] h-[36px] rounded-tr-md rounded-br-md bg-white/80 relative" />
-              )}
-
-              {!isActive && isHoverMinimumActive && (
-                <div
-                  className={cn(
-                    "rounded-tr-md rounded-br-md bg-white/60 relative",
-                    "transition-all !duration-300",
-                    "-ml-1 group-hover/side-item-a:ml-0",
-                    "w-0 group-hover/side-item-a:w-1",
-                    "h-0 group-hover/side-item-a:h-5"
-                  )}
-                />
-              )}
-            </div>
-          </a>
+          {/* <div className="w-[100px] h-[100px] bg-red-500 fixed top-0 right-0 hidden other-hover-[side-item-a]:flex"></div>
+          <div>
+            <div className="w-[100px] h-[100px] bg-blue-500 fixed top-[100px] right-0 hidden other-hover-[side-item-a]:flex"></div>
+          </div> */}
         </div>
       </div>
       <Script

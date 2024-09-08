@@ -59,6 +59,13 @@ const leftFullAppendPlugin: PluginCreator = ({ matchUtilities }) => {
   );
 };
 
+const otherElementHoverPlugin: PluginCreator = ({ matchVariant }) => {
+  // addVariant('other-hover', ({ modify }))
+  matchVariant("other-hover", (value, extra) => {
+    return [`.other\\/${value}:hover ~ * &`, `.other\\/${value}:hover ~ &`];
+  });
+};
+
 export default {
   content: ["./src/**/*.{ts,tsx,css,scss}"],
   theme: {
@@ -151,5 +158,10 @@ export default {
       },
     },
   },
-  plugins: [textShadowPlugin, animateDurationPlugin, leftFullAppendPlugin],
+  plugins: [
+    textShadowPlugin,
+    animateDurationPlugin,
+    leftFullAppendPlugin,
+    otherElementHoverPlugin,
+  ],
 } satisfies Config;
