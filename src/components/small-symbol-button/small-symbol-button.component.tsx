@@ -77,15 +77,13 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
       </div>
       <Script
         html={`
-          (function() {
-            window.addEventListener('load', () => {
-              const popover = document.querySelector('#${popoverId}');
-              if (popover === null) return;
-              setTimeout(() => {
-                popover.classList.remove('!animate-duration-0ms');
-              }, 300);
-            });
-          })();
+          window.addEventListener('load', () => {
+            const popover = document.querySelector('#${popoverId}');
+            if (popover === null) return;
+            setTimeout(() => {
+              popover.classList.remove('!animate-duration-0ms');
+            }, 300);
+          });
         `}
       />
     </>
