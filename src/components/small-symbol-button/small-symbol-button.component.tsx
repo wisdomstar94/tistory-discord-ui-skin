@@ -99,6 +99,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
                   )}
                 >
                   <div className="w-full">{hoverTitle}</div>
+                  {/* TODO: 글자수에 맞게 너비가 유동적으로 바뀌면서, 너비가 특정 임계점에 도달 했을 때는 글자가 wrap 되도록 하는 방법 연구 필요 */}
                 </div>
               </div>
             </div>
