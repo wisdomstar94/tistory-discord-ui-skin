@@ -49,21 +49,36 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
                 id={popoverId}
                 className={cn(
                   "animate-x-fade-out group-hover/side-item-a:animate-x-fade-in",
-                  "!animate-duration-0ms",
-                  // "animate-duration-300ms",
-                  false && "!animate-duration-300ms"
+                  // "side-item-a:animate-x-fade-in",
+                  "!animate-duration-0ms"
                 )}
               >
                 <div
                   className={cn(
-                    "ml-4 whitespace-nowrap px-6 py-2.5 text-xs rounded-lg",
+                    "ml-6 whitespace-nowrap",
                     "text-white/90",
-                    "bg-primary",
-                    "inline-flex"
+                    "inline-flex relative"
                     // "hidden group-hover/side-item-a:inline-flex"
                   )}
                 >
-                  {hoverTitle}
+                  <div
+                    className={cn(
+                      "h-0 absolute top-[50%] right-[100%] flex items-center content-center justify-end"
+                    )}
+                  >
+                    <div
+                      className="w-[8px] h-[12px] bg-primary"
+                      style={{ clipPath: "polygon(100% 0, 0 50%, 100% 100%)" }}
+                    />
+                  </div>
+                  <div
+                    className={cn(
+                      "px-6 py-2.5 text-xs rounded-lg relative",
+                      "bg-primary"
+                    )}
+                  >
+                    {hoverTitle}
+                  </div>
                 </div>
               </div>
             </div>
