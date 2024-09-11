@@ -11,6 +11,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
     aClassName,
     icon,
     hoverTitle,
+    hoverTitleIcon,
     isActive = false,
     isRoundedActive = false,
     isHoverMinimumActive = false,
@@ -41,6 +42,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
                 "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]",
               aClassName
             )}
+            tt-onmouseover="handleSideItemAButtonMouseOver(this)"
           >
             <div className="w-full h-full relative flex flex-wrap items-center justify-center rounded-[12px] overflow-hidden">
               {icon}
@@ -76,6 +78,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
             >
               <div
                 className={cn(
+                  "group",
                   "whitespace-nowrap",
                   "text-white/90",
                   "inline-flex relative"
@@ -94,11 +97,26 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
                 </div>
                 <div
                   className={cn(
-                    "flex flex-wrap px-3 py-1 text-base rounded-lg relative",
-                    "bg-primary max-w-[200px]"
+                    "popover-message-container",
+                    "inline-flex flex-nowrap items-start px-3 py-1.5 text-base rounded-lg relative",
+                    "bg-primary",
+                    "max-w-[200px] group-[.fill-maxed]:w-[200px]"
                   )}
                 >
-                  <div className="w-full">{hoverTitle}</div>
+                  {hoverTitleIcon && (
+                    <div className="w-[24px] flex-shrink-0">
+                      {hoverTitleIcon}
+                    </div>
+                  )}
+                  <div
+                    className={cn(
+                      "w-auto flex",
+                      "group-[.fill-maxed]:flex-wrap",
+                      "whitespace-nowrap group-[.fill-maxed]:whitespace-normal"
+                    )}
+                  >
+                    {hoverTitle}
+                  </div>
                   {/* TODO: 글자수에 맞게 너비가 유동적으로 바뀌면서, 너비가 특정 임계점에 도달 했을 때는 글자가 wrap 되도록 하는 방법 연구 필요 */}
                 </div>
               </div>

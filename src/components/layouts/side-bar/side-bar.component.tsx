@@ -1,10 +1,11 @@
 import { TistoryLogo } from "@/components/icons/tistory-logo/tistory-logo.component";
 import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
-import { NotebookPen, Plus, Search, Settings } from "lucide-react";
+import { House, NotebookPen, Plus, Search, Settings } from "lucide-react";
 import "./side-bar.scss";
 import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
+import { HomeIcon } from "@/components/icons/home-icon/home-icon.component";
 
 export function SideBar() {
   return (
@@ -59,6 +60,11 @@ export function SideBar() {
                       </>
                     }
                     hoverTitle={"[##_blogger_##]"}
+                    hoverTitleIcon={
+                      <div className="mt-[4px]">
+                        <HomeIcon />
+                      </div>
+                    }
                     isActive={true}
                   />
                 </li>
@@ -153,9 +159,14 @@ export function SideBar() {
                       />
                     </div>
                     {/* front */}
-                    <div className="w-full h-full relative box-border p-4">
-                      <div className="text-shadow shadow-primary text-sm font-bold text-white">
-                        [##_blogger_##]
+                    <div className="w-full h-full relative box-border p-4 flex flex-wrap gap-2 content-start items-start">
+                      <div className="w-full flex flex-wrap items-center gap-2 relative">
+                        <div>
+                          <HomeIcon className="shadow-sm" />
+                        </div>
+                        <div className="text-shadow shadow-primary text-sm font-bold text-white">
+                          [##_blogger_##]
+                        </div>
                       </div>
                     </div>
                   </div>
