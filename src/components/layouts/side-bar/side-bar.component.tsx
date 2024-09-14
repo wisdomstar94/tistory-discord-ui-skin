@@ -15,7 +15,7 @@ export function SideBar() {
         {/* small bar */}
         <div
           className={cn(
-            "w-side-bar-inner-small-bar-width h-full flex flex-wrap flex-shrink-0 gap-2 relative z-[2] items-start content-start"
+            "w-side-bar-inner-small-bar-width h-full flex flex-wrap flex-shrink-0 gap-2 relative z-[3] items-start content-start"
           )}
         >
           <div className={cn("side-small-bar-scroll-area", "w-full h-full relative", "overflow-y-scroll", "scrollbar-hidden")}>
