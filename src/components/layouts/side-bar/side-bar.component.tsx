@@ -148,7 +148,7 @@ export function SideBar() {
         {/* big bar */}
         <div
           className={cn(
-            // "side-big-bar",
+            "w-side-bar-inner-big-bar-width",
             "w-full h-full flex flex-wrap gap-2 relative",
             "bg-primary-2"
           )}
@@ -156,7 +156,7 @@ export function SideBar() {
           <div
             className={cn(
               "side-big-bar-scroll-area",
-              "w-full h-full overflow-y-scroll scrollbar-hidden flex flex-wrap gap-2 relative"
+              "w-full h-full overflow-y-scroll scrollbar-hidden block relative"
             )}
           >
             <ul className="w-full flex flex-wrap relative gap-3 items-start content-start side-big-bar">
@@ -164,24 +164,32 @@ export function SideBar() {
                 <s_sidebar_element>
                   <tt_html_comment>[big] 블로그 프로필 영역</tt_html_comment>
                   <li className="w-full flex flex-wrap relative side-blog-profile-item">
-                    {/* blog profile */}
-                    <div className="w-full relative h-[136px]">
-                      {/* back */}
-                      <div className="w-full h-full absolute top-0 left-0">
-                        <img
-                          src="[##_image_##]"
-                          alt="프로필사진"
-                          className="w-full h-full relative object-cover object-center"
-                        />
-                      </div>
-                      {/* front */}
-                      <div className="w-full h-full relative box-border p-4 flex flex-wrap gap-2 content-start items-start">
-                        <div className="w-full flex flex-wrap items-center gap-2 relative">
-                          <div>
-                            <HomeIcon className="shadow-sm" />
-                          </div>
-                          <div className="text-shadow shadow-primary text-sm font-bold text-white">
-                            [##_blogger_##]
+                    <div className="w-full block relative">
+                      {/* blog profile */}
+                      <div className="w-full relative h-[136px]">
+                        {/* back */}
+                        <div className="w-full h-full absolute top-0 left-0">
+                          <img
+                            src="[##_image_##]"
+                            alt="프로필사진"
+                            className="w-full h-full relative object-cover object-center"
+                          />
+                        </div>
+                        {/* front */}
+                        <div className="w-full h-full relative box-border p-4 flex flex-wrap gap-2 content-start items-start">
+                          <div className="w-full flex flex-nowrap items-center relative">
+                            <div className="w-[24px] flex-shrink-0">
+                              <HomeIcon className="shadow-[2px_2px_2px] shadow-primary" />
+                            </div>
+                            <div
+                              className={cn(
+                                "w-[calc(100%-24px)]",
+                                "text-shadow",
+                                "shadow-primary text-sm font-bold text-white relative whitespace-nowrap overflow-ellipsis overflow-hidden"
+                              )}
+                            >
+                              [##_blogger_##]
+                            </div>
                           </div>
                         </div>
                       </div>

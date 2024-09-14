@@ -98,6 +98,8 @@ export default {
       width: {
         "side-bar-inner-small-bar-width":
           "var(--tds-side-bar-inner-small-bar-width)",
+        "side-bar-inner-big-bar-width":
+          "var(--tds-side-bar-inner-big-bar-width)",
         "side-bar-width": "var(--tds-side-bar-width)",
       },
       colors: {

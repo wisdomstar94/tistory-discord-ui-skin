@@ -6,8 +6,11 @@
   :root {
     // side-bar 관련된 css variables
     --tds-side-bar-inner-small-bar-width: 72px;
-    // --tds-side-bar-inner-right-bar-width: 240px;
-    --tds-side-bar-width: 300px;
+    --tds-side-bar-inner-big-bar-width: 240px;
+    --tds-side-bar-width: calc(
+      var(--tds-side-bar-inner-small-bar-width) +
+        var(--tds-side-bar-inner-big-bar-width)
+    );
   }
 
   :root {
