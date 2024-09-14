@@ -66,6 +66,31 @@ const otherElementHoverPlugin: PluginCreator = ({ matchVariant }) => {
   });
 };
 
+const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
+  addUtilities({
+    ".scrollbar-hidden": {
+      "&::-webkit-scrollbar": {
+        width: "0px",
+      },
+    },
+    ".scrollbar-primary": {
+      "&::-webkit-scrollbar": {
+        width: "4px",
+      },
+      "&::-webkit-scrollbar-track": {
+        "background-color": "transparent",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        "background-color": "hsl(var(--tds-primary))",
+        // background-color: hsl(0, 0%, 45%);
+        "border-radius": "20px",
+        "background-clip": "padding-box",
+        border: "2px solid transparent",
+      },
+    },
+  });
+};
+
 export default {
   content: ["./src/**/*.{ts,tsx,css,scss}"],
   theme: {
@@ -163,5 +188,6 @@ export default {
     animateDurationPlugin,
     leftFullAppendPlugin,
     otherElementHoverPlugin,
+    customScrollbarPlugin,
   ],
 } satisfies Config;

@@ -1,7 +1,34 @@
 import { getRenderedElementSize } from "@/components/functions/get-rendered-element-size";
+import { setPositionTargetElement } from "@wisdomstar94/vanilla-js-util";
+
+window.addEventListener("load", () => {
+  settingHoverElement();
+});
+
+window.addEventListener("scroll", () => {
+  settingHoverElement();
+});
+
+function settingHoverElement() {
+  const elements = document.querySelectorAll<HTMLElement>(
+    ".small-symbol-button-popover-container"
+  );
+  if (elements.length === 0) return;
+
+  elements.forEach((element) => {
+    const toElement = element.parentElement;
+    if (toElement === null) return;
+    setPositionTargetElement({
+      to: toElement,
+      from: element,
+      margin: 16,
+    });
+  });
+}
 
 function handleSideItemAButtonMouseOver(target: HTMLElement) {
   // console.log("@handleSideItemAButtonMouseOver.target", { target });
+  settingHoverElement();
 
   const popoverMessageContainer =
     target.parentElement?.querySelector<HTMLElement>(

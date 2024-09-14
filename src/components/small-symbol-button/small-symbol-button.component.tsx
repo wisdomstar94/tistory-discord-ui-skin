@@ -36,7 +36,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
               "group/side-item-a",
               "cursor-pointer",
               "w-full block aspect-square relative transition-all",
-              "bg-white/5 hover:bg-primary-tistory group-[.menu-active]:bg-primary-tistory",
+              "bg-primary-2 hover:bg-primary-tistory group-[.menu-active]:bg-primary-tistory",
               isRoundedActive && "rounded-[12px]",
               !isRoundedActive &&
                 "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]",
@@ -67,7 +67,13 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
             )}
           </div>
 
-          <div className="h-full flex items-center justify-start absolute left-full-append-3 top-0">
+          <div
+            className={cn(
+              "w-1 h-1",
+              "small-symbol-button-popover-container",
+              "flex items-center justify-start fixed"
+            )}
+          >
             <div
               id={popoverId}
               className={cn(

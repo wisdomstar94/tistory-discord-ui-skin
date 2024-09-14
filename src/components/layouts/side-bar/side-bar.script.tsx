@@ -1,25 +1,16 @@
-import { getRenderedElementSize } from "@/components/functions/get-rendered-element-size";
+import { applyOverlayScroll } from "@wisdomstar94/vanilla-js-util";
 
-function handleBlogHomeButtonMouseOver(target: HTMLElement) {
-  console.log("@handleBlogHomeButtonMouseOver.target", { target });
+window.addEventListener("load", () => {
+  const sideSmallBarScrollArea = document.querySelector<HTMLElement>(
+    ".side-big-bar-scroll-area"
+  );
+  if (sideSmallBarScrollArea === null) return;
 
-  const popoverMessageContainer =
-    target.parentElement?.querySelector<HTMLElement>(
-      ".popover-message-container"
-    );
-
-  if (
-    popoverMessageContainer === null ||
-    popoverMessageContainer === undefined
-  ) {
-    console.error("popoverMessageContainer 가 null 이거나 undefined 입니다.");
-    return;
-  }
-
-  getRenderedElementSize({
-    targetElement: popoverMessageContainer,
-    renderContainerClassName: "w-screen h-screen absolute top-0 left-0",
+  const applyResult = applyOverlayScroll({
+    target: sideSmallBarScrollArea,
+    width: 14,
+    padding: 4,
+    scrollEndedHideDelay: 100,
+    scrollBarClassName: "bg-primary rounded-full",
   });
-}
-
-(window as any).handleBlogHomeButtonMouseOver = handleBlogHomeButtonMouseOver;
+});
