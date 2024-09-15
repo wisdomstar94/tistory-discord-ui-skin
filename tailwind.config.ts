@@ -1,6 +1,11 @@
 import type { Config } from "tailwindcss";
 import type { PluginCreator } from "tailwindcss/types/config";
 
+const sideBarPlugin: PluginCreator = ({ addVariant }) => {
+  addVariant("side-bar-open", ".side-bar-open &");
+  addVariant("side-bar-close", ".side-bar-close &");
+};
+
 const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {
   matchUtilities(
     {
@@ -101,6 +106,9 @@ export default {
         "side-bar-width": "var(--tds-side-bar-width)",
         "top-bar-width": "var(--tds-top-bar-width)",
       },
+      inset: {
+        "side-bar-width": "var(--tds-side-bar-width)",
+      },
       padding: {
         "content-area-padding": "var(--tds-content-area-padding)",
         "content-area-padding-with-side-bar-width": "calc(var(--tds-side-bar-width) + var(--tds-content-area-padding))",
@@ -186,12 +194,48 @@ export default {
             overflow: "hidden",
           },
         },
+        "fade-in-opacity": {
+          "0%": {
+            width: "100%",
+            height: "100%",
+            opacity: "0",
+          },
+          "1%": {
+            width: "100%",
+            height: "100%",
+            opacity: "0",
+          },
+          "100%": {
+            width: "100%",
+            height: "100%",
+            opacity: "1",
+          },
+        },
+        "fade-out-opacity": {
+          "0%": {
+            width: "100%",
+            height: "100%",
+            opacity: "1",
+          },
+          "99%": {
+            width: "100%",
+            height: "100%",
+            opacity: "0",
+          },
+          "100%": {
+            width: "0",
+            height: "0",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "x-fade-in": "x-fade-in 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
         "x-fade-out": "x-fade-out 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
+        "fade-in-opacity": "fade-in-opacity 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
+        "fade-out-opacity": "fade-out-opacity 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
       },
     },
   },
-  plugins: [textShadowPlugin, animateDurationPlugin, leftFullAppendPlugin, otherElementHoverPlugin, customScrollbarPlugin],
+  plugins: [textShadowPlugin, animateDurationPlugin, leftFullAppendPlugin, otherElementHoverPlugin, customScrollbarPlugin, sideBarPlugin],
 } satisfies Config;

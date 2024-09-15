@@ -11,7 +11,21 @@ import { BlogTitleBar } from "@/components/blog-title-bar/blog-title-bar.compone
 export function SideBar() {
   return (
     <>
-      <aside className={cn("w-side-bar-width h-full fixed top-0 left-0 flex flex-nowrap bg-primary z-[2]")}>
+      <div
+        className={cn(
+          "fixed top-0 left-0 z-[2] bg-black/70 w-0 h-0 overflow-hidden",
+          "side-bar-open:!animate-fade-in-opacity side-bar-close:!animate-fade-out-opacity"
+        )}
+        tt-onclick="mobileSideBarBackgroundClick();"
+      />
+
+      <aside
+        className={cn(
+          "w-side-bar-width h-full fixed top-0 flex flex-nowrap bg-primary z-[2]",
+          "transition-all duration-300",
+          "-left-side-bar-width lg:left-0 side-bar-open:left-0 side-bar-close:-left-side-bar-inner-small-bar-width"
+        )}
+      >
         {/* small bar */}
         <div
           className={cn(
