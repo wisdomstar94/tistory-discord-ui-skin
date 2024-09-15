@@ -20,11 +20,12 @@ ul.tt_category {
         @apply inline-block w-[20px] h-[20px] bg-primary-foreground;
       }
 
+      &.active,
       &:hover {
         @apply bg-white/5 text-white/90;
 
         &::before {
-          @apply bg-white/80;
+          @apply bg-white/90;
         }
       }
 
@@ -50,8 +51,9 @@ ul.tt_category {
             @apply -mr-1;
           }
 
+          &.active,
           &:hover {
-            @apply text-white/80;
+            @apply text-white/90;
           }
         }
 
@@ -71,8 +73,9 @@ ul.tt_category {
                 @apply text-xl flex items-center content-center;
               }
 
+              &.active,
               &:hover {
-                @apply bg-white/5 text-white/80;
+                @apply bg-white/5 text-white/90;
 
                 // &::before {
                 //   @apply bg-white/90;

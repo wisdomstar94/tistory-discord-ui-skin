@@ -7,14 +7,12 @@
     // side-bar 관련된 css variables
     --tds-side-bar-inner-small-bar-width: 72px;
     --tds-side-bar-inner-big-bar-width: 240px;
-    --tds-side-bar-width: calc(
-      var(--tds-side-bar-inner-small-bar-width) +
-        var(--tds-side-bar-inner-big-bar-width)
-    );
+    --tds-side-bar-width: calc(var(--tds-side-bar-inner-small-bar-width) + var(--tds-side-bar-inner-big-bar-width));
   }
 
   :root {
-    --tds-primary: 220 5% 11%;
+    // --tds-primary: 220 5% 11%;
+    --tds-primary: 225 6% 12%;
     --tds-primary-active: 237 81% 63%;
     --tds-primary-foreground: 216 7% 56%;
 

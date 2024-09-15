@@ -193,6 +193,11 @@ export function SideBar() {
           </div>
         </div>
       </aside>
+      <Script
+        html={`
+          checkActiveCategory();
+        `}
+      />
     </>
   );
 }
