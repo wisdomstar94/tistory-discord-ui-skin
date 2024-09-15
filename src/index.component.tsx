@@ -16,7 +16,7 @@ export default function App() {
         <meta property="og:title" content="[##_page_title_##] :: [##_title_##]" />
         <title>[##_page_title_##] :: [##_title_##]</title>
       </head>
-      <body id="[##_body_id_##]" data-skin-name="stroke" data-skin-version={version} className="bg-primary-3">
+      <body id="[##_body_id_##]" data-skin-name="tistory-discord-skin" data-skin-version={version} className="bg-primary-3">
         <SideBar />
         <TopBar />
         <ContentArea>hi</ContentArea>
