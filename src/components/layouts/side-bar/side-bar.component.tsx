@@ -11,7 +11,7 @@ import { BlogTitleBar } from "@/components/blog-title-bar/blog-title-bar.compone
 export function SideBar() {
   return (
     <>
-      <aside className={cn("w-side-bar-width h-full fixed top-0 left-0 flex flex-nowrap bg-primary")}>
+      <aside className={cn("w-side-bar-width h-full fixed top-0 left-0 flex flex-nowrap bg-primary z-[2]")}>
         {/* small bar */}
         <div
           className={cn(
