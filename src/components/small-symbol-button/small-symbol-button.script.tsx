@@ -1,4 +1,4 @@
-import { getRenderedElementSize } from "@/components/functions/get-rendered-element-size";
+import { getRenderedElementSize } from "@wisdomstar94/vanilla-js-util";
 import { setPositionTargetElement } from "@wisdomstar94/vanilla-js-util";
 
 window.addEventListener("load", () => {
@@ -10,9 +10,7 @@ window.addEventListener("scroll", () => {
 });
 
 function settingHoverElement() {
-  const elements = document.querySelectorAll<HTMLElement>(
-    ".small-symbol-button-popover-container"
-  );
+  const elements = document.querySelectorAll<HTMLElement>(".small-symbol-button-popover-container");
   if (elements.length === 0) return;
 
   elements.forEach((element) => {
@@ -30,21 +28,14 @@ function handleSideItemAButtonMouseOver(target: HTMLElement) {
   // console.log("@handleSideItemAButtonMouseOver.target", { target });
   settingHoverElement();
 
-  const popoverMessageContainer =
-    target.parentElement?.querySelector<HTMLElement>(
-      ".popover-message-container"
-    );
+  const popoverMessageContainer = target.parentElement?.querySelector<HTMLElement>(".popover-message-container");
 
-  if (
-    popoverMessageContainer === null ||
-    popoverMessageContainer === undefined
-  ) {
+  if (popoverMessageContainer === null || popoverMessageContainer === undefined) {
     console.error("popoverMessageContainer 가 null 이거나 undefined 입니다.");
     return;
   }
 
-  const popoverMessageContainerParentElement =
-    popoverMessageContainer.parentElement;
+  const popoverMessageContainerParentElement = popoverMessageContainer.parentElement;
   if (popoverMessageContainerParentElement === null) {
     console.error("popoverMessageContainerParentElement 가 null 입니다.");
     return;

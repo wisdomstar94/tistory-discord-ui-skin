@@ -5,7 +5,7 @@
     "build": "torytis build",
     "build:variable": "torytis varbuild",
     "dev": "torytis dev --port=3000",
-    "tsc": "tsc",
+    "tsc": "tsc --noEmit",
     "tailwindcss": "tailwindcss",
     "torytis": "torytis"
   },
@@ -27,7 +27,7 @@
     "vite": "^5.4.3"
   },
   "dependencies": {
-    "@wisdomstar94/vanilla-js-util": "^0.0.5",
+    "@wisdomstar94/vanilla-js-util": "^0.0.6",
     "lucide-react": "^0.439.0",
     "uuid": "^10.0.0"
   }

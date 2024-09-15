@@ -4,6 +4,7 @@ import "./index.scss";
 import { TopBar } from "./components/layouts/top-bar/top-bar.component";
 import { ContentArea } from "./components/layouts/content-area/content-area.component";
 import { AdArea } from "./components/layouts/ad-area/ad-area.component";
+import { Posts } from "./components/posts/posts.component";
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
           <TopBar />
           <ContentArea>
             <AdArea upper />
-
+            <Posts />
             <AdArea lower />
           </ContentArea>
         </s_t3>
