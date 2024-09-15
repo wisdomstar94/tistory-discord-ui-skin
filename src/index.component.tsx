@@ -3,6 +3,7 @@ import { version } from "../package.json";
 import "./index.scss";
 import { TopBar } from "./components/layouts/top-bar/top-bar.component";
 import { ContentArea } from "./components/layouts/content-area/content-area.component";
+import { AdArea } from "./components/layouts/ad-area/ad-area.component";
 
 export default function App() {
   return (
@@ -17,9 +18,15 @@ export default function App() {
         <title>[##_page_title_##] :: [##_title_##]</title>
       </head>
       <body id="[##_body_id_##]" data-skin-name="tistory-discord-skin" data-skin-version={version} className="bg-primary-3">
-        <SideBar />
-        <TopBar />
-        <ContentArea>hi</ContentArea>
+        <s_t3>
+          <SideBar />
+          <TopBar />
+          <ContentArea>
+            <AdArea upper />
+
+            <AdArea lower />
+          </ContentArea>
+        </s_t3>
       </body>
     </html>
   );
