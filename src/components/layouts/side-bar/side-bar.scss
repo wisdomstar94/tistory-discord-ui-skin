@@ -9,9 +9,8 @@ ul.tt_category {
     position: relative;
 
     a.link_tit {
-      @apply text-base flex px-3 py-2 box-border items-center rounded-md gap-2;
+      @apply text-base font-medium w-full flex flex-wrap px-3 py-2 box-border items-center rounded-md gap-2 relative mx-2 mb-8;
       width: calc(100% - (8px * 2));
-      margin: 0 8px;
 
       &::before {
         content: "";
@@ -25,21 +24,26 @@ ul.tt_category {
         @apply bg-white/5 text-white/90;
 
         &::before {
-          @apply bg-white/90;
+          @apply bg-white/80;
         }
+      }
+
+      &::after {
+        content: "";
+        @apply w-full h-[1px] bg-white/10 block absolute bottom-[-12px] left-0;
       }
     }
 
     ul.category_list {
-      @apply w-full flex flex-wrap relative gap-2;
+      @apply w-full flex flex-wrap relative gap-4;
 
       > li {
-        @apply w-full flex flex-wrap relative gap-2;
+        @apply w-full flex flex-wrap relative gap-0;
 
         a.link_item {
           width: calc(100% - (8px * 2));
           margin: 0 8px;
-          @apply relative flex flex-wrap box-border gap-2 px-3 py-1 font-bold;
+          @apply relative font-medium flex flex-wrap box-border gap-2 px-3 py-1;
 
           &::before {
             content: "--";
@@ -47,7 +51,7 @@ ul.tt_category {
           }
 
           &:hover {
-            @apply text-white/90;
+            @apply text-white/80;
           }
         }
 
@@ -60,7 +64,20 @@ ul.tt_category {
             a.link_sub_item {
               width: calc(100% - (8px * 2));
               margin: 0 8px;
-              @apply relative flex flex-wrap box-border gap-2 px-3 py-1 font-bold;
+              @apply relative flex flex-wrap box-border gap-2 px-3 py-0.5 rounded-md font-medium items-center content-center;
+
+              &::before {
+                content: "#";
+                @apply text-xl flex items-center content-center;
+              }
+
+              &:hover {
+                @apply bg-white/5 text-white/80;
+
+                // &::before {
+                //   @apply bg-white/90;
+                // }
+              }
             }
           }
         }
