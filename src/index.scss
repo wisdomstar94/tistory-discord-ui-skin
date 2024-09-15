@@ -8,6 +8,9 @@
     --tds-side-bar-inner-small-bar-width: 72px;
     --tds-side-bar-inner-big-bar-width: 240px;
     --tds-side-bar-width: calc(var(--tds-side-bar-inner-small-bar-width) + var(--tds-side-bar-inner-big-bar-width));
+    --tds-top-bar-width: calc(100% - var(--tds-side-bar-width));
+    --tds-top-bar-height: 48px;
+    --tds-content-area-padding: 16px;
   }
 
   :root {
@@ -19,6 +22,7 @@
     --tds-primary-tistory: 3 96% 63%;
 
     --tds-primary-2: 223 7% 20%;
+    --tds-primary-3: 220 7% 17%;
 
     --tds-secondary: 141 59% 38%;
 

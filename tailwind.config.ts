@@ -96,11 +96,18 @@ export default {
   theme: {
     extend: {
       width: {
-        "side-bar-inner-small-bar-width":
-          "var(--tds-side-bar-inner-small-bar-width)",
-        "side-bar-inner-big-bar-width":
-          "var(--tds-side-bar-inner-big-bar-width)",
+        "side-bar-inner-small-bar-width": "var(--tds-side-bar-inner-small-bar-width)",
+        "side-bar-inner-big-bar-width": "var(--tds-side-bar-inner-big-bar-width)",
         "side-bar-width": "var(--tds-side-bar-width)",
+        "top-bar-width": "var(--tds-top-bar-width)",
+      },
+      padding: {
+        "content-area-padding": "var(--tds-content-area-padding)",
+        "content-area-padding-with-side-bar-width": "calc(var(--tds-side-bar-width) + var(--tds-content-area-padding))",
+        "content-area-padding-with-top-bar-height": "calc(var(--tds-top-bar-height) + var(--tds-content-area-padding))",
+      },
+      height: {
+        "top-bar-height": "var(--tds-top-bar-height)",
       },
       colors: {
         primary: {
@@ -110,6 +117,9 @@ export default {
         },
         "primary-2": {
           DEFAULT: "hsl(var(--tds-primary-2))",
+        },
+        "primary-3": {
+          DEFAULT: "hsl(var(--tds-primary-3))",
         },
         "primary-tistory": {
           DEFAULT: "hsl(var(--tds-primary-tistory))",
@@ -178,18 +188,10 @@ export default {
         },
       },
       animation: {
-        "x-fade-in":
-          "x-fade-in 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
-        "x-fade-out":
-          "x-fade-out 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
+        "x-fade-in": "x-fade-in 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
+        "x-fade-out": "x-fade-out 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;",
       },
     },
   },
-  plugins: [
-    textShadowPlugin,
-    animateDurationPlugin,
-    leftFullAppendPlugin,
-    otherElementHoverPlugin,
-    customScrollbarPlugin,
-  ],
+  plugins: [textShadowPlugin, animateDurationPlugin, leftFullAppendPlugin, otherElementHoverPlugin, customScrollbarPlugin],
 } satisfies Config;
