@@ -21,7 +21,7 @@ export function SideBar() {
 
       <aside
         className={cn(
-          "w-side-bar-width h-full fixed top-0 flex flex-nowrap bg-primary z-[2]",
+          "w-side-bar-width h-full fixed top-0 flex flex-nowrap bg-murky-color-1 z-[2]",
           "transition-all duration-300",
           "-left-side-bar-width lg:left-0 side-bar-open:left-0 side-bar-close:-left-side-bar-inner-small-bar-width"
         )}
@@ -41,7 +41,7 @@ export function SideBar() {
                     <SmallSymbolButton
                       id="side-bar-tistory-home-a"
                       href="https://www.tistory.com/"
-                      aClassName="hover:bg-primary-tistory group-[.menu-active]:bg-primary-tistory"
+                      aClassName="hover:bg-tistory-color group-[.menu-active]:bg-tistory-color"
                       icon={<TistoryLogo className="text-white/80 w-[24px] h-[24px] inline-flex" />}
                       hoverTitle={"티스토리 홈"}
                       isHoverMinimumActive={true}
@@ -81,7 +81,7 @@ export function SideBar() {
                     <SmallSymbolButton
                       id="side-bar-guest-book-a"
                       href="/guestbook"
-                      aClassName="hover:bg-primary-active group-[.menu-active]:bg-primary-active"
+                      aClassName="hover:bg-light-color-1 group-[.menu-active]:bg-light-color-1"
                       icon={<NotebookPen className="text-white/80" />}
                       hoverTitle={"방명록"}
                       isHoverMinimumActive={true}
@@ -107,7 +107,7 @@ export function SideBar() {
                     <SmallSymbolButton
                       id="side-bar-notice-a"
                       href="/notice"
-                      aClassName="hover:bg-primary-active group-[.menu-active]:bg-primary-active"
+                      aClassName="hover:bg-light-color-1 group-[.menu-active]:bg-light-color-1"
                       icon={<Bell className="text-white/80" />}
                       hoverTitle={"공지사항"}
                       isHoverMinimumActive={true}
@@ -133,8 +133,8 @@ export function SideBar() {
                     <SmallSymbolButton
                       id="side-bar-manage-post-a"
                       href="/manage/post"
-                      aClassName="hover:bg-secondary group-[.menu-active]:bg-secondary"
-                      icon={<Plus className="text-secondary group-hover/side-item-a:text-white/80 transition-all" />}
+                      aClassName="hover:bg-murky-color-4 group-[.menu-active]:bg-murky-color-4"
+                      icon={<Plus className="text-murky-color-4 group-hover/side-item-a:text-white/80 transition-all" />}
                       hoverTitle={"글 작성"}
                     />
                   </li>
@@ -151,8 +151,8 @@ export function SideBar() {
                     <SmallSymbolButton
                       id="side-bar-blog-manage-a"
                       href="/manage"
-                      aClassName="hover:bg-secondary group-[.menu-active]:bg-secondary"
-                      icon={<Settings className="text-secondary group-hover/side-item-a:text-white/80 transition-all" />}
+                      aClassName="hover:bg-murky-color-4 group-[.menu-active]:bg-murky-color-4"
+                      icon={<Settings className="text-murky-color-4 group-hover/side-item-a:text-white/80 transition-all" />}
                       hoverTitle={"블로그 관리"}
                       isHoverMinimumActive={true}
                     />
@@ -164,12 +164,12 @@ export function SideBar() {
         </div>
 
         {/* big bar */}
-        <div className={cn("w-side-bar-inner-big-bar-width", "w-full h-full flex flex-wrap gap-2 relative", "bg-primary-2")}>
+        <div className={cn("w-side-bar-inner-big-bar-width", "w-full h-full flex flex-wrap gap-2 relative", "bg-murky-color-2")}>
           <div className={cn("side-big-bar-scroll-area", "w-full h-full overflow-y-scroll scrollbar-hidden block relative")}>
             <div className={cn("blog-title-bar-float-container", "w-full block h-[48px] top-0 left-0 sticky z-[2]")}>
-              <div className="background w-full h-full bg-primary-2 absolute top-0 left-0 opacity-0"></div>
+              <div className="background w-full h-full bg-murky-color-2 absolute top-0 left-0 opacity-0"></div>
               <BlogTitleBar />
-              <div className="background-bottom-border w-full h-[2px] bg-primary/80 absolute bottom-[-2px] left-0 opacity-0"></div>
+              <div className="background-bottom-border w-full h-[2px] bg-murky-color-1/80 absolute bottom-[-2px] left-0 opacity-0"></div>
             </div>
             <div className="w-full mt-[-48px]"></div>
             <ul className="w-full flex flex-wrap relative gap-3 items-start content-start side-big-bar">
@@ -188,7 +188,7 @@ export function SideBar() {
                             className={cn("profile-image", "w-full h-full relative object-cover object-center flex-shrink-0")}
                           />
                         </div>
-                        <div className={cn("movable-profile-area-overlay-bg", "w-full h-full bg-primary-2 opacity-0 relative")}></div>
+                        <div className={cn("movable-profile-area-overlay-bg", "w-full h-full bg-murky-color-2 opacity-0 relative")}></div>
                         <div className="movable-blog-title-bar">
                           <BlogTitleBar />
                         </div>
@@ -205,8 +205,8 @@ export function SideBar() {
                           type="text"
                           placeholder="검색하기"
                           className={cn(
-                            "w-full relative bg-primary text-sm box-border px-2 py-1 pr-8",
-                            "text-white/80 placeholder:text-primary-foreground",
+                            "w-full relative bg-murky-color-1 text-sm box-border px-2 py-1 pr-8",
+                            "text-white/80 placeholder:text-light-color-2",
                             "focus:outline-none"
                           )}
                           name="[##_search_name_##]"
@@ -215,7 +215,7 @@ export function SideBar() {
                         />
                         <div className="absolute top-[50%] right-0 flex items-center content-center justify-end h-0">
                           <button className="p-2 cursor-pointer" tt-onclick="[##_search_onclick_submit_##]">
-                            <Search className="text-primary-foreground w-[20px] h-[20px]" />
+                            <Search className="text-light-color-2 w-[20px] h-[20px]" />
                           </button>
                         </div>
                       </div>
@@ -225,7 +225,7 @@ export function SideBar() {
                 <s_sidebar_element>
                   <tt_html_comment>[big] 글 카테고리 메뉴 영역</tt_html_comment>
                   <li className="w-full flex flex-wrap relative">
-                    <div className="w-full block relative text-sm text-primary-foreground">[##_category_list_##]</div>
+                    <div className="w-full block relative text-sm text-light-color-2">[##_category_list_##]</div>
                   </li>
                 </s_sidebar_element>
               </s_sidebar>

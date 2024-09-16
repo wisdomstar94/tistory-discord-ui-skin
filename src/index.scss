@@ -14,22 +14,15 @@
   }
 
   :root {
-    // --tds-primary: 220 5% 11%;
-    --tds-primary: 225 6% 12%;
-    --tds-primary-active: 237 81% 63%;
-    --tds-primary-foreground: 216 7% 56%;
+    --tds-murky-color-1: 225 6% 12%;
+    --tds-murky-color-2: 223 7% 20%;
+    --tds-murky-color-3: 220 7% 17%;
+    --tds-murky-color-4: 141 59% 38%;
+    --tds-murky-color-5: 225 7% 22%;
 
-    --tds-primary-tistory: 3 96% 63%;
+    --tds-light-color-1: 237 81% 63%;
+    --tds-light-color-2: 216 7% 56%;
 
-    --tds-primary-2: 223 7% 20%;
-    --tds-primary-3: 220 7% 17%;
-
-    --tds-secondary: 141 59% 38%;
-
-    // --tds-secondary-default-color: 216 6% 16%;
-    // --tds-secondary-foreground-color: 217 7% 57%;
+    --tds-tistory-color: 3 96% 63%;
   }
-
-  // .light {
-  // }
 }

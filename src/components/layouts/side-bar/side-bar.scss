@@ -17,7 +17,7 @@ ul.tt_category {
         mask-image: url("./images/text-search.svg");
         mask-repeat: no-repeat;
         mask-position: center center;
-        @apply inline-block w-[20px] h-[20px] bg-primary-foreground;
+        @apply inline-block w-[20px] h-[20px] bg-light-color-2;
       }
 
       &.active,

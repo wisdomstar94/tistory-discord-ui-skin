@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
     width: 14,
     padding: 4,
     scrollEndedHideDelay: 100,
-    scrollBarClassName: "bg-primary rounded-full",
+    scrollBarClassName: "bg-murky-color-1 rounded-full",
   });
 });
 

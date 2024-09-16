@@ -78,21 +78,6 @@ const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
         width: "0px",
       },
     },
-    ".scrollbar-primary": {
-      "&::-webkit-scrollbar": {
-        width: "4px",
-      },
-      "&::-webkit-scrollbar-track": {
-        "background-color": "transparent",
-      },
-      "&::-webkit-scrollbar-thumb": {
-        "background-color": "hsl(var(--tds-primary))",
-        // background-color: hsl(0, 0%, 45%);
-        "border-radius": "20px",
-        "background-clip": "padding-box",
-        border: "2px solid transparent",
-      },
-    },
   });
 };
 
@@ -118,22 +103,31 @@ export default {
         "top-bar-height": "var(--tds-top-bar-height)",
       },
       colors: {
-        primary: {
-          DEFAULT: "hsl(var(--tds-primary))",
-          foreground: "hsl(var(--tds-primary-foreground))",
-          active: "hsl(var(--tds-primary-active))",
+        "murky-color-1": {
+          DEFAULT: "hsl(var(--tds-murky-color-1))",
         },
-        "primary-2": {
-          DEFAULT: "hsl(var(--tds-primary-2))",
+        "murky-color-2": {
+          DEFAULT: "hsl(var(--tds-murky-color-2))",
         },
-        "primary-3": {
-          DEFAULT: "hsl(var(--tds-primary-3))",
+        "murky-color-3": {
+          DEFAULT: "hsl(var(--tds-murky-color-3))",
         },
-        "primary-tistory": {
-          DEFAULT: "hsl(var(--tds-primary-tistory))",
+        "murky-color-4": {
+          DEFAULT: "hsl(var(--tds-murky-color-4))",
         },
-        secondary: {
-          DEFAULT: "hsl(var(--tds-secondary))",
+        "murky-color-5": {
+          DEFAULT: "hsl(var(--tds-murky-color-5))",
+        },
+
+        "light-color-1": {
+          DEFAULT: "hsl(var(--tds-light-color-1))",
+        },
+        "light-color-2": {
+          DEFAULT: "hsl(var(--tds-light-color-2))",
+        },
+
+        "tistory-color": {
+          DEFAULT: "hsl(var(--tds-tistory-color))",
         },
       },
       textShadow: {

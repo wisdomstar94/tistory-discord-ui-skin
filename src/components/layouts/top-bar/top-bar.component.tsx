@@ -7,7 +7,7 @@ export function TopBar() {
     <>
       <header
         className={cn(
-          "h-top-bar-height box-border fixed top-0 right-0 bg-primary-3 z-[1] text-white px-content-area-padding py-2",
+          "h-top-bar-height box-border fixed top-0 right-0 bg-murky-color-3 z-[1] text-white px-content-area-padding py-2",
           "transition-all duration-300",
           "w-full lg:w-top-bar-width"
         )}
@@ -21,7 +21,7 @@ export function TopBar() {
           </div>
           <div className={cn("top-bar-title-area")}>내용 준비중..</div>
         </div>
-        <div className="background-bottom-border w-full h-[2px] bg-primary/80 absolute bottom-[-2px] left-0"></div>
+        <div className="background-bottom-border w-full h-[2px] bg-murky-color-1/80 absolute bottom-[-2px] left-0"></div>
       </header>
       <Script
         html={`
