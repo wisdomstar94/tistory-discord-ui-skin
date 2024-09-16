@@ -4,7 +4,7 @@ import "./index.scss";
 import { TopBar } from "./components/layouts/top-bar/top-bar.component";
 import { ContentArea } from "./components/layouts/content-area/content-area.component";
 import { AdArea } from "./components/layouts/ad-area/ad-area.component";
-import { Posts } from "./components/posts/posts.component";
+import { Posts } from "./components/post/posts/posts.component";
 
 export default function App() {
   return (

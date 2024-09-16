@@ -65,7 +65,7 @@ export function SideBar() {
                           <img src="[##_image_##]" alt="프로필사진" className="w-full h-full relative object-cover object-center" />
                         </>
                       }
-                      hoverTitle={"[##_blogger_##] 사과 바나나 키위 메론"}
+                      hoverTitle={"[##_blogger_##]"}
                       hoverTitleIcon={
                         <div className="mt-[4px]">
                           <HomeIcon />
