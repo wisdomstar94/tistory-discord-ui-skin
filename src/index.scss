@@ -22,7 +22,13 @@
 
     --tds-light-color-1: 237 81% 63%;
     --tds-light-color-2: 216 7% 56%;
+    --tds-light-color-3: 0 0% 100%;
+    --tds-light-color-4: 146 62% 48%;
 
     --tds-tistory-color: 3 96% 63%;
   }
+}
+
+.article-rep-summary br {
+  display: none;
 }

@@ -125,6 +125,12 @@ export default {
         "light-color-2": {
           DEFAULT: "hsl(var(--tds-light-color-2))",
         },
+        "light-color-3": {
+          DEFAULT: "hsl(var(--tds-light-color-3))",
+        },
+        "light-color-4": {
+          DEFAULT: "hsl(var(--tds-light-color-4))",
+        },
 
         "tistory-color": {
           DEFAULT: "hsl(var(--tds-tistory-color))",
