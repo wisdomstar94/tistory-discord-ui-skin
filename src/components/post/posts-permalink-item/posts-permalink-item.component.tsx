@@ -2,6 +2,7 @@ import { BookText } from "lucide-react";
 import { IPostsPermalinkItem } from "./posts-permalink-item.type";
 import { cn } from "@/utils/cn";
 import { Script } from "@/components/script/script.component";
+import "./posts-permalink-item.scss";
 
 export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
   return (
@@ -21,7 +22,12 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
           <div className="w-full h-full bg-light-color-3/10 flex-1"></div>
         </div>
         <div className="w-full flex gap-4 relative group py-1">
-          <div className="w-[calc(100vw+100px)] h-full absolute top-0 left-[-50px] group-hover:bg-murky-color-1/30"></div>
+          <div
+            className={cn(
+              "w-[calc(100vw+100px)] h-full absolute top-0 left-[-50px]"
+              // "group-hover:bg-murky-color-1/30"
+            )}
+          ></div>
 
           <div className="w-full flex flex-wrap gap-2 relative">
             <ul className="w-full flex flex-wrap gap-1 relative items-center">

@@ -11,17 +11,16 @@ const dirname = import.meta.dirname;
 
 const disposeIndexComponent = async () => {
   await new Promise(function (resolve, reject) {
-    const command = `npx vite build --config ${join(
-      dirname,
-      "torytis.index.vite.config.ts"
-    )}`;
+    const command = `npx vite build --config ${join(dirname, "torytis.index.vite.config.ts")}`;
 
     exec(command, (error, stdout, stderr) => {
       if (error) {
+        console.error(error);
         resolve(error);
         return;
       }
       if (stderr) {
+        console.error(stderr);
         resolve(stderr);
         return;
       }
@@ -42,17 +41,16 @@ const disposeIndexComponent = async () => {
 
 const disposeIndexScript = async () => {
   await new Promise(function (resolve, reject) {
-    const command = `npx vite build --config ${join(
-      dirname,
-      "torytis.script.vite.config.ts"
-    )}`;
+    const command = `npx vite build --config ${join(dirname, "torytis.script.vite.config.ts")}`;
 
     exec(command, (error, stdout, stderr) => {
       if (error) {
+        console.error(error);
         resolve(error);
         return;
       }
       if (stderr) {
+        console.error(stderr);
         resolve(stderr);
         return;
       }
