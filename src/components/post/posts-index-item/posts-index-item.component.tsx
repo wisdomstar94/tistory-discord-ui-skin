@@ -2,6 +2,7 @@ import { cn } from "@/utils/cn";
 import { IPostsIndexItem } from "./posts-index-item.type";
 import { Script } from "@/components/script/script.component";
 import { Bell, LockKeyhole, MessageCircle } from "lucide-react";
+import "./posts-index.scss";
 
 export function PostsIndexItem(props: IPostsIndexItem.Props) {
   const { postType } = props;
@@ -65,7 +66,28 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
               </div>
             </div>
             <div data-title="article-extra-info" className={cn("w-full flex gap-2 relative items-start text-sm", "mt-1 lg:mt-0")}>
-              <ul className={cn("w-full flex flex-wrap relative", "flex-col lg:flex-row", "gap-1 lg:gap-2")}>
+              <ul
+                data-title="article-extra-info-list"
+                className={cn("w-full flex flex-wrap relative", "flex-col lg:flex-row", "gap-1 lg:gap-5")}
+              >
+                <s_ad_div>
+                  <li
+                    data-title="posts-index-item-s-ad-div"
+                    data-status="[##_s_ad_s1_label_##]" // "공개", "비공개", "보호"
+                    className={cn(
+                      // "hidden",
+                      "inline-flex",
+                      "gap-1 relative text-light-color-3/50",
+                      "items-center",
+                      "text-xs lg:text-sm"
+                    )}
+                  >
+                    {/* <EyeOff className="w-[16px] h-[16px] text-light-color-3/80" /> */}
+                    <span data-title="posts-index-item-s-ad-div-icon"></span>
+                    <span className="text-light-color-3/80">[##_s_ad_s1_label_##]글</span>
+                  </li>
+                </s_ad_div>
+
                 {postType === "normal" && (
                   <>
                     <s_rp_count>
@@ -75,11 +97,6 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                         <span className="text-light-color-3/80">{`[##_${replacer_prefix}_rep_rp_cnt_##]`}</span>
                       </li>
                     </s_rp_count>
-                    <li
-                      className={cn("gap-2 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm", "hidden lg:inline-flex")}
-                    >
-                      <div className="w-0.5 h-0.5 rounded-3xl bg-light-color-3/20" />
-                    </li>
                   </>
                 )}
 
@@ -88,25 +105,6 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                     <li className={cn("inline-flex gap-1 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm")}>
                       <Bell className="w-[16px] h-[16px] text-light-color-3/80" />
                       <span className="text-light-color-3/80">공지사항</span>
-                    </li>
-                    <li
-                      className={cn("gap-2 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm", "hidden lg:inline-flex")}
-                    >
-                      <div className="w-0.5 h-0.5 rounded-3xl bg-light-color-3/20" />
-                    </li>
-                  </>
-                )}
-
-                {postType === "protected" && (
-                  <>
-                    <li className={cn("inline-flex gap-1 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm")}>
-                      <LockKeyhole className="w-[16px] h-[16px] text-light-color-3/80" />
-                      <span className="text-light-color-3/80">보호글</span>
-                    </li>
-                    <li
-                      className={cn("gap-2 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm", "hidden lg:inline-flex")}
-                    >
-                      <div className="w-0.5 h-0.5 rounded-3xl bg-light-color-3/20" />
                     </li>
                   </>
                 )}

@@ -1,0 +1,62 @@
+li[data-title="posts-index-item-s-ad-div"] {
+  &[data-status="공개"] {
+    [data-title="posts-index-item-s-ad-div-icon"] {
+      content: "";
+      mask-image: url("./images/eye.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 16px 16px;
+      @apply inline-block w-[16px] h-[16px] bg-light-color-3/80;
+
+      > svg {
+        @apply w-[16px] h-[16px];
+      }
+    }
+  }
+  &[data-status="비공개"] {
+    [data-title="posts-index-item-s-ad-div-icon"] {
+      content: "";
+      mask-image: url("./images/eye-off.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 16px 16px;
+      @apply inline-block w-[16px] h-[16px] bg-light-color-3/80;
+
+      > svg {
+        @apply w-[16px] h-[16px];
+      }
+    }
+  }
+  &[data-status="보호"] {
+    [data-title="posts-index-item-s-ad-div-icon"] {
+      content: "";
+      mask-image: url("./images/lock-keyhole.svg");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: 16px 16px;
+      @apply inline-block w-[16px] h-[16px] bg-light-color-3/80;
+
+      > svg {
+        @apply w-[16px] h-[16px];
+      }
+    }
+    // @apply hidden;
+  }
+}
+
+ul[data-title="article-extra-info-list"] {
+  > li:not(:first-child) {
+    // background-color: #f00;
+    // @apply bg-red-500;
+
+    // &::marker {
+    //   content: "..";
+    //   @apply inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute;
+    // }
+
+    &:before {
+      content: "";
+      @apply hidden lg:inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute -left-3;
+    }
+  }
+}
