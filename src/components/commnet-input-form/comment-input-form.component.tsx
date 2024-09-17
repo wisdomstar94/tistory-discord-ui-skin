@@ -7,12 +7,14 @@ export function CommentInputForm(props: ICommentInputForm.Props) {
     <>
       <div
         className={cn(
+          "flex flex-wrap",
           "w-comment-input-form-width lg:w-comment-input-form-width-with-sidebar",
           "rounded-md",
-          "left-comment-input-form-left lg:left-comment-input-form-left-with-sidebar",
-          "bottom-content-area-padding",
+          "lg:left-comment-input-form-left-with-sidebar",
+          "ml-comment-input-form-left lg:ml-0",
+          "lg:bottom-content-area-padding",
           "relative lg:fixed",
-          "bottom-0 left-0",
+          // "lg:bottom-0 lg:left-0",
           "bg-murky-color-5 z-[2]",
           "box-border px-4 py-1"
         )}

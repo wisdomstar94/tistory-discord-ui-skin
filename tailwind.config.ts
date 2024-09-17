@@ -108,6 +108,7 @@ export default {
       },
       margin: {
         "content-area-padding": "var(--tds-content-area-padding)",
+        "comment-input-form-left": "var(--tds-comment-input-form-left)",
       },
       height: {
         "top-bar-height": "var(--tds-top-bar-height)",
