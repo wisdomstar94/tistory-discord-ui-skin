@@ -18,7 +18,7 @@ export function ContentArea(props: { children: ReactNode }) {
           "text-white"
         )}
       >
-        {props.children}
+        <div className="w-full flex flex-wrap gap-4 relative box-border">{props.children}</div>
       </main>
     </>
   );

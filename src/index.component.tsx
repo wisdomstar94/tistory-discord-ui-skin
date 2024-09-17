@@ -5,6 +5,7 @@ import { TopBar } from "./components/layouts/top-bar/top-bar.component";
 import { ContentArea } from "./components/layouts/content-area/content-area.component";
 import { AdArea } from "./components/layouts/ad-area/ad-area.component";
 import { Posts } from "./components/post/posts/posts.component";
+import { Pagination } from "./components/pagination/pagination.component";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <ContentArea>
           <AdArea upper />
           <Posts />
+          <Pagination />
           <AdArea lower />
         </ContentArea>
         {/* </s_t3> */}
