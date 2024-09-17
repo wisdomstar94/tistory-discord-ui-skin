@@ -58,4 +58,28 @@
       }
     }
   }
+
+  .container_postbtn {
+    .btn_post {
+      @apply p-0 px-2 py-0 flex items-center bg-murky-color-1 rounded-md text-light-color-3/80 cursor-pointer hover:bg-murky-color-2;
+
+      .ico_like {
+        margin: 0;
+      }
+    }
+
+    .postbtn_like {
+      float: none;
+      border: 0;
+      @apply flex gap-2 relative;
+
+      .wrap_btn {
+        float: none;
+
+        .uoc-icon {
+          @apply flex items-center gap-1;
+        }
+      }
+    }
+  }
 }
