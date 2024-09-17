@@ -1,0 +1,10 @@
+[data-title="sub-rp-list"] {
+  > li {
+    > div {
+      &::before {
+        content: "";
+        @apply w-5 h-3 mt-3 flex justify-end flex-grow-0 flex-shrink-0 relative border-b-2 border-b-light-color-3/20 border-l-2 border-l-light-color-3/20 rounded-bl-lg;
+      }
+    }
+  }
+}

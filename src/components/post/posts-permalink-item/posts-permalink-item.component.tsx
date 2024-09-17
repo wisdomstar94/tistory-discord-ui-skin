@@ -5,6 +5,7 @@ import "./posts-permalink-item.scss";
 import { ContentDivider } from "@/components/content-divider/content-divider.component";
 import { CommentList } from "@/components/commnet-list/commnet-list.component";
 import { SmallDatetimeInline } from "@/small-datetime-inline/small-datetime-inline.component";
+import { CommentInputForm } from "@/components/commnet-input-form/comment-input-form.component";
 
 export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
   return (
@@ -47,9 +48,13 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
         <ContentDivider className={cn("mt-6 mb-2")}>
           댓글 <s_rp_count>({`[##_article_rep_rp_cnt_##]`})</s_rp_count>
         </ContentDivider>
-        <div className="w-full h-1 bg-light-color-2/30 flex flex-wrap gap-2 relative mb-2"></div>
+        {/* <div className="w-full h-1 bg-light-color-2/30 flex flex-wrap gap-2 relative mb-2"></div> */}
         <s_rp>
           <CommentList />
+          <div className="w-full h-[16px]"></div>
+          <s_rp_input_form>
+            <CommentInputForm />
+          </s_rp_input_form>
         </s_rp>
       </li>
     </>

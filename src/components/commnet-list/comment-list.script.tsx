@@ -12,8 +12,8 @@ window.addEventListener("load", () => {
     },
     callback: (mutations) => {
       // ...
-      checkRpList();
-      observer.disconnect();
+      // checkRpList();
+      // observer.disconnect();
     },
   });
 });

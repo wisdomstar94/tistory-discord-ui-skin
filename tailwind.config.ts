@@ -90,9 +90,14 @@ export default {
         "side-bar-inner-big-bar-width": "var(--tds-side-bar-inner-big-bar-width)",
         "side-bar-width": "var(--tds-side-bar-width)",
         "top-bar-width": "var(--tds-top-bar-width)",
+        "comment-input-form-width-with-sidebar": "var(--tds-comment-input-form-width-with-sidebar)",
+        "comment-input-form-width": "var(--tds-comment-input-form-width)",
       },
       inset: {
         "side-bar-width": "var(--tds-side-bar-width)",
+        "comment-input-form-left-with-sidebar": "var(--tds-comment-input-form-left-with-sidebar)",
+        "comment-input-form-left": "var(--tds-comment-input-form-left)",
+        "content-area-padding": "var(--tds-content-area-padding)",
       },
       padding: {
         "side-bar-width": "var(--tds-side-bar-width)",
