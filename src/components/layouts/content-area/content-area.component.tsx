@@ -8,10 +8,12 @@ export function ContentArea(props: { children: ReactNode }) {
         className={cn(
           "block relative",
           "transition-all duration-300",
-          "pl-content-area-padding lg:pl-content-area-padding-with-side-bar-width",
-          "pt-content-area-padding-with-top-bar-height",
-          "pr-content-area-padding",
-          "pb-content-area-padding",
+          "pt-top-bar-height",
+          "pl-0 lg:pl-side-bar-width",
+          // "pl-content-area-padding lg:pl-content-area-padding-with-side-bar-width",
+          // "pt-content-area-padding-with-top-bar-height",
+          // "pr-content-area-padding",
+          // "pb-content-area-padding",
           "text-white"
         )}
       >

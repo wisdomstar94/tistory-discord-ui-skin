@@ -95,9 +95,14 @@ export default {
         "side-bar-width": "var(--tds-side-bar-width)",
       },
       padding: {
+        "side-bar-width": "var(--tds-side-bar-width)",
+        "top-bar-height": "var(--tds-top-bar-height)",
         "content-area-padding": "var(--tds-content-area-padding)",
         "content-area-padding-with-side-bar-width": "calc(var(--tds-side-bar-width) + var(--tds-content-area-padding))",
         "content-area-padding-with-top-bar-height": "calc(var(--tds-top-bar-height) + var(--tds-content-area-padding))",
+      },
+      margin: {
+        "content-area-padding": "var(--tds-content-area-padding)",
       },
       height: {
         "top-bar-height": "var(--tds-top-bar-height)",

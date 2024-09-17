@@ -24,15 +24,15 @@ export default function App() {
         data-skin-version={version}
         className="bg-murky-color-3 overflow-x-hidden"
       >
-        <s_t3>
-          <SideBar />
-          <TopBar />
-          <ContentArea>
-            <AdArea upper />
-            <Posts />
-            <AdArea lower />
-          </ContentArea>
-        </s_t3>
+        {/* <s_t3> */}
+        <SideBar />
+        <TopBar />
+        <ContentArea>
+          <AdArea upper />
+          <Posts />
+          <AdArea lower />
+        </ContentArea>
+        {/* </s_t3> */}
       </body>
     </html>
   );

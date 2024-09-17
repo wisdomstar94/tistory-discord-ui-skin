@@ -20,7 +20,7 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
 
   return (
     <>
-      <li className="w-full relative">
+      <li className="w-full relative px-content-area-padding first:mt-content-area-padding">
         <a
           className={cn(
             "w-full flex gap-2 relative bg-murky-color-5 box-border p-4 items-start",
