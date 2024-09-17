@@ -90,13 +90,12 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
 
                 {postType === "normal" && (
                   <>
-                    <s_rp_count>
-                      <li className={cn("inline-flex gap-1 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm")}>
-                        <MessageCircle className="w-[16px] h-[16px] text-light-color-3/80" />
-
+                    <li className={cn("inline-flex gap-1 relative text-light-color-3/50", "items-center", "text-xs lg:text-sm")}>
+                      <MessageCircle className="w-[16px] h-[16px] text-light-color-3/80" />
+                      <s_rp_count>
                         <span className="text-light-color-3/80">{`[##_${replacer_prefix}_rep_rp_cnt_##]`}</span>
-                      </li>
-                    </s_rp_count>
+                      </s_rp_count>
+                    </li>
                   </>
                 )}
 

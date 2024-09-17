@@ -1,5 +1,4 @@
-import { getRenderedElementSize } from "@wisdomstar94/vanilla-js-util";
-import { setPositionTargetElement } from "@wisdomstar94/vanilla-js-util";
+import { getRenderedElementSize, setPositionTargetElement } from "@wisdomstar94/vanilla-js-util";
 
 window.addEventListener("load", () => {
   settingHoverElement();

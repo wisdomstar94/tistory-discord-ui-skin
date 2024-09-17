@@ -118,6 +118,9 @@ export default {
         "murky-color-5": {
           DEFAULT: "hsl(var(--tds-murky-color-5))",
         },
+        "murky-color-6": {
+          DEFAULT: "hsl(var(--tds-murky-color-6))",
+        },
 
         "light-color-1": {
           DEFAULT: "hsl(var(--tds-light-color-1))",
@@ -130,6 +133,15 @@ export default {
         },
         "light-color-4": {
           DEFAULT: "hsl(var(--tds-light-color-4))",
+        },
+        "light-color-5": {
+          DEFAULT: "hsl(var(--tds-light-color-5))",
+        },
+        "light-color-6": {
+          DEFAULT: "hsl(var(--tds-light-color-6))",
+        },
+        "light-color-7": {
+          DEFAULT: "hsl(var(--tds-light-color-7))",
         },
 
         "tistory-color": {
