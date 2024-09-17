@@ -194,14 +194,14 @@
         {
           "comment_id": "comment19900033",
           "name": "방문자3",
-          "profile_img_url": "이미지 URL",
-          "content": "댓글 남기고 갑니다.",
+          "profile_img_url": "https://cdn.pixabay.com/photo/2023/03/23/03/49/dolphin-7871058_640.jpg",
+          "content": "댓글 남기고 갑니다. 마법 같았지 when we disco~ when we disco~ 그래서 잊지를 못해~ 아직도~~~ 너무 그리워 when we disco~ when we disco~ 너도 기억하고 있는지~~ 지금도~~",
           "datetime": "2024-01-25 09:01:34",
           "comment_list": [
             {
               "comment_id": "comment19900034",
               "name": "방문자4",
-              "profile_img_url": "이미지 URL",
+              "profile_img_url": "https://cdn.pixabay.com/photo/2019/11/10/10/40/cute-4615444_640.jpg",
               "content": "저는 댓글의 댓글 남기고 갑니다~",
               "datetime": "2024-01-25 10:11:35"
             }

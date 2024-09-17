@@ -38,3 +38,7 @@
 .article-rep-summary br {
   display: none;
 }
+
+[data-tistory-react-app] {
+  @apply hidden;
+}
