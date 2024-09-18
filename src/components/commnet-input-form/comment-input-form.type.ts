@@ -1,3 +1,5 @@
 export declare namespace ICommentInputForm {
-  export type Props = {};
+  export type Props = {
+    isGuestbook?: boolean;
+  };
 }

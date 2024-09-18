@@ -1,3 +1,5 @@
 export declare namespace ICommnetList {
-  export type Props = {};
+  export type Props = {
+    isGuestBook?: boolean;
+  };
 }

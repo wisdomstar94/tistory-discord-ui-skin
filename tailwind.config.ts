@@ -4,6 +4,17 @@ import type { PluginCreator } from "tailwindcss/types/config";
 const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("side-bar-open", ".side-bar-open &");
   addVariant("side-bar-close", ".side-bar-close &");
+  addVariant("list-empty", [".list-empty &", ".list-empty&"]);
+
+  // https://tistory.github.io/document-tistory-skin/common/global.html 참조
+  addVariant("tt-body-index", ["#tt-body-index &", "#tt-body-index&"]);
+  addVariant("tt-body-page", ["#tt-body-page &", "#tt-body-page&"]);
+  addVariant("tt-body-category", ["#tt-body-category &", "#tt-body-category&"]);
+  addVariant("tt-body-archive", ["#tt-body-archive &", "#tt-body-archive&"]);
+  addVariant("tt-body-tag", ["#tt-body-tag &", "#tt-body-tag&"]);
+  addVariant("tt-body-search", ["#tt-body-search &", "#tt-body-search&"]);
+  addVariant("tt-body-guestbook", ["#tt-body-guestbook &", "#tt-body-guestbook&"]);
+  addVariant("tt-body-location", ["#tt-body-location &", "#tt-body-location&"]);
 };
 
 const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {
