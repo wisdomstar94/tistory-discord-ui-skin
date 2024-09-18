@@ -107,10 +107,13 @@
     }
 
     // 코드블럭
-    pre {
-      code {
-        @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/30 mt-1 mb-3 relative;
-      }
+    li code {
+      @apply bg-murky-color-1 p-1 box-border rounded-md text-light-color-3/50 relative opacity-100;
+    }
+
+    pre code {
+      @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/50 mt-1 mb-3 relative opacity-100 block;
+      // visibility: visible;
     }
 
     // 테이블
@@ -236,9 +239,7 @@
         tbody {
           tr {
             td {
-              &:first-child {
-                @apply border-r-0 border-b-0;
-              }
+              @apply border-r-0 border-b-0;
             }
           }
         }
