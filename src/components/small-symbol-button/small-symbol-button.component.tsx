@@ -31,7 +31,7 @@ export function SmallSymbolButton(props: ISmallSymbolButton.Props) {
               "group/side-item-a",
               "cursor-pointer",
               "w-full block aspect-square relative transition-all",
-              "bg-murky-color-2 hover:bg-tistory-color group-[.menu-active]:bg-tistory-color",
+              "bg-murky-color-2",
               isRoundedActive && "rounded-[12px]",
               !isRoundedActive && "rounded-[30px] hover:rounded-[12px] group-[.menu-active]:rounded-[12px]",
               aClassName

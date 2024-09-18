@@ -23,9 +23,9 @@ export default function App() {
       </head>
       <body
         id="[##_body_id_##]"
-        data-skin-name="tistory-discord-skin"
+        data-skin-name="tistory-discord-ui-skin"
         data-skin-version={version}
-        className="bg-murky-color-3 overflow-x-hidden"
+        className="bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20"
       >
         {/* <s_t3> */}
         <SideBar />

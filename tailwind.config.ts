@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import type { PluginCreator } from "tailwindcss/types/config";
+import type { CSSRuleObject, PluginCreator } from "tailwindcss/types/config";
 
 const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("side-bar-open", ".side-bar-open &");
@@ -92,6 +92,258 @@ const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
   });
 };
 
+const customColorExtendPlugin: PluginCreator = ({ addUtilities }) => {
+  const opacitys = Array.from({ length: 20 }).map((_, index) => index * 5);
+
+  const extendColors: Record<string, string> = {
+    "murky-color-1": "var(--tds-murky-color-1)",
+    "murky-color-2": "var(--tds-murky-color-2)",
+    "murky-color-3": "var(--tds-murky-color-3)",
+    "murky-color-4": "var(--tds-murky-color-4)",
+    "murky-color-5": "var(--tds-murky-color-5)",
+    "murky-color-6": "var(--tds-murky-color-6)",
+
+    "light-color-1": "var(--tds-light-color-1)",
+    "light-color-2": "var(--tds-light-color-2)",
+    "light-color-3": "var(--tds-light-color-3)",
+    "light-color-4": "var(--tds-light-color-4)",
+    "light-color-5": "var(--tds-light-color-5)",
+    "light-color-6": "var(--tds-light-color-6)",
+    "light-color-7": "var(--tds-light-color-7)",
+
+    "tistory-color": "var(--tds-tistory-color)",
+  };
+
+  const keys = Object.keys(extendColors);
+  for (const colorName of keys) {
+    const cssValue = extendColors[colorName];
+
+    // text-*
+    const textCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "text-",
+      cssMap: [
+        {
+          cssProperty: "color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // bg-*
+    const bgCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "bg-",
+      cssMap: [
+        {
+          cssProperty: "background-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // outline-*
+    const outlineCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "outline-",
+      cssMap: [
+        {
+          cssProperty: "outline-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // stroke-*
+    const strokeCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "stroke-",
+      cssMap: [
+        {
+          cssProperty: "stroke",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // fill-*
+    const fillCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "fill-",
+      cssMap: [
+        {
+          cssProperty: "fill",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // shadow-*
+    const shadowCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "shadow-",
+      cssMap: [
+        {
+          cssProperty: "--tw-shadow-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+        {
+          cssProperty: "--tw-shadow",
+          cssValue(opacity) {
+            return `var(--tw-shadow-colored)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // border-*
+    const borderCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "border-",
+      cssMap: [
+        {
+          cssProperty: "border-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // border-l-*
+    const borderLCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "border-l-",
+      cssMap: [
+        {
+          cssProperty: "border-left-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // border-r-*
+    const borderRCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "border-r-",
+      cssMap: [
+        {
+          cssProperty: "border-right-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // border-t-*
+    const borderTCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "border-t-",
+      cssMap: [
+        {
+          cssProperty: "border-top-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    // border-b-*
+    const borderBCSSRuleObjects = generateColorCSSRuleObject({
+      colorName,
+      classNamePrefix: "border-b-",
+      cssMap: [
+        {
+          cssProperty: "border-bottom-color",
+          cssValue: (opacity) => {
+            if (opacity === undefined) return cssValue;
+            return `color-mix(in hsl, ${cssValue} ${opacity}%, transparent)`;
+          },
+        },
+      ],
+      opacitys,
+    });
+
+    const temp: CSSRuleObject[] = [];
+    const allObjects = temp.concat(
+      textCSSRuleObjects,
+      bgCSSRuleObjects,
+      outlineCSSRuleObjects,
+      strokeCSSRuleObjects,
+      fillCSSRuleObjects,
+      shadowCSSRuleObjects,
+      borderCSSRuleObjects,
+      borderLCSSRuleObjects,
+      borderRCSSRuleObjects,
+      borderTCSSRuleObjects,
+      borderBCSSRuleObjects
+    );
+
+    addUtilities(allObjects);
+  }
+};
+
+function generateColorCSSRuleObject(params: {
+  colorName: string;
+  classNamePrefix: string;
+  opacitys: number[];
+  cssMap: { cssProperty: string; cssValue: (opacity?: number) => string }[];
+}) {
+  const { colorName, classNamePrefix, opacitys, cssMap } = params;
+
+  const classNameCSSRuleObject: CSSRuleObject = {};
+
+  classNameCSSRuleObject[`.${classNamePrefix}${colorName}`] = {};
+  for (const { cssProperty, cssValue } of cssMap) {
+    classNameCSSRuleObject[`.${classNamePrefix}${colorName}`]![cssProperty] = cssValue();
+  }
+
+  for (const opacity of opacitys) {
+    classNameCSSRuleObject[`.${classNamePrefix}${colorName}\\/${opacity}`] = {};
+    for (const { cssProperty, cssValue } of cssMap) {
+      classNameCSSRuleObject[`.${classNamePrefix}${colorName}\\/${opacity}`]![cssProperty] = cssValue(opacity);
+    }
+  }
+
+  return classNameCSSRuleObject;
+}
+
 export default {
   content: ["./src/**/*.{ts,tsx,css,scss}"],
   theme: {
@@ -124,52 +376,7 @@ export default {
       height: {
         "top-bar-height": "var(--tds-top-bar-height)",
       },
-      colors: {
-        "murky-color-1": {
-          DEFAULT: "hsl(var(--tds-murky-color-1))",
-        },
-        "murky-color-2": {
-          DEFAULT: "hsl(var(--tds-murky-color-2))",
-        },
-        "murky-color-3": {
-          DEFAULT: "hsl(var(--tds-murky-color-3))",
-        },
-        "murky-color-4": {
-          DEFAULT: "hsl(var(--tds-murky-color-4))",
-        },
-        "murky-color-5": {
-          DEFAULT: "hsl(var(--tds-murky-color-5))",
-        },
-        "murky-color-6": {
-          DEFAULT: "hsl(var(--tds-murky-color-6))",
-        },
-
-        "light-color-1": {
-          DEFAULT: "hsl(var(--tds-light-color-1))",
-        },
-        "light-color-2": {
-          DEFAULT: "hsl(var(--tds-light-color-2))",
-        },
-        "light-color-3": {
-          DEFAULT: "hsl(var(--tds-light-color-3))",
-        },
-        "light-color-4": {
-          DEFAULT: "hsl(var(--tds-light-color-4))",
-        },
-        "light-color-5": {
-          DEFAULT: "hsl(var(--tds-light-color-5))",
-        },
-        "light-color-6": {
-          DEFAULT: "hsl(var(--tds-light-color-6))",
-        },
-        "light-color-7": {
-          DEFAULT: "hsl(var(--tds-light-color-7))",
-        },
-
-        "tistory-color": {
-          DEFAULT: "hsl(var(--tds-tistory-color))",
-        },
-      },
+      colors: {},
       textShadow: {
         sm: "1px 1px 2px var(--tw-shadow-color)",
         DEFAULT: "2px 2px 2px var(--tw-shadow-color)",
@@ -271,5 +478,13 @@ export default {
       },
     },
   },
-  plugins: [textShadowPlugin, animateDurationPlugin, leftFullAppendPlugin, otherElementHoverPlugin, customScrollbarPlugin, sideBarPlugin],
+  plugins: [
+    textShadowPlugin,
+    animateDurationPlugin,
+    leftFullAppendPlugin,
+    otherElementHoverPlugin,
+    customScrollbarPlugin,
+    sideBarPlugin,
+    customColorExtendPlugin,
+  ],
 } satisfies Config;

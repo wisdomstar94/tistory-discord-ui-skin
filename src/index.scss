@@ -20,22 +20,22 @@
   }
 
   :root {
-    --tds-murky-color-1: 225 6% 12%;
-    --tds-murky-color-2: 220 7% 18%; //223 7% 20%;
-    --tds-murky-color-3: 223 8% 17%; // 220 7% 17%;
-    --tds-murky-color-4: 141 59% 38%;
-    --tds-murky-color-5: 225 7% 22%;
-    --tds-murky-color-6: 0 0% 0%;
+    --tds-murky-color-1: rgb(29, 30, 32);
+    --tds-murky-color-2: rgb(43, 45, 49);
+    --tds-murky-color-3: rgb(40, 42, 47);
+    --tds-murky-color-4: rgb(40, 154, 80);
+    --tds-murky-color-5: rgb(52, 54, 60);
+    --tds-murky-color-6: rgb(0, 0, 0);
 
-    --tds-light-color-1: 237 81% 63%;
-    --tds-light-color-2: 216 7% 56%;
-    --tds-light-color-3: 0 0% 100%;
-    --tds-light-color-4: 146 62% 48%;
-    --tds-light-color-5: 48 87% 50%;
-    --tds-light-color-6: 235 86% 89%;
-    --tds-light-color-7: 236 53% 60%;
+    --tds-light-color-1: rgb(84, 92, 237);
+    --tds-light-color-2: rgb(135, 141, 151);
+    --tds-light-color-3: rgb(255, 255, 255);
+    --tds-light-color-4: rgb(47, 198, 112);
+    --tds-light-color-5: rgb(238, 194, 17);
+    --tds-light-color-6: rgb(203, 207, 251);
+    --tds-light-color-7: rgb(99, 106, 207);
 
-    --tds-tistory-color: 3 96% 63%;
+    --tds-tistory-color: rgb(251, 79, 70);
   }
 }
 
