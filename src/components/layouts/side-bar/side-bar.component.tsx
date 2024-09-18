@@ -1,7 +1,7 @@
 import { TistoryLogo } from "@/components/icons/tistory-logo/tistory-logo.component";
 import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
-import { Bell, NotebookPen, Plus, Search, Settings } from "lucide-react";
+import { Bell, NotebookPen, Plus, Search, Settings, X } from "lucide-react";
 import "./side-bar.scss";
 import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
@@ -214,6 +214,16 @@ export function SideBar() {
               </s_sidebar>
             </ul>
           </div>
+        </div>
+
+        {/* mobile close button */}
+        <div className="hidden side-bar-open:inline-flex absolute top-0 right-0 items-center justify-end z-[2]">
+          <button
+            className="inline-flex p-1 bg-murky-color-1/70 cursor-pointer hover:bg-murky-color-1"
+            tt-onclick="sideBarCloseButtonClick()"
+          >
+            <X className="text-light-color-3/50" />
+          </button>
         </div>
       </aside>
       <Script

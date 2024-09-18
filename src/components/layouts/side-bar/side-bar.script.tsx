@@ -117,3 +117,10 @@ function mobileSideBarBackgroundClick() {
 }
 
 (window as any).mobileSideBarBackgroundClick = mobileSideBarBackgroundClick;
+
+function sideBarCloseButtonClick() {
+  document.body.classList.add("side-bar-close");
+  document.body.classList.remove("side-bar-open");
+}
+
+(window as any).sideBarCloseButtonClick = sideBarCloseButtonClick;
