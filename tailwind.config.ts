@@ -5,6 +5,7 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("side-bar-open", ".side-bar-open &");
   addVariant("side-bar-close", ".side-bar-close &");
   addVariant("list-empty", [".list-empty &", ".list-empty&"]);
+  addVariant("notice-index-page", [".notice-index-page &", ".notice-index-page&"]);
 
   // https://tistory.github.io/document-tistory-skin/common/global.html 참조
   addVariant("tt-body-index", ["#tt-body-index &", "#tt-body-index&"]);

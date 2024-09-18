@@ -1,6 +1,8 @@
-import { getCategoryPathnameInfo } from "@/common/functions";
+import { getCategoryPathnameInfo, getPathname } from "@/common/functions";
 
 function checkPageTitle() {
+  const pathname = getPathname();
+
   if (document.body.id === "tt-body-category") {
     const { isCategoryPath, categoryType, categoryName, subCategoryName } = getCategoryPathnameInfo();
     if (isCategoryPath) {
@@ -17,6 +19,10 @@ function checkPageTitle() {
         span.textContent = pageTitle;
       }
     }
+  }
+
+  if (pathname.startsWith("/notice")) {
+    document.body.classList.add("notice-index-page");
   }
 }
 

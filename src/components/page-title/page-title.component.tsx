@@ -8,8 +8,16 @@ export function PageTitle() {
         data-title="page-title"
         className={cn("inline-flex whitespace-nowrap overflow-hidden overflow-ellipsis min-w-0", "text-light-color-3/90", "font-bold")}
       >
-        <div className={cn("hidden tt-body-index:block", "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-0")}>
+        <div
+          className={cn(
+            "hidden tt-body-index:block tt-body-index:notice-index-page:hidden",
+            "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-0"
+          )}
+        >
           <ShopChar /> Home
+        </div>
+        <div className={cn("hidden notice-index-page:block", "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-0")}>
+          <ShopChar /> 공지사항
         </div>
         <div
           className={cn("hidden tt-body-category:block", "whitespace-nowrap overflow-hidden overflow-ellipsis min-w-0")}

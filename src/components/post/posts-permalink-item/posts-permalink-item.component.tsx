@@ -27,7 +27,7 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
             {postType === "protected" && <FileLock className="text-light-color-3/70 w-10 h-10" />}
           </div>
         </div>
-        <div className={cn("w-full flex flex-wrap relative", "text-light-color-3/90 text-3xl", "px-content-area-padding")}>
+        <div className={cn("w-full flex flex-wrap relative box-border", "text-light-color-3/90 text-3xl", "px-content-area-padding")}>
           {`[##_${prefix}_rep_title_##]`}
         </div>
         <ContentDivider
@@ -52,7 +52,7 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
                 />
               </li>
             </ul>
-            <div className="w-full block relative text-light-color-3/80">
+            <div className="w-full block relative text-light-color-3/80" id="article-description">
               {postType !== "protected" && `[##_${prefix}_rep_desc_##]`}
               {postType === "protected" && (
                 <>

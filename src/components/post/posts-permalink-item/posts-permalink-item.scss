@@ -33,7 +33,7 @@
     }
 
     table {
-      @apply w-full block relative;
+      @apply w-full block relative border-none;
 
       tbody {
         @apply w-full flex flex-wrap gap-2 relative;
@@ -51,7 +51,7 @@
           }
 
           td {
-            @apply w-full flex justify-start items-center m-0;
+            @apply w-full flex justify-start items-center m-0 border-none;
             padding: 0 !important;
           }
         }
@@ -79,6 +79,178 @@
         .uoc-icon {
           @apply flex items-center gap-1;
         }
+      }
+    }
+  }
+}
+
+#article-description {
+  > div {
+    // 제목
+    h1 {
+      @apply text-5xl mt-6 mb-4;
+    }
+    h2 {
+      @apply text-4xl mt-6 mb-4;
+    }
+    h3 {
+      @apply text-3xl mt-6 mb-4;
+    }
+    h4 {
+      @apply text-2xl mt-6 mb-4;
+    }
+    h5 {
+      @apply text-xl mt-6 mb-4;
+    }
+    h6 {
+      @apply text-lg mt-6 mb-4;
+    }
+
+    // 코드블럭
+    pre {
+      code {
+        @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/30 mt-1 mb-3 relative;
+      }
+    }
+
+    // 테이블
+    table {
+      width: 100%;
+      @apply border-light-color-3/50 border-t border-l;
+
+      thead {
+        tr {
+          th {
+            @apply border-light-color-3/50 border-r border-b px-2 py-1;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            @apply border-light-color-3/50 border-r border-b px-2 py-0.5;
+          }
+        }
+      }
+
+      &[data-ke-style="style1"],
+      &[data-ke-style="style2"],
+      &[data-ke-style="style3"] {
+        thead {
+          tr {
+            th {
+              @apply border-b-2;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+            }
+          }
+        }
+      }
+
+      &[data-ke-style="style4"],
+      &[data-ke-style="style5"],
+      &[data-ke-style="style6"],
+      &[data-ke-style="style7"] {
+        tbody {
+          tr {
+            &:nth-child(2n) {
+              td {
+                @apply bg-light-color-3/5;
+              }
+            }
+          }
+        }
+      }
+
+      &[data-ke-style="style8"],
+      &[data-ke-style="style9"],
+      &[data-ke-style="style10"],
+      &[data-ke-style="style11"] {
+        @apply border-l-0;
+
+        thead {
+          tr {
+            th {
+              @apply border-r-0 border-b-2;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              @apply border-r-0;
+            }
+          }
+        }
+      }
+
+      &[data-ke-style="style12"],
+      &[data-ke-style="style13"],
+      &[data-ke-style="style14"],
+      &[data-ke-style="style15"] {
+        thead {
+          tr {
+            th {
+              @apply bg-murky-color-1;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            &:first-child {
+              td {
+                color: inherit;
+              }
+            }
+
+            td {
+              @apply bg-transparent;
+
+              &:first-child {
+                @apply bg-light-color-3/5;
+              }
+            }
+          }
+        }
+      }
+
+      &[data-ke-style="style16"] {
+        @apply border-l-0 border-t-0;
+
+        thead {
+          tr {
+            th {
+              @apply border-r-0 border-b-0;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              &:first-child {
+                @apply border-r-0 border-b-0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 리스트
+    ul,
+    ol {
+      @apply pl-5 my-1;
+
+      li {
       }
     }
   }
