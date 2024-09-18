@@ -6,6 +6,7 @@ import { ContentArea } from "./components/layouts/content-area/content-area.comp
 import { AdArea } from "./components/layouts/ad-area/ad-area.component";
 import { Posts } from "./components/post/posts/posts.component";
 import { Pagination } from "./components/pagination/pagination.component";
+import { Lists } from "./list/lists/lists.component";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <ContentArea>
           <AdArea upper />
           <Posts />
+          <Lists />
           <Pagination />
           <AdArea lower />
         </ContentArea>

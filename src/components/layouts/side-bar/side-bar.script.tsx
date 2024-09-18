@@ -82,22 +82,28 @@ function checkActiveCategory() {
     linkItems.forEach((item) => {
       const html = item.innerHTML.replace("\n", "");
       const htmlSplit = html.split('<span class="').map((x) => x.trim());
-      console.log("@htmlSplit", htmlSplit);
 
       if (htmlSplit[0] === categoryName) {
         item.classList.add("active");
       }
     });
   } else if (categoryType === "sub-categpry") {
-    const linkItems = unwrap(ul.querySelectorAll<HTMLElement>("a.link_sub_item"), "a.link_sub_item 요소가 없습니다.");
+    const linkItems = unwrap(ul.querySelectorAll<HTMLElement>("a.link_item"), "a.link_item 요소가 없습니다.");
     linkItems.forEach((item) => {
       const html = item.innerHTML.replace("\n", "");
       const htmlSplit = html.split('<span class="').map((x) => x.trim());
-      console.log("@htmlSplit", htmlSplit);
+      const parentCategoryName = htmlSplit[0];
 
-      if (htmlSplit[0] === subCategoryName) {
-        item.classList.add("active");
-      }
+      const subLinkItems = unwrap(item.parentElement?.querySelectorAll<HTMLElement>("a.link_sub_item"), "a.link_sub_item 요소가 없습니다.");
+      subLinkItems.forEach((item) => {
+        const html = item.innerHTML.replace("\n", "");
+        const htmlSplit = html.split('<span class="').map((x) => x.trim());
+        const childCategoryName = htmlSplit[0];
+
+        if (parentCategoryName === categoryName && childCategoryName === subCategoryName) {
+          item.classList.add("active");
+        }
+      });
     });
   }
 }

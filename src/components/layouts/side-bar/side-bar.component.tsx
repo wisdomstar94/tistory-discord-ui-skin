@@ -7,6 +7,7 @@ import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
 import { HomeIcon } from "@/components/icons/home-icon/home-icon.component";
 import { BlogTitleBar } from "@/components/blog-title-bar/blog-title-bar.component";
+import { SearchBar } from "@/components/search-bar/search-bar.component";
 
 export function SideBar() {
   return (
@@ -189,39 +190,21 @@ export function SideBar() {
                           />
                         </div>
                         <div className={cn("movable-profile-area-overlay-bg", "w-full h-full bg-murky-color-2 opacity-0 relative")}></div>
-                        <div className="movable-blog-title-bar">
+                        <div className="movable-blog-title-bar hidden">
                           <BlogTitleBar />
                         </div>
                       </div>
                     </div>
                   </li>
                 </s_sidebar_element>
-                <s_sidebar_element>
+                {/* <s_sidebar_element>
                   <tt_html_comment>[big] 검색 영역</tt_html_comment>
                   <li className="w-full flex flex-wrap relative">
                     <div className="w-full box-border px-3 relative">
-                      <div className="w-full flex flex-nowrap gap-2 relative">
-                        <input
-                          type="text"
-                          placeholder="검색하기"
-                          className={cn(
-                            "w-full relative bg-murky-color-1 text-sm box-border px-2 py-1 pr-8",
-                            "text-white/80 placeholder:text-light-color-2",
-                            "focus:outline-none"
-                          )}
-                          name="[##_search_name_##]"
-                          tt-value="[##_search_text_##]"
-                          tt-onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }"
-                        />
-                        <div className="absolute top-[50%] right-0 flex items-center content-center justify-end h-0">
-                          <button className="p-2 cursor-pointer" tt-onclick="[##_search_onclick_submit_##]">
-                            <Search className="text-light-color-2 w-[20px] h-[20px]" />
-                          </button>
-                        </div>
-                      </div>
+                      <SearchBar />
                     </div>
                   </li>
-                </s_sidebar_element>
+                </s_sidebar_element> */}
                 <s_sidebar_element>
                   <tt_html_comment>[big] 글 카테고리 메뉴 영역</tt_html_comment>
                   <li className="w-full flex flex-wrap relative">
