@@ -6,6 +6,8 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("side-bar-close", ".side-bar-close &");
   addVariant("list-empty", [".list-empty &", ".list-empty&"]);
   addVariant("notice-index-page", [".notice-index-page &", ".notice-index-page&"]);
+  addVariant("modal-open", [".modal-open &", ".modal-open&"]);
+  addVariant("modal-close", [".modal-close &", ".modal-close&"]);
 
   // https://tistory.github.io/document-tistory-skin/common/global.html 참조
   addVariant("tt-body-index", ["#tt-body-index &", "#tt-body-index&"]);
@@ -103,6 +105,7 @@ const customColorExtendPlugin: PluginCreator = ({ addUtilities }) => {
     "murky-color-4": "var(--tds-murky-color-4)",
     "murky-color-5": "var(--tds-murky-color-5)",
     "murky-color-6": "var(--tds-murky-color-6)",
+    "murky-color-7": "var(--tds-murky-color-7)",
 
     "light-color-1": "var(--tds-light-color-1)",
     "light-color-2": "var(--tds-light-color-2)",
