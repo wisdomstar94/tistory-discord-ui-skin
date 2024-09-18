@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@wisdomstar94/vanilla-js-util": "^0.0.10",
+    "axios": "^1.7.7",
     "lucide-react": "^0.439.0",
     "uuid": "^10.0.0"
   }

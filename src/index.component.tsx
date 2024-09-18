@@ -8,7 +8,7 @@ import { Posts } from "./components/post/posts/posts.component";
 import { Pagination } from "./components/pagination/pagination.component";
 import { Lists } from "./list/lists/lists.component";
 import { GuestBook } from "./components/guest-book/guest-book.component";
-import { ModalTemplate } from "./components/modal-template/modal-template.component";
+import { LatestVersionCheck } from "./components/latest-version-check/latest-version-check.component";
 
 export default function App() {
   return (
@@ -38,14 +38,7 @@ export default function App() {
           <GuestBook />
           <Pagination />
           <AdArea lower />
-          <ModalTemplate
-            id={"skin-latest-version-notice-modal"}
-            title={"스킨 업데이트 안내"}
-            description={
-              "현재 이용하고 계신 스킨의 버전보다 더 높은 최신 버전이 감지 되었습니다. 최신버전 스킨 파일을 다운로드 받을 수 있는 페이지로 이동하시겠습니까?"
-            }
-            okButtonOnClick={""}
-          />
+          <LatestVersionCheck />
         </ContentArea>
         {/* </s_t3> */}
       </body>

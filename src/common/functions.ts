@@ -32,3 +32,12 @@ export function getCategoryPathnameInfo() {
     subCategoryName,
   };
 }
+
+export function isAdmin() {
+  if (window.tiara !== undefined) {
+    if (window.tiara.customProps?.role === "owner") {
+      return true;
+    }
+  }
+  return false;
+}
