@@ -5,7 +5,9 @@ export function GuestBook() {
   return (
     <>
       <s_guest>
+        <div className="h-[16px] w-full"></div>
         <CommentList isGuestBook />
+        <div className="h-[16px] w-full"></div>
         <s_guest_input_form>
           <CommentInputForm isGuestbook />
         </s_guest_input_form>

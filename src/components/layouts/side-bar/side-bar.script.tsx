@@ -1,3 +1,4 @@
+import { getCategoryPathnameInfo, getPathname } from "@/common/functions";
 import { applyOverlayScroll, getInfoByScroll, unwrap } from "@wisdomstar94/vanilla-js-util";
 
 window.addEventListener("load", () => {
@@ -109,41 +110,6 @@ function checkActiveCategory() {
 }
 
 (window as any).checkActiveCategory = checkActiveCategory;
-
-function getPathname() {
-  return decodeURIComponent(location.pathname.trim());
-}
-
-function getCategoryPathnameInfo() {
-  const pathname = getPathname();
-  let isCategoryPath = pathname.startsWith("/category");
-
-  let categoryType: "all" | "category" | "sub-categpry" | undefined;
-
-  let categoryName: string | undefined;
-  let subCategoryName: string | undefined;
-
-  if (isCategoryPath) {
-    const urlSplit = pathname.split("/"); // ex) ['', 'category', '1', '2'];
-    if (urlSplit.length === 4) {
-      categoryType = "sub-categpry";
-      categoryName = urlSplit[urlSplit.length - 2];
-      subCategoryName = urlSplit[urlSplit.length - 1];
-    } else if (urlSplit.length === 3) {
-      categoryType = "category";
-      categoryName = urlSplit[urlSplit.length - 1];
-    } else if (urlSplit.length === 2) {
-      categoryType = "all";
-    }
-  }
-
-  return {
-    isCategoryPath,
-    categoryType,
-    categoryName,
-    subCategoryName,
-  };
-}
 
 function mobileSideBarBackgroundClick() {
   document.body.classList.add("side-bar-close");

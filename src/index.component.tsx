@@ -33,7 +33,7 @@ export default function App() {
         <ContentArea>
           <AdArea upper />
           <Posts />
-          <Lists />
+          {/* <Lists /> */}
           <GuestBook />
           <Pagination />
           <AdArea lower />
