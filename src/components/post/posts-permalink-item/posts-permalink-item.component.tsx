@@ -96,6 +96,30 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
           </div>
         </div>
 
+        <ContentDivider className={cn("mt-6 mb-2")}>다음글</ContentDivider>
+        <s_article_next>
+          <a
+            className="w-full flex flex-col gap-0 relative text-light-color-5 text-xs p-content-area-padding hover:bg-murky-color-1/70 other/next-a"
+            href="[##_article_next_link_##]"
+          >
+            <div>[##_article_next_title_##]</div>
+            <div>[##_article_next_date_##]</div>
+          </a>
+        </s_article_next>
+        <div className="text-xs px-content-area-padding text-light-color-3/50 w-full other-exist-[next-a]:hidden">다음 글이 없습니다.</div>
+
+        <ContentDivider className={cn("mt-6 mb-2")}>이전글</ContentDivider>
+        <s_article_prev>
+          <a
+            className="w-full flex flex-col gap-0 relative text-light-color-5 text-xs p-content-area-padding hover:bg-murky-color-1/70 other/prev-a"
+            href="[##_article_prev_link_##]"
+          >
+            <div>[##_article_prev_title_##]</div>
+            <div>[##_article_prev_date_##]</div>
+          </a>
+        </s_article_prev>
+        <div className="text-xs px-content-area-padding text-light-color-3/50 w-full other-exist-[prev-a]:hidden">이전 글이 없습니다.</div>
+
         {postType !== "protected" && (
           <>
             <ContentDivider className={cn("mt-6 mb-2")}>

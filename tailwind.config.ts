@@ -87,6 +87,14 @@ const otherElementPlugin: PluginCreator = ({ matchVariant }) => {
   matchVariant("other-checked", (value, extra) => {
     return [`.other\\/${value}:checked ~ * &`, `.other\\/${value}:checked ~ &`];
   });
+
+  matchVariant("other-exist", (value, extra) => {
+    return [`.other\\/${value} ~ * &`, `.other\\/${value} ~ &`];
+  });
+
+  matchVariant("other-has", (value, extra) => {
+    return [`.other\\/${extra.modifier}:has(${value}) ~ * &`, `.other\\/${extra.modifier}:has(${value}) ~ &`];
+  });
 };
 
 const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {

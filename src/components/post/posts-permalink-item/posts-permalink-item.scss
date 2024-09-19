@@ -3,13 +3,13 @@
     @apply w-full border-0 m-0 p-0 relative box-border;
 
     h4 {
-      @apply w-full min-w-0 flex overflow-hidden whitespace-nowrap font-normal items-center;
+      @apply w-full min-w-0 flex overflow-hidden whitespace-nowrap font-normal items-center text-light-color-3/50;
       border-bottom: 0 !important;
 
       &,
       * {
         // @apply text-light-color-3/50;
-        color: hsl(var(--tds-light-color-3) / 0.5) !important;
+        color: color-mix(in hsl, var(--tds-light-color-3) 50%, transparent) !important;
       }
 
       &::before,
@@ -81,6 +81,10 @@
         }
       }
     }
+  }
+
+  [data-tistory-react-app="Namecard"] + div {
+    @apply w-full block relative;
   }
 }
 
