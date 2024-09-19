@@ -123,6 +123,34 @@
     //   @apply w-[16px] h-[16px] border-b-4 border-b-light-color-3/80 border-r-4 border-r-light-color-3/80 absolute bottom-0 right-0;
     // }
   }
+
+  figure {
+    @apply text-light-color-3/80;
+
+    &.fileblock {
+      @apply hover:bg-murky-color-1/70;
+
+      .image {
+        background-image: none;
+        mask-image: url("./images/file.svg");
+        mask-repeat: no-repeat;
+        mask-position: center center;
+        mask-size: 24px 24px;
+        @apply bg-light-color-3/80;
+      }
+
+      a {
+        &::after {
+          background-image: none;
+          mask-image: url("./images/download.svg");
+          mask-repeat: no-repeat;
+          mask-position: center center;
+          mask-size: 24px 24px;
+          @apply bg-light-color-3/80;
+        }
+      }
+    }
+  }
 }
 
 #article-description {
@@ -130,6 +158,11 @@
     *[style*="background-color: #ffffff;"] {
       // @apply bg-transparent;
       background-color: transparent !important;
+    }
+
+    *[class*="filename"] {
+      // @apply bg-transparent;
+      color: color-mix(in hsl, var(--tds-light-color-3) 80%, transparent) !important;
     }
 
     // 제목
