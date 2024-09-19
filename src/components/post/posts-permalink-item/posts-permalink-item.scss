@@ -86,10 +86,52 @@
   [data-tistory-react-app="Namecard"] + div {
     @apply w-full block relative;
   }
+
+  blockquote[data-ke-style="style1"] {
+    @apply text-light-color-3/80;
+  }
+
+  blockquote[data-ke-style="style2"] {
+    @apply flex min-w-0 items-stretch;
+
+    &::before {
+      content: "";
+      @apply inline-flex w-[4px] bg-light-color-3/80 mr-4 flex-grow-0 flex-shrink-0;
+    }
+  }
+
+  blockquote[data-ke-style="style3"] {
+    @apply flex min-w-0 items-stretch bg-transparent relative border-0 text-light-color-3/80;
+
+    &::before {
+      content: "";
+      @apply w-full h-[4px] bg-light-color-3/80 absolute top-0 left-0;
+    }
+
+    &::after {
+      content: "";
+      @apply w-full h-[4px] bg-light-color-3/80 absolute bottom-0 left-0;
+    }
+
+    // &::before {
+    //   content: "";
+    //   @apply w-[16px] h-[16px] border-t-4 border-t-light-color-3/80 border-l-4 border-l-light-color-3/80 absolute top-0 left-0;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   @apply w-[16px] h-[16px] border-b-4 border-b-light-color-3/80 border-r-4 border-r-light-color-3/80 absolute bottom-0 right-0;
+    // }
+  }
 }
 
 #article-description {
   > div {
+    *[style*="background-color: #ffffff;"] {
+      // @apply bg-transparent;
+      background-color: transparent !important;
+    }
+
     // 제목
     h1 {
       @apply text-5xl mt-6 mb-4;
@@ -257,6 +299,11 @@
 
       li {
       }
+    }
+
+    // 인용
+    blockquote {
+      @apply text-light-color-3/80;
     }
   }
 }
