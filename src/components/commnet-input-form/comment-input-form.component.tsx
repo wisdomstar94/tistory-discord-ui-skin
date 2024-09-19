@@ -1,6 +1,6 @@
 import { cn } from "@/utils/cn";
 import { ICommentInputForm } from "./comment-input-form.type";
-import { MessageCircle, Send, User } from "lucide-react";
+import { LockKeyhole, LockKeyholeOpen, MessageCircle, Send, User } from "lucide-react";
 
 export function CommentInputForm(props: ICommentInputForm.Props) {
   const { isGuestbook = false } = props;
@@ -65,19 +65,19 @@ export function CommentInputForm(props: ICommentInputForm.Props) {
                   />
                 </li>
               </GuestComp>
-              {!isGuestbook && (
+              {/* {!isGuestbook && (
                 <li className={cn("w-full flex gap-2 items-center relative", "flex-grow flex-shrink", "min-w-0 overflow-hidden")}>
                   <input
                     type="checkbox"
                     id={`[##_rp_input_is_secret_##]`}
                     name={`[##_rp_input_is_secret_##]`}
-                    className="w-[16px] h-[16px] bg-transparent border border-light-color-3/60"
+                    className="w-[16px] h-[16px] bg-transparent border border-light-color-3/60 hidden"
                   />
-                  <label htmlFor="secret" className="text-light-color-3/40">
+                  <label htmlFor="secret" className="text-light-color-3/40 hidden">
                     비밀글
                   </label>
                 </li>
-              )}
+              )} */}
             </ul>
           </div>
         </MemberComp>
@@ -99,8 +99,24 @@ export function CommentInputForm(props: ICommentInputForm.Props) {
                 )}
               />
             </li>
+            {!isGuestbook && (
+              <li className={cn("inline-block aspect-square relative", "flex-grow-0 flex-shrink-0", "cursor-pointer")}>
+                <input
+                  type="checkbox"
+                  data-title="secret-checkbox"
+                  id={`[##_rp_input_is_secret_##]`}
+                  name={`[##_rp_input_is_secret_##]`}
+                  className="w-[16px] h-[16px] bg-transparent border border-light-color-3/60 hidden other/secret-checkbox"
+                />
+                <button className="flex items-center cursor-pointer" tt-onclick="secretVirtualCheckboxClick(this);">
+                  <LockKeyholeOpen className="text-light-color-3/20 flex other-checked-[secret-checkbox]:hidden" />
+                  <LockKeyhole className="text-light-color-3/80 hidden other-checked-[secret-checkbox]:flex" />
+                </button>
+              </li>
+            )}
+
             <li
-              className={cn("w-[22px] block aspect-square relative", "flex-grow-0 flex-shrink-0", "cursor-pointer")}
+              className={cn("w-[22px] flex relative", "flex-grow-0 flex-shrink-0", "cursor-pointer")}
               tt-onclick={`[##_${prefix}_onclick_submit_##]`}
             >
               <Send className="text-light-color-3/60" />

@@ -78,10 +78,14 @@ const leftFullAppendPlugin: PluginCreator = ({ matchUtilities }) => {
   );
 };
 
-const otherElementHoverPlugin: PluginCreator = ({ matchVariant }) => {
+const otherElementPlugin: PluginCreator = ({ matchVariant }) => {
   // addVariant('other-hover', ({ modify }))
   matchVariant("other-hover", (value, extra) => {
     return [`.other\\/${value}:hover ~ * &`, `.other\\/${value}:hover ~ &`];
+  });
+
+  matchVariant("other-checked", (value, extra) => {
+    return [`.other\\/${value}:checked ~ * &`, `.other\\/${value}:checked ~ &`];
   });
 };
 
@@ -486,7 +490,7 @@ export default {
     textShadowPlugin,
     animateDurationPlugin,
     leftFullAppendPlugin,
-    otherElementHoverPlugin,
+    otherElementPlugin,
     customScrollbarPlugin,
     sideBarPlugin,
     customColorExtendPlugin,
