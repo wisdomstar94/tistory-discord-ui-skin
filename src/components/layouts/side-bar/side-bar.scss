@@ -66,11 +66,11 @@ ul.tt_category {
             a.link_sub_item {
               width: calc(100% - (8px * 2));
               margin: 0 8px;
-              @apply relative flex flex-wrap box-border gap-2 px-3 py-0.5 rounded-md font-medium items-center content-center;
+              @apply relative flex box-border gap-2 px-3 py-1 rounded-md font-medium items-start;
 
               &::before {
                 content: "#";
-                @apply text-xl flex items-center content-center;
+                @apply text-xl inline-flex items-start content-center flex-shrink-0 flex-grow-0 leading-5;
               }
 
               &.active,
@@ -80,6 +80,10 @@ ul.tt_category {
                 // &::before {
                 //   @apply bg-white/90;
                 // }
+              }
+
+              .c_cnt {
+                @apply inline-flex flex-shrink-0 flex-grow-0;
               }
             }
           }

@@ -150,6 +150,18 @@
         }
       }
     }
+
+    &[data-ke-type="opengraph"] {
+      div {
+        &.og-text {
+          p {
+            &.og-title {
+              @apply text-light-color-3/80;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
