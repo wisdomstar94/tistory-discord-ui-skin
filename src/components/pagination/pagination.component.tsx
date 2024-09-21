@@ -6,7 +6,7 @@ export function Pagination() {
   return (
     <>
       <s_paging>
-        <div className="w-full flex flex-wrap justify-center items-center content-center gap-2 relative box-border">
+        <div className="w-full flex flex-wrap justify-start items-center content-center gap-2 relative box-border px-content-area-padding">
           <a tt-onlyattr="[##_prev_page_##]" className={cn("[##_no_more_prev_##]", "rounded-md p-1 hover:bg-murky-color-1")}>
             <ChevronLeft className="text-light-color-3/50" />
           </a>

@@ -44,19 +44,34 @@ li[data-title="posts-index-item-s-ad-div"] {
   }
 }
 
-ul[data-title="article-extra-info-list"] {
-  > li:not(:first-child) {
-    // background-color: #f00;
-    // @apply bg-red-500;
+[data-title="article-list"] {
+  &:not(.list_display_type_grid) {
+    ul[data-title="article-extra-info-list"] {
+      > li:not(:first-child) {
+        // background-color: #f00;
+        // @apply bg-red-500;
 
-    // &::marker {
-    //   content: "..";
-    //   @apply inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute;
-    // }
+        // &::marker {
+        //   content: "..";
+        //   @apply inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute;
+        // }
 
-    &:before {
-      content: "";
-      @apply hidden lg:inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute -left-3;
+        &:before {
+          content: "";
+          @apply hidden lg:inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute -left-3;
+        }
+      }
     }
   }
+
+  // &.list_display_type_grid {
+  //   ul[data-title="article-extra-info-list"] {
+  //     > li:not(:nth-child(1), :nth-child(2)) {
+  //       &::before {
+  //         content: "";
+  //         @apply hidden lg:inline-flex w-0.5 h-0.5 rounded-3xl bg-light-color-3/20 absolute -left-3;
+  //       }
+  //     }
+  //   }
+  // }
 }
