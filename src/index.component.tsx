@@ -9,6 +9,7 @@ import { Pagination } from "./components/pagination/pagination.component";
 import { Lists } from "./list/lists/lists.component";
 import { GuestBook } from "./components/guest-book/guest-book.component";
 import { LatestVersionCheck } from "./components/latest-version-check/latest-version-check.component";
+import { Tags } from "./components/tags/tags.component";
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
           <Posts />
           {/* <Lists /> */}
           <GuestBook />
+          <Tags />
           <Pagination />
           <AdArea lower />
           <LatestVersionCheck />
