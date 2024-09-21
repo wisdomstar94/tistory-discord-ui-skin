@@ -10,6 +10,9 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("modal-close", [".modal-close &", ".modal-close&"]);
   addVariant("my-active", [".my-active &", ".my-active&"]);
   addVariant("my-checked", [".my-checked &", ".my-checked&"]);
+  addVariant("posts-index-open", [".posts-index-open &", ".posts-index-open&"]);
+  addVariant("posts-index-close", [".posts-index-close &", ".posts-index-close&"]);
+  addVariant("no-posts-index", [".no-posts-index &", ".no-posts-index&"]);
 
   // https://tistory.github.io/document-tistory-skin/common/global.html 참조
   addVariant("tt-body-index", ["#tt-body-index &", "#tt-body-index&"]);
@@ -418,13 +421,16 @@ export default {
         "side-bar-width": "var(--tds-side-bar-width)",
         "top-bar-width": "var(--tds-top-bar-width)",
         "comment-input-form-width-with-sidebar": "var(--tds-comment-input-form-width-with-sidebar)",
+        "comment-input-form-width-with-sidebar-with-posts-index": "var(--tds-comment-input-form-width-with-sidebar-with-posts-index)",
         "comment-input-form-width": "var(--tds-comment-input-form-width)",
+        "posts-index-width": "var(--tds-posts-index-width)",
       },
       inset: {
         "side-bar-width": "var(--tds-side-bar-width)",
         "comment-input-form-left-with-sidebar": "var(--tds-comment-input-form-left-with-sidebar)",
         "comment-input-form-left": "var(--tds-comment-input-form-left)",
         "content-area-padding": "var(--tds-content-area-padding)",
+        "posts-index-width": "var(--tds-posts-index-width)",
       },
       padding: {
         "side-bar-width": "var(--tds-side-bar-width)",
@@ -433,10 +439,12 @@ export default {
         "content-area-inner-padding": "var(--tds-content-area-inner-padding)",
         "content-area-padding-with-side-bar-width": "calc(var(--tds-side-bar-width) + var(--tds-content-area-padding))",
         "content-area-padding-with-top-bar-height": "calc(var(--tds-top-bar-height) + var(--tds-content-area-padding))",
+        "posts-index-width": "var(--tds-posts-index-width)",
       },
       margin: {
         "content-area-padding": "var(--tds-content-area-padding)",
         "comment-input-form-left": "var(--tds-comment-input-form-left)",
+        "posts-index-width": "var(--tds-posts-index-width)",
       },
       height: {
         "top-bar-height": "var(--tds-top-bar-height)",

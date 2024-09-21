@@ -15,7 +15,9 @@ export function ContentArea(props: { children: ReactNode }) {
           // "pt-content-area-padding-with-top-bar-height",
           // "pr-content-area-padding",
           // "pb-content-area-padding",
-          "text-white"
+          "text-white",
+
+          "pr-0 lg:posts-index-open:pr-posts-index-width"
         )}
       >
         <div className="w-full flex flex-wrap gap-4 relative box-border">{props.children}</div>

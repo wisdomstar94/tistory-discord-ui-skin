@@ -27,7 +27,8 @@ export function CommentInputForm(props: ICommentInputForm.Props) {
       <div
         className={cn(
           "flex flex-wrap",
-          "w-comment-input-form-width lg:w-comment-input-form-width-with-sidebar",
+          "transition-all duration-300",
+          "w-comment-input-form-width lg:w-comment-input-form-width-with-sidebar lg:posts-index-open:w-comment-input-form-width-with-sidebar-with-posts-index",
           "rounded-md",
           "lg:left-comment-input-form-left-with-sidebar",
           "ml-comment-input-form-left lg:ml-0",

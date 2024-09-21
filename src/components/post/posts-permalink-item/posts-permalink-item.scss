@@ -180,21 +180,27 @@
     // 제목
     h1 {
       @apply text-5xl mt-6 mb-4;
+      scroll-margin: 60px;
     }
     h2 {
       @apply text-4xl mt-6 mb-4;
+      scroll-margin: 60px;
     }
     h3 {
       @apply text-3xl mt-6 mb-4;
+      scroll-margin: 60px;
     }
     h4 {
       @apply text-2xl mt-6 mb-4;
+      scroll-margin: 60px;
     }
     h5 {
       @apply text-xl mt-6 mb-4;
+      scroll-margin: 60px;
     }
     h6 {
       @apply text-lg mt-6 mb-4;
+      scroll-margin: 60px;
     }
 
     // 코드블럭

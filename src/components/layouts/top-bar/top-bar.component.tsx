@@ -9,10 +9,12 @@ export function TopBar() {
     <>
       <header
         className={cn(
-          "h-top-bar-height box-border fixed top-0 right-0 bg-murky-color-3 z-[1] text-white px-content-area-padding py-2",
+          "h-top-bar-height box-border fixed top-0 bg-murky-color-3 z-[1] text-white px-content-area-padding py-2",
           "transition-all duration-300",
           "w-full lg:w-top-bar-width",
-          "min-w-0"
+          "min-w-0",
+
+          "right-0 lg:posts-index-open:right-posts-index-width"
         )}
       >
         <div className="w-full h-full min-w-0 relative flex items-center justify-start gap-2">

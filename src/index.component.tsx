@@ -10,6 +10,7 @@ import { Lists } from "./list/lists/lists.component";
 import { GuestBook } from "./components/guest-book/guest-book.component";
 import { LatestVersionCheck } from "./components/latest-version-check/latest-version-check.component";
 import { Tags } from "./components/tags/tags.component";
+import { PostsIndex } from "./components/layouts/posts-index/posts-index.component";
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
           <AdArea lower />
           <LatestVersionCheck />
         </ContentArea>
+        <PostsIndex />
         {/* </s_t3> */}
       </body>
     </html>

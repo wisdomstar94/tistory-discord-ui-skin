@@ -13,8 +13,12 @@
     --tds-top-bar-width: calc(100% - var(--tds-side-bar-width));
     --tds-top-bar-height: 48px;
     --tds-content-area-padding: 16px;
+    --tds-posts-index-width: 320px;
     --tds-content-area-inner-padding: calc(var(--tds-content-area-padding) + 12px);
     --tds-comment-input-form-width-with-sidebar: calc(100% - var(--tds-side-bar-width) - (var(--tds-content-area-padding) * 2));
+    --tds-comment-input-form-width-with-sidebar-with-posts-index: calc(
+      100% - var(--tds-side-bar-width) - (var(--tds-content-area-padding) * 2) - var(--tds-posts-index-width)
+    );
     --tds-comment-input-form-width: calc(100% - (var(--tds-content-area-padding) * 2));
     --tds-comment-input-form-left-with-sidebar: calc(var(--tds-side-bar-width) + var(--tds-content-area-padding));
     --tds-comment-input-form-left: var(--tds-content-area-padding);
