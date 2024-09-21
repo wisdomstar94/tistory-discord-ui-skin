@@ -1,7 +1,7 @@
 import { TistoryLogo } from "@/components/icons/tistory-logo/tistory-logo.component";
 import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
-import { Bell, NotebookPen, Plus, Search, Settings, X } from "lucide-react";
+import { Bell, NotebookPen, Plus, Search, Settings, Tags, X } from "lucide-react";
 import "./side-bar.scss";
 import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
@@ -120,6 +120,32 @@ export function SideBar() {
                           if (!pathname.startsWith('/notice')) return;
 
                           const a = document.querySelector('#side-bar-notice-a');
+                          if (a === null) return;
+
+                          a.parentElement?.parentElement?.classList.add('menu-active');
+                        })();
+                      `}
+                    />
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[small] 태그목록 버튼</tt_html_comment>
+                  <li className="group w-full flex fle-wrap relative box-border">
+                    <SmallSymbolButton
+                      id="side-bar-tag-a"
+                      href="/tag"
+                      aClassName="hover:bg-light-color-1 group-[.menu-active]:bg-light-color-1"
+                      icon={<Tags className="text-white/80" />}
+                      hoverTitle={"태그"}
+                      isHoverMinimumActive={true}
+                    />
+                    <Script
+                      html={`
+                        (function(){
+                          const pathname = location.pathname;
+                          if (!pathname.startsWith('/tag')) return;
+
+                          const a = document.querySelector('#side-bar-tag-a');
                           if (a === null) return;
 
                           a.parentElement?.parentElement?.classList.add('menu-active');
