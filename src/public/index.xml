@@ -105,7 +105,7 @@
             {"name":"list_grid_max_col_6", "label":"6", "value":"list_grid_max_col_6"}
           ]
         ]]></option>
-        <default>list_grid_max_col_5</default>
+        <default>list_grid_max_col_4</default>
       </variable>
       <variable>
         <name>list_grid_detail_detatime_display_flag</name>

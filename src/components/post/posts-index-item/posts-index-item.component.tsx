@@ -137,9 +137,12 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 "w-full",
                 "text-light-color-3 font-bold min-w-0 overflow-hidden text-ellipsis whitespace-nowrap",
                 "text-lg lg:text-xl",
-                "other-exist-[post-index-thumbnail]:pr-[92px]",
+                "list_display_type_grid:text-sm lg:list_display_type_grid:text-sm",
+
+                "list_display_type_row:other-exist-[post-index-thumbnail]:pr-[92px]",
 
                 "list_display_type_grid:order-2"
+                // "list_display_type_grid:whitespace-normal"
               )}
             >
               {`[##_${replacer_prefix}_rep_title_##]`}
@@ -185,7 +188,7 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
               className={cn(
                 "text-light-color-3/80 overflow-hidden article-rep-summary relative",
                 "min-w-0 overflow-hidden box-border",
-                "other-exist-[post-index-thumbnail]:pr-[92px]",
+                "list_display_type_row:other-exist-[post-index-thumbnail]:pr-[92px]",
                 "other-exist-[post-index-thumbnail]:hidden",
 
                 "flex-grow",
@@ -215,7 +218,7 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 "w-full",
                 "flex gap-2 items-start text-sm",
                 "mt-1 lg:mt-0",
-                "other-exist-[post-index-thumbnail]:pr-[92px]",
+                "list_display_type_row:other-exist-[post-index-thumbnail]:pr-[92px]",
 
                 "list_display_type_grid:order-5"
                 // "relative",

@@ -72,7 +72,7 @@ export function Posts() {
 
       <div
         className={cn(
-          "p-content-area-padding",
+          "px-content-area-padding",
           "hidden text-light-color-3/40",
 
           "tt-body-index:list-empty:inline-flex",

@@ -36,10 +36,14 @@ ul.tt_category {
     }
 
     ul.category_list {
-      @apply w-full flex flex-wrap relative gap-4;
+      @apply w-full flex flex-wrap relative gap-0.5;
 
       > li {
         @apply w-full flex flex-wrap relative gap-0;
+
+        &:has(.sub_category_list) {
+          @apply mb-1.5;
+        }
 
         a.link_item {
           width: calc(100% - (8px * 2));
