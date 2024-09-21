@@ -33,6 +33,34 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
         <s_tag_label>
           <div id="tag-list">[##_tag_label_rep_##]</div>
         </s_tag_label>
+        <s_ad_div>
+          <div className="w-full flex flex-wrap gap-2 relative box-border px-content-area-padding">
+            <a
+              href="[##_s_ad_m_link_##]"
+              className="inline-flex bg-light-color-2/30 text-light-color-3 text-xs cursor-pointer px-2 py-1 rounded-md"
+            >
+              글 수정
+            </a>
+            <button
+              tt-onclick="[##_s_ad_d_onclick_##]"
+              className="inline-flex bg-light-color-2/30 text-light-color-3 text-xs cursor-pointer px-2 py-1 rounded-md"
+            >
+              글 삭제
+            </button>
+            <button
+              tt-onclick="[##_s_ad_s2_onclick_##]"
+              data-status="[##_s_ad_s1_label_##]"
+              className="inline-flex data-[status=보호]:hidden bg-light-color-2/30 text-light-color-3 text-xs cursor-pointer px-2 py-1 rounded-md"
+            >
+              <span className="hidden data-[status=공개]:inline" data-status="[##_s_ad_s1_label_##]">
+                비공개로 전환
+              </span>
+              <span className="hidden data-[status=비공개]:inline" data-status="[##_s_ad_s1_label_##]">
+                공개로 전환
+              </span>
+            </button>
+          </div>
+        </s_ad_div>
         <ContentDivider
           className={cn("mt-6 mb-2")}
         >{`[##_${prefix}_rep_date_year_##]년 [##_${prefix}_rep_date_month_##]월 [##_${prefix}_rep_date_day_##]일`}</ContentDivider>

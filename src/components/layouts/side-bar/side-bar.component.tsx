@@ -1,13 +1,12 @@
 import { TistoryLogo } from "@/components/icons/tistory-logo/tistory-logo.component";
 import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
-import { Bell, NotebookPen, Plus, Search, Settings, Tags, X } from "lucide-react";
+import { Bell, NotebookPen, Plus, Settings, Tags, X } from "lucide-react";
 import "./side-bar.scss";
 import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol-button.component";
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
 import { HomeIcon } from "@/components/icons/home-icon/home-icon.component";
 import { BlogTitleBar } from "@/components/blog-title-bar/blog-title-bar.component";
-import { SearchBar } from "@/components/search-bar/search-bar.component";
 
 export function SideBar() {
   return (
