@@ -4,7 +4,7 @@
     <name>{ project_name }</name>
     <version>{ version }</version>
     <description>
-      <![CDATA[XHTML torytis 프레임워크로 개발된 tistory 스킨입니다.]]>
+      <![CDATA[XHTML torytis 프레임워크로 개발된 discord ui tistory 스킨입니다.]]>
     </description>
     <license>
       <![CDATA[자유롭게 수정이 가능하며, 저작권 표시하에 재배포 가능합니다.]]>
@@ -75,39 +75,44 @@
     <contentWidth>500</contentWidth>
   </default>
   <variables>
-    <!-- 
-        variables 내용 수정 후에 터미널에 "npm run build:variable" 명령어를 입력하시면, 
-        torytis-variable.d.ts 파일이 생성되며 variable 태그 자동완성이 지원됩니다. 
-    -->
-    <!-- example -->
-    <!-- 
-    <variablegroup name="구글애드센스">
+    <variablegroup name="리스트 표시 타입">
       <variable>
-        <name>google_adsense_script_url</name>
+        <name>list_display_type</name>
         <label>
-          <![CDATA[ 구글애드센스 script url ]]>
+          <![CDATA[ 리스트 표시 타입 ]]>
         </label>
-        <description>구글애드센스 script url을 입력하세요.</description>
-        <type>STRING</type>
-      </variable>
-    </variablegroup>
-    <variablegroup name="테마">
-      <variable>
-        <name>dark_mode_type</name>
-        <label>
-          <![CDATA[ 다크 모드 타입 ]]>
-        </label>
-        <description>다크 모드를 방문자가 컨트롤 할 수 있도록 할 것인지, 강제로 적용할 것인지에 대한 설정 값입니다.</description>
+        <description>리스트를 어떤 UI 로 보여줄 것인지에 대한 타입을 설정합니다.</description>
         <type>SELECT</type>
         <option><![CDATA[
           [
-            {"name":"darkmode_loose", "label":"방문자가 다크모드 컨트롤 가능", "value":"darkmode_loose"},
-            {"name":"darkmode_fixed", "label":"블로그를 항상 다크모드로 고정", "value":"darkmode_fixed"}
+            {"name":"list_display_type_row", "label":"행", "value":"list_display_type_row"},
+            {"name":"list_display_type_grid", "label":"그리드", "value":"list_display_type_grid"}
           ]
         ]]></option>
+        <!-- <default>list_display_type_grid</default> -->
+        <default>list_display_type_row</default>
+      </variable>
+      <variable>
+        <name>list_grid_max_col_count</name>
+        <label>
+          <![CDATA[ 그리드일 때 최대 열 표시 갯수 ]]>
+        </label>
+        <description>리스트 표시 타입이 그리드일 때 최대 열 표시 갯수를 지정합니다.</description>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"list_grid_max_col_2", "label":"2", "value":"list_grid_max_col_2"},
+            {"name":"list_grid_max_col_3", "label":"3", "value":"list_grid_max_col_3"},
+            {"name":"list_grid_max_col_4", "label":"4", "value":"list_grid_max_col_4"},
+            {"name":"list_grid_max_col_5", "label":"5", "value":"list_grid_max_col_5"},
+            {"name":"list_grid_max_col_6", "label":"6", "value":"list_grid_max_col_6"},
+            {"name":"list_grid_max_col_7", "label":"7", "value":"list_grid_max_col_7"},
+            {"name":"list_grid_max_col_8", "label":"8", "value":"list_grid_max_col_8"},
+          ]
+        ]]></option>
+        <default>list_grid_max_col_4</default>
       </variable>
     </variablegroup> 
-    -->
   </variables>
   <cover>
     <!-- example -->

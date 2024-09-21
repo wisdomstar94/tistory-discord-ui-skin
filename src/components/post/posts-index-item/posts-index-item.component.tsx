@@ -20,7 +20,17 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
 
   return (
     <>
-      <li className="w-full relative px-content-area-padding first:mt-content-area-padding">
+      <li
+        className={cn(
+          "w-full relative flex items-stretch",
+
+          "min-h-[112px]",
+
+          "first:mt-content-area-padding list_display_type_grid:first:mt-0",
+          "px-content-area-padding list_display_type_grid:px-0"
+          // "",
+        )}
+      >
         <a
           className={cn(
             "w-full flex gap-2 relative bg-murky-color-5 box-border p-4 items-start",
@@ -32,19 +42,107 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
           )}
           href="[##_article_rep_link_##]"
         >
-          <div className={cn("min-w-0", "w-full flex flex-wrap relative gap-1 items-start content-start")}>
+          <div
+            className={cn(
+              "min-w-0",
+              "w-full relative gap-1 items-start content-start box-border",
+              "flex flex-wrap"
+              // "",
+            )}
+          >
+            {/* 게시글 썸네일 사진 */}
+            <>
+              {postType === "normal" && (
+                <s_article_rep_thumbnail>
+                  {/* 3 */}
+                  <div
+                    className={cn(
+                      "other/post-index-thumbnail",
+                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+                      "absolute top-0 right-0",
+
+                      "list_display_type_grid:order-3"
+                      // "",
+                    )}
+                  >
+                    <img
+                      className="w-full h-full object-cover object-center"
+                      alt="포스트글 썸네일 이미지"
+                      src={`[##_${replacer_prefix}_rep_thumbnail_url_##]`}
+                    />
+                  </div>
+                </s_article_rep_thumbnail>
+              )}
+              {postType === "notice" && (
+                <s_notice_rep_thumbnail>
+                  {/* 3 */}
+                  <div
+                    className={cn(
+                      "other/post-index-thumbnail",
+                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+                      "absolute top-0 right-0",
+
+                      "list_display_type_grid:order-3"
+                      // "",
+                    )}
+                  >
+                    <img
+                      className="w-full h-full object-cover object-center"
+                      alt="공지사항글 썸네일 이미지"
+                      src={`[##_${replacer_prefix}_rep_thumbnail_url_##]`}
+                    />
+                  </div>
+                </s_notice_rep_thumbnail>
+              )}
+              {postType === "protected" && (
+                <>
+                  {/* 3 */}
+                  <div
+                    className={cn(
+                      "other/post-index-thumbnail",
+                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+                      "absolute top-0 right-0",
+
+                      "list_display_type_grid:order-3"
+                      // "",
+                    )}
+                  >
+                    <div className="w-full h-full flex items-center justify-center">
+                      <LockKeyhole className="text-light-color-3" />
+                    </div>
+                  </div>
+                </>
+              )}
+            </>
+
+            {/* 2 */}
             <div
               data-title="article-title"
               className={cn(
-                "w-full text-light-color-3 font-bold min-w-0 overflow-hidden text-ellipsis whitespace-nowrap",
-                "text-lg lg:text-xl"
+                "w-full",
+                "text-light-color-3 font-bold min-w-0 overflow-hidden text-ellipsis whitespace-nowrap",
+                "text-lg lg:text-xl",
+                "other-exist-[post-index-thumbnail]:pr-[92px]",
+
+                "list_display_type_grid:order-2"
               )}
             >
               {`[##_${replacer_prefix}_rep_title_##]`}
             </div>
+
+            {/* 1 */}
             <div
               data-title="article-summary"
-              className={cn("w-full flex relative items-start text-sm", "flex-col lg:flex-row", "gap-0 lg:gap-2")}
+              className={cn(
+                "w-full",
+                "flex relative items-start text-sm",
+                "flex-col lg:flex-row",
+                "gap-0 lg:gap-2",
+                "other-exist-[post-index-thumbnail]:pr-[92px]",
+
+                "list_display_type_grid:order-1"
+                // ""
+              )}
             >
               <div className={cn("flex-grow-0 flex-shrink-0", "flex flex-wrap items-center")}>
                 <span className="text-light-color-4 font-medium max-w-[80px] overflow-hidden min-w-0 text-ellipsis whitespace-nowrap">
@@ -65,7 +163,20 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 {postType === "protected" ? "보호글 입니다." : `[##_${replacer_prefix}_rep_summary_##]`}
               </div>
             </div>
-            <div data-title="article-extra-info" className={cn("w-full flex gap-2 relative items-start text-sm", "mt-1 lg:mt-0")}>
+
+            {/* 4 */}
+            <div
+              data-title="article-extra-info"
+              className={cn(
+                "w-full",
+                "flex gap-2 relative items-start text-sm",
+                "mt-1 lg:mt-0",
+                "other-exist-[post-index-thumbnail]:pr-[92px]",
+
+                "list_display_type_grid:order-4"
+                // "",
+              )}
+            >
               <ul
                 data-title="article-extra-info-list"
                 className={cn("w-full flex flex-wrap relative", "flex-col lg:flex-row", "gap-1 lg:gap-5")}
@@ -132,35 +243,6 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
               </ul>
             </div>
           </div>
-          {postType === "normal" && (
-            <s_article_rep_thumbnail>
-              <div className="w-[80px] aspect-square block flex-shrink-0 relative bg-light-color-1 rounded-xl overflow-hidden">
-                <img
-                  className="w-full h-full object-cover object-center"
-                  alt="포스트글 썸네일 이미지"
-                  src={`[##_${replacer_prefix}_rep_thumbnail_url_##]`}
-                />
-              </div>
-            </s_article_rep_thumbnail>
-          )}
-          {postType === "notice" && (
-            <s_notice_rep_thumbnail>
-              <div className="w-[80px] aspect-square block flex-shrink-0 relative bg-light-color-1 rounded-xl overflow-hidden">
-                <img
-                  className="w-full h-full object-cover object-center"
-                  alt="공지사항글 썸네일 이미지"
-                  src={`[##_${replacer_prefix}_rep_thumbnail_url_##]`}
-                />
-              </div>
-            </s_notice_rep_thumbnail>
-          )}
-          {postType === "protected" && (
-            <div className="w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden relative">
-              <div className="w-full h-full flex items-center justify-center">
-                <LockKeyhole className="text-light-color-3" />
-              </div>
-            </div>
-          )}
         </a>
       </li>
     </>

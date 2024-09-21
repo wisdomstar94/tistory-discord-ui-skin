@@ -23,6 +23,16 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("tt-body-search", ["#tt-body-search &", "#tt-body-search&"]);
   addVariant("tt-body-guestbook", ["#tt-body-guestbook &", "#tt-body-guestbook&"]);
   addVariant("tt-body-location", ["#tt-body-location &", "#tt-body-location&"]);
+
+  addVariant("list_display_type_grid", [".list_display_type_grid &", ".list_display_type_grid&"]);
+
+  addVariant("list_grid_max_col_2", [".list_grid_max_col_2 &", ".list_grid_max_col_2&"]);
+  addVariant("list_grid_max_col_3", [".list_grid_max_col_3 &", ".list_grid_max_col_3&"]);
+  addVariant("list_grid_max_col_4", [".list_grid_max_col_4 &", ".list_grid_max_col_4&"]);
+  addVariant("list_grid_max_col_5", [".list_grid_max_col_5 &", ".list_grid_max_col_5&"]);
+  addVariant("list_grid_max_col_6", [".list_grid_max_col_6 &", ".list_grid_max_col_6&"]);
+  addVariant("list_grid_max_col_7", [".list_grid_max_col_7 &", ".list_grid_max_col_7&"]);
+  addVariant("list_grid_max_col_8", [".list_grid_max_col_8 &", ".list_grid_max_col_8&"]);
 };
 
 const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {
