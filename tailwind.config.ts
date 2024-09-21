@@ -208,7 +208,8 @@ const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
         width: "4px",
       },
       "&::-webkit-scrollbar-track": {
-        "background-color": "var(--tds-light-color-2)",
+        // "background-color": "transparent",
+        "background-color": "color-mix(in hsl, var(--tds-light-color-3) 10%, transparent)",
       },
       "&::-webkit-scrollbar-thumb": {
         "background-color": "var(--tds-murky-color-1)",

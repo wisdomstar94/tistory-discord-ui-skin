@@ -1,5 +1,5 @@
 import { getCategoryPathnameInfo, getPathname } from "@/common/functions";
-import { applyOverlayScroll, getInfoByScroll, unwrap } from "@wisdomstar94/vanilla-js-util";
+import { getInfoByScroll, unwrap } from "@wisdomstar94/vanilla-js-util";
 
 window.addEventListener("load", () => {
   const sideSmallBarScrollArea = document.querySelector<HTMLElement>(".side-big-bar-scroll-area");
@@ -59,13 +59,13 @@ window.addEventListener("load", () => {
     }
   });
 
-  const applyResult = applyOverlayScroll({
-    target: sideSmallBarScrollArea,
-    width: 14,
-    padding: 4,
-    scrollEndedHideDelay: 100,
-    scrollBarClassName: "bg-murky-color-1 rounded-full",
-  });
+  // const applyResult = applyOverlayScroll({
+  //   target: sideSmallBarScrollArea,
+  //   width: 14,
+  //   padding: 4,
+  //   scrollEndedHideDelay: 100,
+  //   scrollBarClassName: "bg-murky-color-1 rounded-full",
+  // });
 });
 
 function checkActiveCategory() {
