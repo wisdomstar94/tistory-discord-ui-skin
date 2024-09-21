@@ -19,7 +19,7 @@ export function Posts() {
 
           // "list_display_type_grid:items-stretch",
           "list_display_type_grid:px-content-area-padding",
-          "pt-0 has-[li]:pt-9 tt-body-page:pt-0",
+          "pt-0 has-[li]:pt-5 tt-body-page:pt-0",
 
           "list_display_type_grid:list_grid_max_col_4:grid-cols-1",
           "xs:list_display_type_grid:list_grid_max_col_4:grid-cols-2",

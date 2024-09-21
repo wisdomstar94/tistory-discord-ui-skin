@@ -5,8 +5,8 @@ export function AdArea(props: IAdArea.Props) {
 
   return (
     <>
-      {upper === true && "[##_revenue_list_upper_##]"}
-      {lower === true && "[##_revenue_list_lower_##]"}
+      {upper === true && <div className="w-full block relative">[##_revenue_list_upper_##]</div>}
+      {lower === true && <div className="w-full block relative">[##_revenue_list_lower_##]</div>}
     </>
   );
 }
