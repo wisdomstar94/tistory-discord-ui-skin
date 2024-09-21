@@ -73,6 +73,10 @@
       border: 0;
       @apply flex gap-2 relative;
 
+      [data-tistory-react-app] {
+        @apply inline-flex;
+      }
+
       .wrap_btn {
         float: none;
 
@@ -170,6 +174,12 @@
     *[style*="background-color: #ffffff;"] {
       // @apply bg-transparent;
       background-color: transparent !important;
+    }
+
+    *[style*="color: #000000;"],
+    *[style*="color: #1f2328;"] {
+      // @apply bg-transparent;
+      color: inherit !important;
     }
 
     *[class*="filename"] {
@@ -395,6 +405,10 @@
     // 링크
     a[href] {
       @apply text-light-color-4/70 hover:text-light-color-4;
+    }
+
+    figure {
+      @apply mt-1 mb-4;
     }
   }
 }
