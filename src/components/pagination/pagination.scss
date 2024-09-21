@@ -3,7 +3,7 @@
     font-size: 0;
 
     > span {
-      @apply text-sm inline-flex px-2.5 py-1.5 text-light-color-3/60 hover:bg-murky-color-1 rounded-lg;
+      @apply text-sm inline-flex px-2 py-1.5 text-light-color-3/60 hover:bg-murky-color-1 rounded-lg;
 
       &.selected {
         @apply bg-murky-color-1;
