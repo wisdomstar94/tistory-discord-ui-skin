@@ -125,6 +125,30 @@ const leftFullAppendPlugin: PluginCreator = ({ matchUtilities }) => {
   );
 };
 
+const scrollMarginPlugin: PluginCreator = ({ matchUtilities }) => {
+  matchUtilities(
+    {
+      "scroll-margin": (value) => ({
+        "scroll-margin": `${value}`,
+      }),
+    },
+    {
+      values: {
+        "1": "4px",
+        "2": "8px",
+        "3": "12px",
+        "4": "16px",
+        "5": "20px",
+        "6": "24px",
+        "7": "28px",
+        "8": "32px",
+        "9": "36px",
+        "10": "40px",
+      },
+    }
+  );
+};
+
 const otherElementPlugin: PluginCreator = ({ matchVariant }) => {
   // addVariant('other-hover', ({ modify }))
   matchVariant("other-hover", (value, extra) => {
@@ -583,6 +607,7 @@ export default {
     customScrollbarPlugin,
     sideBarPlugin,
     customColorExtendPlugin,
+    scrollMarginPlugin,
     // cssVirtualSelectorVariantPlugin,
   ],
 } satisfies Config;
