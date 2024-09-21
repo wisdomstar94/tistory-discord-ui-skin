@@ -4,30 +4,39 @@ window.addEventListener("load", () => {
   const codes = document.querySelectorAll<HTMLElement>("#article-description pre code");
   // console.log("@codes", codes);
   codes.forEach((code) => {
+    if (code.parentElement?.nodeName.toLowerCase() !== "pre") {
+      return;
+    }
+
     // console.log(code.classList.value);
     let checkedTimeout: NodeJS.Timeout | undefined;
 
-    code.addEventListener("click", (event) => {
-      console.log("event", event);
+    const pre = code.parentElement;
+    if (pre === null) {
+      return;
+    }
+
+    pre.addEventListener("click", (event) => {
+      // console.log("event", event);
 
       if (isContain(code, event)) {
-        code.classList.add("my-checked");
+        pre.classList.add("my-checked");
 
         clearTimeout(checkedTimeout);
         checkedTimeout = setTimeout(() => {
-          code.classList.remove("my-checked");
+          pre.classList.remove("my-checked");
         }, 1300);
 
-        console.log("copy...");
+        // console.log("copy...");
         copy(code.textContent ?? "");
       }
     });
 
-    code.addEventListener("mousemove", (event) => {
+    pre.addEventListener("mousemove", (event) => {
       if (isContain(code, event)) {
-        code.classList.add("my-active");
+        pre.classList.add("my-active");
       } else {
-        code.classList.remove("my-active");
+        pre.classList.remove("my-active");
       }
     });
   });

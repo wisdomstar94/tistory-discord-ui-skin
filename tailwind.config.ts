@@ -27,13 +27,22 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("list_display_type_row", [".list_display_type_row &", ".list_display_type_row&"]);
   addVariant("list_display_type_grid", [".list_display_type_grid &", ".list_display_type_grid&"]);
 
-  addVariant("list_grid_max_col_2", [".list_grid_max_col_2 &", ".list_grid_max_col_2&"]);
-  addVariant("list_grid_max_col_3", [".list_grid_max_col_3 &", ".list_grid_max_col_3&"]);
+  // addVariant("list_grid_max_col_2", [".list_grid_max_col_2 &", ".list_grid_max_col_2&"]);
+  // addVariant("list_grid_max_col_3", [".list_grid_max_col_3 &", ".list_grid_max_col_3&"]);
   addVariant("list_grid_max_col_4", [".list_grid_max_col_4 &", ".list_grid_max_col_4&"]);
   addVariant("list_grid_max_col_5", [".list_grid_max_col_5 &", ".list_grid_max_col_5&"]);
   addVariant("list_grid_max_col_6", [".list_grid_max_col_6 &", ".list_grid_max_col_6&"]);
-  addVariant("list_grid_max_col_7", [".list_grid_max_col_7 &", ".list_grid_max_col_7&"]);
-  addVariant("list_grid_max_col_8", [".list_grid_max_col_8 &", ".list_grid_max_col_8&"]);
+  // addVariant("list_grid_max_col_7", [".list_grid_max_col_7 &", ".list_grid_max_col_7&"]);
+  // addVariant("list_grid_max_col_8", [".list_grid_max_col_8 &", ".list_grid_max_col_8&"]);
+
+  addVariant("list_grid_detail_detatime_display_flag_hidden", [
+    ".list_grid_detail_detatime_display_flag_hidden &",
+    ".list_grid_detail_detatime_display_flag_hidden&",
+  ]);
+  addVariant("list_grid_detail_detatime_display_flag_visible", [
+    ".list_grid_detail_detatime_display_flag_visible &",
+    ".list_grid_detail_detatime_display_flag_visible&",
+  ]);
 };
 
 const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {
@@ -426,6 +435,10 @@ export default {
   content: ["./src/**/*.{ts,tsx,css,scss}"],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        "3xl": "1780px",
+      },
       width: {
         "side-bar-inner-small-bar-width": "var(--tds-side-bar-inner-small-bar-width)",
         "side-bar-inner-big-bar-width": "var(--tds-side-bar-inner-big-bar-width)",

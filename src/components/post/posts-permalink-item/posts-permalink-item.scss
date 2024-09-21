@@ -208,28 +208,34 @@
       @apply bg-murky-color-1 p-1 box-border rounded-md text-light-color-3/50 relative opacity-100;
     }
 
-    pre code {
-      @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/50 mt-1 mb-3 relative opacity-100 block;
-      // visibility: visible;
-
-      &::after {
-        content: "";
-        mask-image: url("./images/copy.svg");
-        mask-repeat: no-repeat;
-        mask-position: center center;
-        mask-size: 24px 24px;
-        @apply w-[24px] h-[24px] inline-flex bg-light-color-3/50 cursor-pointer absolute top-4 right-4;
+    pre {
+      code {
+        @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/50 mt-1 mb-3 relative opacity-100 block;
+        // visibility: visible;
       }
 
-      &.my-active {
+      &:has(code) {
+        @apply block relative;
+
         &::after {
-          @apply bg-light-color-3/80;
+          content: "";
+          mask-image: url("./images/copy.svg");
+          mask-repeat: no-repeat;
+          mask-position: center center;
+          mask-size: 24px 24px;
+          @apply w-[24px] h-[24px] inline-flex bg-light-color-3/50 cursor-pointer absolute top-4 right-4;
         }
-      }
 
-      &.my-checked {
-        &::after {
-          mask-image: url("./images/copy-check.svg");
+        &.my-active {
+          &::after {
+            @apply bg-light-color-3/80;
+          }
+        }
+
+        &.my-checked {
+          &::after {
+            mask-image: url("./images/copy-check.svg");
+          }
         }
       }
     }

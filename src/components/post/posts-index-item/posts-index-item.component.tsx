@@ -33,8 +33,9 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
       >
         <a
           className={cn(
-            "w-full flex gap-2 relative bg-murky-color-5 box-border p-4 items-start",
+            "w-full flex gap-2 relative bg-murky-color-5 box-border p-4",
             "rounded-xl",
+            "items-stretch",
             "transition-all duration-300",
             "hover:-translate-y-0.5",
             "hover:shadow-murky-color-1",
@@ -45,8 +46,13 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
           <div
             className={cn(
               "min-w-0",
-              "w-full relative gap-1 items-start content-start box-border",
-              "flex flex-wrap"
+              "w-full relative content-start box-border",
+              "items-stretch",
+              "flex",
+
+              "flex-wrap list_display_type_grid:flex-nowrap",
+              "gap-1 list_display_type_grid:gap-2",
+              "list_display_type_grid:flex-col"
               // "",
             )}
           >
@@ -142,27 +148,45 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
             {/* 1 */}
             <div
               className={cn(
-                "flex-grow-0 flex-shrink-0",
-                "flex flex-wrap items-center",
+                "flex-grow-0 flex-shrink-0 box-border relative",
+                "flex items-center",
                 "text-xs lg:text-sm",
                 // "other-exist-[post-index-thumbnail]:pr-[92px]",
 
-                "max-w-[100px]"
+                "max-w-[100px] list_display_type_grid:max-w-full",
+                "list_display_type_grid:w-full",
+                "list_display_type_grid:pr-[100px]"
                 // ""
               )}
             >
-              <span className="text-light-color-4 font-medium max-w-[80px] overflow-hidden min-w-0 text-ellipsis whitespace-nowrap">
+              <span
+                className={cn(
+                  "text-light-color-4 font-medium overflow-hidden min-w-0 text-ellipsis whitespace-nowrap",
+                  "list_display_type_grid:w-full"
+                  //
+                )}
+              >
                 {`[##_${replacer_prefix}_rep_author_##]`}
               </span>
-              <span className={cn("text-light-color-3 font-medium", "hidden lg:inline-block")}>:</span>
+              <span
+                className={cn(
+                  "text-light-color-3 font-medium",
+                  "hidden lg:inline-block",
+                  "list_display_type_grid:hidden"
+                  // ""
+                )}
+              >
+                :
+              </span>
             </div>
 
-            {/* 5 */}
+            {/* 4 */}
             <div
               className={cn(
-                "text-light-color-3/80 whitespace-nowrap overflow-hidden article-rep-summary relative",
-                "min-w-0",
+                "text-light-color-3/80 overflow-hidden article-rep-summary relative",
+                "min-w-0 overflow-hidden box-border",
                 "other-exist-[post-index-thumbnail]:pr-[92px]",
+                "other-exist-[post-index-thumbnail]:hidden",
 
                 "flex-grow",
                 "flex-1",
@@ -171,13 +195,20 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 // "flex-grow flex-shrink",
                 "text-xs lg:text-sm",
 
-                "list_display_type_grid:order-5"
+                "whitespace-nowrap list_display_type_grid:whitespace-normal",
+                // "list_display_type_grid:aspect-square",
+                "list_display_type_grid:order-4",
+                "list_display_type_grid:p-2",
+                "list_display_type_grid:max-h-[240px]",
+                "list_display_type_grid:rounded-lg",
+                "list_display_type_grid:bg-murky-color-1/20",
+                "list_display_type_grid:border list_display_type_grid:border-light-color-2/30"
               )}
             >
               {postType === "protected" ? "보호글 입니다." : `[##_${replacer_prefix}_rep_summary_##]`}
             </div>
 
-            {/* 4 */}
+            {/* 5 */}
             <div
               data-title="article-extra-info"
               className={cn(
@@ -186,7 +217,7 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 "mt-1 lg:mt-0",
                 "other-exist-[post-index-thumbnail]:pr-[92px]",
 
-                "list_display_type_grid:order-4"
+                "list_display_type_grid:order-5"
                 // "relative",
               )}
             >
@@ -241,25 +272,40 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                   className={cn(
                     "inline-flex gap-2 text-light-color-3/50",
                     "items-start lg:items-center",
-                    "text-xs lg:text-sm",
+                    "text-xs lg:text-sm"
 
-                    "list_display_type_grid:absolute",
-                    "list_display_type_grid:top-0 list_display_type_grid:right-0"
                     // "relative"
                   )}
                 >
                   {/* <div>{">"}</div> */}
-                  <div className={cn("inline-flex relative", "flex-col lg:flex-row", "gap-0 lg:gap-2")}>
+                  <div className={cn("inline-flex", "flex-col lg:flex-row", "gap-0 lg:gap-2")}>
                     <span
                       className={cn(
-                        "list_display_type_grid:hidden"
+                        "box-border whitespace-nowrap",
+                        "inline-flex items-center justify-center",
+
+                        "list_display_type_grid:list_grid_detail_detatime_display_flag_hidden:hidden",
+                        "list_display_type_grid:rounded-lg",
+                        "list_display_type_grid:bg-murky-color-1/60",
+                        "list_display_type_grid:absolute",
+                        "list_display_type_grid:px-2 list_display_type_grid:py-1",
+                        "list_display_type_grid:top-[-32px]",
+                        "list_display_type_grid:left-[calc(50%-75px)]",
+                        "list_display_type_grid:max-w-[150px]"
+                        // "list_display_type_grid:hidden"
                         // ""
                       )}
                     >
                       {`[##_${replacer_prefix}_rep_date_year_##]-[##_${replacer_prefix}_rep_date_month_##]-[##_${replacer_prefix}_rep_date_day_##]`}{" "}
                       {`[##_${replacer_prefix}_rep_date_hour_##]:[##_${replacer_prefix}_rep_date_minute_##]:[##_${replacer_prefix}_rep_date_second_##]`}
                     </span>
-                    <span>
+                    <span
+                      className={cn(
+                        "list_display_type_grid:absolute",
+                        "list_display_type_grid:top-0 list_display_type_grid:right-0"
+                        // "",
+                      )}
+                    >
                       <Script
                         html={`
                           {

@@ -9,23 +9,37 @@ export function Posts() {
       <ul
         data-title="article-list"
         className={cn(
-          "w-full flex-wrap relative list-empty:hidden",
+          "w-full flex-wrap relative list-empty:hidden box-border",
           Var["[##_var_list_display_type_##]"],
           Var["[##_var_list_grid_max_col_count_##]"],
+          Var["[##_var_list_grid_detail_detatime_display_flag_##]"],
           // ""
           "flex list_display_type_grid:grid",
-          "gap-2 list_display_type_grid:gap-4",
+          "gap-6 xs:list_display_type_grid:gap-4",
 
           // "list_display_type_grid:items-stretch",
-          "list_display_type_grid:p-content-area-padding",
+          "list_display_type_grid:px-content-area-padding",
+          "pt-10 tt-body-page:pt-content-area-padding tt-body-tag:pt-0 tt-body-guestbook:pt-0",
 
-          "list_display_type_grid:list_grid_max_col_2:grid-cols-2",
-          "list_display_type_grid:list_grid_max_col_3:grid-cols-3",
-          "list_display_type_grid:list_grid_max_col_4:grid-cols-4",
-          "list_display_type_grid:list_grid_max_col_5:grid-cols-5",
-          "list_display_type_grid:list_grid_max_col_6:grid-cols-6",
-          "list_display_type_grid:list_grid_max_col_7:grid-cols-7",
-          "list_display_type_grid:list_grid_max_col_8:grid-cols-8"
+          "list_display_type_grid:list_grid_max_col_4:grid-cols-1",
+          "xs:list_display_type_grid:list_grid_max_col_4:grid-cols-2",
+          "md:list_display_type_grid:list_grid_max_col_4:grid-cols-3",
+          "xl:list_display_type_grid:list_grid_max_col_4:grid-cols-4",
+
+          "list_display_type_grid:list_grid_max_col_5:grid-cols-1",
+          "xs:list_display_type_grid:list_grid_max_col_5:grid-cols-2",
+          "md:list_display_type_grid:list_grid_max_col_5:grid-cols-3",
+          "xl:list_display_type_grid:list_grid_max_col_5:grid-cols-4",
+          "2xl:list_display_type_grid:list_grid_max_col_5:grid-cols-5",
+
+          "list_display_type_grid:list_grid_max_col_6:grid-cols-1",
+          "xs:list_display_type_grid:list_grid_max_col_6:grid-cols-2",
+          "md:list_display_type_grid:list_grid_max_col_6:grid-cols-3",
+          "xl:list_display_type_grid:list_grid_max_col_6:grid-cols-4",
+          "2xl:list_display_type_grid:list_grid_max_col_6:grid-cols-5",
+          "3xl:list_display_type_grid:list_grid_max_col_6:grid-cols-6",
+
+          "tt-body-page:grid-cols-1"
         )}
       >
         <s_article_rep>

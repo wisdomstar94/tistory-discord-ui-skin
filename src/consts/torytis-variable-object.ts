@@ -5,4 +5,5 @@
 export const Var = {
 	"[##_var_list_display_type_##]": "[##_var_list_display_type_##]",
 	"[##_var_list_grid_max_col_count_##]": "[##_var_list_grid_max_col_count_##]",
+	"[##_var_list_grid_detail_detatime_display_flag_##]": "[##_var_list_grid_detail_detatime_display_flag_##]",
 };
