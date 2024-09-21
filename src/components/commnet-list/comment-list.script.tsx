@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
   // if (rpListContainer === null) return;
 
   const commentListDiv = document.querySelector<HTMLElement>(`#tt-body-page [data-tistory-react-app="Namecard"]`);
-  console.log("@commentListDiv", commentListDiv);
+  // console.log("@commentListDiv", commentListDiv);
   if (commentListDiv === null) {
     return;
   }
