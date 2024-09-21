@@ -1,6 +1,6 @@
 #tt-body-page {
   .another_category {
-    @apply w-full border-0 m-0 p-0 relative box-border;
+    @apply border-0 m-0 p-0 relative box-border -ml-4 w-full-append-8;
 
     h4 {
       @apply w-full min-w-0 flex overflow-hidden whitespace-nowrap font-normal items-center text-light-color-3/50;
@@ -39,7 +39,7 @@
         @apply w-full flex flex-wrap gap-2 relative;
 
         tr {
-          @apply w-full flex flex-wrap gap-1 relative box-border rounded-lg bg-transparent p-3 cursor-pointer transition-all duration-300;
+          @apply w-full flex flex-wrap gap-1 relative box-border rounded-lg bg-transparent p-3 px-content-area-padding cursor-pointer transition-all duration-300;
 
           &:hover {
             @apply -translate-y-0.5 shadow-murky-color-1 shadow-[0px_2px_12px];

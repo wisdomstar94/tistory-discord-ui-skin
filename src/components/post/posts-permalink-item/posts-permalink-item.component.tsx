@@ -30,6 +30,9 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
         <div className={cn("w-full flex flex-wrap relative box-border", "text-light-color-3/90 text-3xl", "px-content-area-padding")}>
           {`[##_${prefix}_rep_title_##]`}
         </div>
+        <s_tag_label>
+          <div id="tag-list">[##_tag_label_rep_##]</div>
+        </s_tag_label>
         <ContentDivider
           className={cn("mt-6 mb-2")}
         >{`[##_${prefix}_rep_date_year_##]년 [##_${prefix}_rep_date_month_##]월 [##_${prefix}_rep_date_day_##]일`}</ContentDivider>

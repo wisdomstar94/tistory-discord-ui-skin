@@ -78,6 +78,28 @@ const leftFullAppendPlugin: PluginCreator = ({ matchUtilities }) => {
       },
     }
   );
+
+  matchUtilities(
+    {
+      "w-full-append": (value) => ({
+        width: `calc(100% + ${value})`,
+      }),
+    },
+    {
+      values: {
+        "1": "4px",
+        "2": "8px",
+        "3": "12px",
+        "4": "16px",
+        "5": "20px",
+        "6": "24px",
+        "7": "28px",
+        "8": "32px",
+        "9": "36px",
+        "10": "40px",
+      },
+    }
+  );
 };
 
 const otherElementPlugin: PluginCreator = ({ matchVariant }) => {
@@ -408,6 +430,7 @@ export default {
         "side-bar-width": "var(--tds-side-bar-width)",
         "top-bar-height": "var(--tds-top-bar-height)",
         "content-area-padding": "var(--tds-content-area-padding)",
+        "content-area-inner-padding": "var(--tds-content-area-inner-padding)",
         "content-area-padding-with-side-bar-width": "calc(var(--tds-side-bar-width) + var(--tds-content-area-padding))",
         "content-area-padding-with-top-bar-height": "calc(var(--tds-top-bar-height) + var(--tds-content-area-padding))",
       },

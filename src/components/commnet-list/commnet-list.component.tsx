@@ -27,7 +27,13 @@ export function CommentList(props: ICommnetList.Props) {
         <ul data-title="rp-list" className="w-full flex flex-wrap box-border relative gap-2 other/rp-list">
           <RepComp>
             <li data-title="rp-item" id={`[##_${prefix}_rep_id_##]`} className={cn("w-full flex flex-wrap gap-2 relative box-border")}>
-              <div className="w-full flex relative box-border px-content-area-padding py-1 items-start gap-4 hover:bg-murky-color-1/70">
+              <div
+                className={cn(
+                  "w-full flex relative box-border py-1 items-start gap-4 hover:bg-murky-color-1/70",
+                  // "px-content-area-inner-padding"
+                  "px-content-area-padding"
+                )}
+              >
                 <div className="w-[42px] aspect-square block flex-grow-0 flex-shrink-0 relative rounded-full overflow-hidden">
                   <img
                     data-title="rp-profile-image"

@@ -13,6 +13,7 @@
     --tds-top-bar-width: calc(100% - var(--tds-side-bar-width));
     --tds-top-bar-height: 48px;
     --tds-content-area-padding: 16px;
+    --tds-content-area-inner-padding: calc(var(--tds-content-area-padding) + 12px);
     --tds-comment-input-form-width-with-sidebar: calc(100% - var(--tds-side-bar-width) - (var(--tds-content-area-padding) * 2));
     --tds-comment-input-form-width: calc(100% - (var(--tds-content-area-padding) * 2));
     --tds-comment-input-form-left-with-sidebar: calc(var(--tds-side-bar-width) + var(--tds-content-area-padding));
@@ -46,4 +47,18 @@
 
 [data-tistory-react-app] {
   @apply hidden;
+}
+
+#tag-list {
+  font-size: 0;
+  @apply w-full flex flex-wrap gap-1 relative box-border px-content-area-padding;
+
+  a {
+    @apply inline-flex items-center relative px-2 py-1 text-xs bg-murky-color-1 rounded-md text-light-color-3/60 whitespace-nowrap min-w-0 overflow-hidden overflow-ellipsis;
+
+    &::before {
+      content: "#";
+      @apply inline-flex flex-shrink-0 flex-grow-0;
+    }
+  }
 }
