@@ -30,7 +30,11 @@ export default function App() {
         id="[##_body_id_##]"
         data-skin-name="tistory-discord-ui-skin"
         data-skin-version={version}
-        className={cn("bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20", Var["[##_var_posts_index_default_display_##]"])}
+        className={cn(
+          "bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20",
+          Var["[##_var_posts_index_default_display_##]"],
+          "scrollbar-murky"
+        )}
       >
         {/* <s_t3> */}
         <SideBar />

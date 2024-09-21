@@ -202,6 +202,18 @@ const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
         width: "0px",
       },
     },
+
+    ".scrollbar-murky": {
+      "&::-webkit-scrollbar": {
+        width: "4px",
+      },
+      "&::-webkit-scrollbar-track": {
+        "background-color": "var(--tds-light-color-2)",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        "background-color": "var(--tds-murky-color-1)",
+      },
+    },
   });
 };
 
