@@ -10,7 +10,9 @@ export function TopBar() {
       <header
         className={cn(
           "h-top-bar-height box-border fixed top-0 bg-murky-color-3 z-[1] text-white px-content-area-padding py-2",
-          "transition-all duration-300",
+          "transition-all",
+
+          "duration-300 posts_index_default_display_show:duration-0",
           "w-full lg:w-top-bar-width",
           "min-w-0",
 

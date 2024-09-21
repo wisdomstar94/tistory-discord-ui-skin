@@ -7,7 +7,8 @@ export function ContentArea(props: { children: ReactNode }) {
       <main
         className={cn(
           "block relative",
-          "transition-all duration-300",
+          "transition-all",
+          "duration-300 posts_index_default_display_show:duration-0",
           "pt-top-bar-height",
           "pl-0 lg:pl-side-bar-width",
           "pb-[112px]",

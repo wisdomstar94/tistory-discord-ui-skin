@@ -11,6 +11,8 @@ import { GuestBook } from "./components/guest-book/guest-book.component";
 import { LatestVersionCheck } from "./components/latest-version-check/latest-version-check.component";
 import { Tags } from "./components/tags/tags.component";
 import { PostsIndex } from "./components/layouts/posts-index/posts-index.component";
+import { cn } from "./utils/cn";
+import { Var } from "./consts/torytis-variable-object";
 
 export default function App() {
   return (
@@ -28,7 +30,7 @@ export default function App() {
         id="[##_body_id_##]"
         data-skin-name="tistory-discord-ui-skin"
         data-skin-version={version}
-        className="bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20"
+        className={cn("bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20", Var["[##_var_posts_index_default_display_##]"])}
       >
         {/* <s_t3> */}
         <SideBar />

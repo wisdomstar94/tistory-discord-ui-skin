@@ -1,3 +1,4 @@
+import { Script } from "@/components/script/script.component";
 import { cn } from "@/utils/cn";
 import { Dot, IndentDecrease, IndentIncrease, X } from "lucide-react";
 
@@ -6,10 +7,11 @@ export function PostsIndex() {
     <>
       <section
         className={cn(
-          "w-posts-index-width h-full gap-2 fixed top-0 text-light-color-3/70 z-[1] transition-all duration-300 box-border",
+          "w-posts-index-width h-full gap-2 fixed top-0 text-light-color-3/70 z-[1] transition-all box-border",
           // "",
+          "duration-300 posts_index_default_display_show:duration-0",
           "bg-murky-color-3",
-          "flex flex-col gap-2 items-stretch min-h-0 min-w-0",
+          "flex-col gap-2 items-stretch min-h-0 min-w-0",
           "-right-posts-index-width posts-index-open:right-0 posts-index-close:-right-posts-index-width",
           "border-l-[10px] border-l-murky-color-1",
           "hidden tt-body-page:flex"
@@ -72,6 +74,11 @@ export function PostsIndex() {
           </ul>
         </div>
       </section>
+      <Script
+        html={`
+          checkDefaultDisplay();
+        `}
+      />
     </>
   );
 }

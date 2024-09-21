@@ -35,6 +35,9 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   // addVariant("list_grid_max_col_7", [".list_grid_max_col_7 &", ".list_grid_max_col_7&"]);
   // addVariant("list_grid_max_col_8", [".list_grid_max_col_8 &", ".list_grid_max_col_8&"]);
 
+  addVariant("posts_index_default_display_show", [".posts_index_default_display_show &", ".posts_index_default_display_show&"]);
+  addVariant("posts_index_default_display_hide", [".posts_index_default_display_hide &", ".posts_index_default_display_hide&"]);
+
   addVariant("list_grid_detail_detatime_display_flag_hidden", [
     ".list_grid_detail_detatime_display_flag_hidden &",
     ".list_grid_detail_detatime_display_flag_hidden&",

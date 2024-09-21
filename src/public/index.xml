@@ -90,7 +90,6 @@
           ]
         ]]></option>
         <default>list_display_type_grid</default>
-        <!-- <default>list_display_type_row</default> -->
       </variable>
       <variable>
         <name>list_grid_max_col_count</name>
@@ -118,26 +117,28 @@
         <option><![CDATA[
           [
             {"name":"list_grid_detail_detatime_display_flag_hidden", "label":"숨김", "value":"list_grid_detail_detatime_display_flag_hidden"},
-            {"name":"list_grid_detail_detatime_display_flag_visible", "label":"표시", "value":"list_grid_detail_detatime_display_flag_visible"},
+            {"name":"list_grid_detail_detatime_display_flag_visible", "label":"표시", "value":"list_grid_detail_detatime_display_flag_visible"}
           ]
         ]]></option>
         <default>list_grid_detail_detatime_display_flag_hidden</default>
       </variable>
     </variablegroup> 
+    <variablegroup name="목차 설정">
+      <variable>
+        <name>posts_index_default_display</name>
+        <label>
+          <![CDATA[ 목차 닫힘/열림 디폴트 값 ]]>
+        </label>
+        <description>글 상세페이지에 접근했을 때 목차를 닫힌 상태로 표시할건지 열린 상태로 표시할 것인지 여부입니다.</description>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"posts_index_default_display_show", "label":"열린 상태", "value":"posts_index_default_display_show"},
+            {"name":"posts_index_default_display_hide", "label":"닫힌 상태", "value":"posts_index_default_display_hide"}
+          ]
+        ]]></option>
+        <default>posts_index_default_display_hide</default>
+      </variable>
+    </variablegroup>
   </variables>
-  <cover>
-    <!-- example -->
-    <!-- 
-    <item>
-      <name>list</name>
-      <label><![CDATA[리스트]]></label>
-      <description><![CDATA[글 리스트를 표시합니다.]]></description>
-    </item>
-    <item>
-      <name>list_half</name>
-      <label><![CDATA[리스트(절반크기)]]></label>
-      <description><![CDATA[글 리스트를 표시합니다.]]></description>
-    </item> 
-    -->
-  </cover>
 </skin>
