@@ -192,7 +192,7 @@ export function SideBar() {
 
         {/* big bar */}
         <div className={cn("w-side-bar-inner-big-bar-width", "w-full h-full flex flex-wrap gap-2 relative", "bg-murky-color-2")}>
-          <div className={cn("side-big-bar-scroll-area", "w-full h-full overflow-y-auto scrollbar-murky block relative")}>
+          <div className={cn("side-big-bar-scroll-area", "w-full h-full overflow-y-auto scrollbar-murky block relative pb-6")}>
             <div className={cn("blog-title-bar-float-container", "w-full block h-[48px] top-0 left-0 sticky z-[2]")}>
               <div className="background w-full h-full bg-murky-color-2 absolute top-0 left-0 opacity-0"></div>
               <BlogTitleBar />
