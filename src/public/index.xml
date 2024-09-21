@@ -127,7 +127,7 @@
       <variable>
         <name>posts_index_default_display</name>
         <label>
-          <![CDATA[ 목차 닫힘/열림 디폴트 값 ]]>
+          <![CDATA[ 목차 닫힘/열림 디폴트 값(단, 모바일 UI 일 경우엔 무조건 디폴트 닫힘으로 처리) ]]>
         </label>
         <description>글 상세페이지에 접근했을 때 목차를 닫힌 상태로 표시할건지 열린 상태로 표시할 것인지 여부입니다.</description>
         <type>SELECT</type>

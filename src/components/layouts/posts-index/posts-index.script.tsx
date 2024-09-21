@@ -74,7 +74,10 @@ function initPostsIndex() {
 function checkDefaultDisplay() {
   if (document.body.id === "tt-body-page") {
     if (document.body.classList.contains("posts_index_default_display_show")) {
-      document.body.classList.add("posts-index-open");
+      const windowWidth = window.innerWidth;
+      if (windowWidth >= 1024) {
+        document.body.classList.add("posts-index-open");
+      }
       setTimeout(() => {
         document.body.classList.remove("posts_index_default_display_show");
       }, 300);
