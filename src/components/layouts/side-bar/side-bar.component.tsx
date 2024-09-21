@@ -7,6 +7,7 @@ import { SmallSymbolButton } from "@/components/small-symbol-button/small-symbol
 import { SmallSideBarDivider } from "@/components/small-side-bar-divider/small-side-bar-divider.component";
 import { HomeIcon } from "@/components/icons/home-icon/home-icon.component";
 import { BlogTitleBar } from "@/components/blog-title-bar/blog-title-bar.component";
+import { ContentDivider } from "@/components/content-divider/content-divider.component";
 
 export function SideBar() {
   return (
@@ -234,6 +235,88 @@ export function SideBar() {
                   <tt_html_comment>[big] 글 카테고리 메뉴 영역</tt_html_comment>
                   <li className="w-full flex flex-wrap relative">
                     <div className="w-full block relative text-sm text-light-color-2">[##_category_list_##]</div>
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 구분 선 (divider)</tt_html_comment>
+                  <li className="w-full relative px-2">
+                    <div className={cn("w-full h-[1px] block bg-light-color-3/10")} />
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 방문자 수</tt_html_comment>
+                  <li className="w-full relative px-2 flex flex-wrap gap-1.5 text-light-color-3/50">
+                    <div className="text-sm w-full box-border px-2">방문자 수</div>
+                    <ul className="w-full flex flex-wrap gap-1 relative box-border p-2 rounded-md bg-murky-color-7 text-xs">
+                      <li className="w-full flex gap-2 relative min-w-0">
+                        <div className="font-bold flex-shrink-0 flex-grow-0">전체:</div>
+                        <div>[##_count_total_##]</div>
+                      </li>
+                      <li className="w-full flex gap-2 relative min-w-0">
+                        <div className="font-bold flex-shrink-0 flex-grow-0">오늘:</div>
+                        <div>[##_count_today_##]</div>
+                      </li>
+                      <li className="w-full flex gap-2 relative min-w-0">
+                        <div className="font-bold flex-shrink-0 flex-grow-0">어제:</div>
+                        <div>[##_count_yesterday_##]</div>
+                      </li>
+                    </ul>
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 구분 선 (divider)</tt_html_comment>
+                  <li className="w-full relative px-2">
+                    <div className={cn("w-full h-[1px] block bg-light-color-3/10")} />
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 최근 댓글</tt_html_comment>
+                  <li className="w-full relative px-2 flex flex-wrap gap-1.5 text-light-color-3/50">
+                    <div className="text-sm w-full box-border px-2">최근 댓글</div>
+                    <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs">
+                      <s_rctrp_rep>
+                        <li className="w-full flex flex-wrap gap-1 relative min-w-0 text-xs">
+                          <a
+                            href="[##_rctrp_rep_link_##]"
+                            className="p-2 rounded-md bg-murky-color-7 hover:bg-murky-color-1 cursor-pointer w-full flex flex-wrap gap-1 relative min-w-0"
+                          >
+                            <div className="w-full flex gap-2 relative min-w-0 items-center">
+                              <div className="inline-flex whitespace-nowrap overflow-hidden min-w-0 overflow-ellipsis">
+                                [##_rctrp_rep_name_##]
+                              </div>
+                              <div className="inline-flex flex-grow-0 flex-shrink-0 whitespace-nowrap">[##_rctrp_rep_time_##]</div>
+                            </div>
+                            <div className="w-full">[##_rctrp_rep_desc_##]</div>
+                          </a>
+                        </li>
+                      </s_rctrp_rep>
+                    </ul>
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 구분 선 (divider)</tt_html_comment>
+                  <li className="w-full relative px-2">
+                    <div className={cn("w-full h-[1px] block bg-light-color-3/10")} />
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[big] 최근 공지</tt_html_comment>
+                  <li className="w-full relative px-2 flex flex-wrap gap-1.5 text-light-color-3/50">
+                    <s_rct_notice>
+                      <div className="text-sm w-full box-border px-2">최근 공지</div>
+                      <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs">
+                        <s_rct_notice_rep>
+                          <li className="w-full flex flex-wrap gap-1 relative min-w-0 text-xs">
+                            <a
+                              href="[##_notice_rep_link_##]"
+                              className="p-2 rounded-md bg-murky-color-7 hover:bg-murky-color-1 cursor-pointer w-full flex flex-wrap gap-1 relative min-w-0"
+                            >
+                              <div className="w-full">[##_notice_rep_title_##]</div>
+                            </a>
+                          </li>
+                        </s_rct_notice_rep>
+                      </ul>
+                    </s_rct_notice>
                   </li>
                 </s_sidebar_element>
               </s_sidebar>
