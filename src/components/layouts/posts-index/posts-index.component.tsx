@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { Dot, IndentDecrease, IndentIncrease } from "lucide-react";
+import { Dot, IndentDecrease, IndentIncrease, X } from "lucide-react";
 
 export function PostsIndex() {
   return (
@@ -8,6 +8,7 @@ export function PostsIndex() {
         className={cn(
           "w-posts-index-width h-full gap-2 fixed top-0 text-light-color-3/70 z-[1] transition-all duration-300 box-border",
           // "",
+          "bg-murky-color-3",
           "flex flex-col gap-2 items-stretch min-h-0 min-w-0",
           "-right-posts-index-width posts-index-open:right-0 posts-index-close:-right-posts-index-width",
           "border-l-[10px] border-l-murky-color-1",
@@ -15,15 +16,21 @@ export function PostsIndex() {
         )}
       >
         {/* handler */}
-        <div className="w-12 h-10 absolute top-16 -left-12 cursor-pointer pr-2 box-border" tt-onclick="postsIndexToggleButtonClick()">
-          <button className="w-full h-full flex items-center justify-center bg-murky-color-1 hover:bg-murky-color-6">
+        <div
+          className="w-14 h-10 absolute top-16 -left-14 cursor-pointer bg-murky-color-1 pr-4 hover:bg-murky-color-6 box-border"
+          tt-onclick="postsIndexToggleButtonClick()"
+        >
+          <button className="w-full h-full flex items-center justify-center">
             <IndentDecrease className="flex text-light-color-3/60 posts-index-open:hidden" />
             <IndentIncrease className="hidden text-light-color-3/60 posts-index-open:flex" />
           </button>
         </div>
 
-        <div className="w-full text-xl text-light-color-3/70 box-border p-4 border-b border-b-murky-color-1 flex-shrink-0 flex-grow-0">
+        <div className="w-full flex items-center text-lg text-light-color-3/70 box-border h-top-bar-height px-4 border-b border-b-murky-color-1 flex-shrink-0 flex-grow-0">
           목차
+          <button className="inline-flex absolute top-2.5 right-4" tt-onclick="postsIndexToggleButtonClick()">
+            <X className="text-light-color-3/50 cursor-pointer" />
+          </button>
         </div>
 
         <div className="w-full overflow-y-auto scrollbar-hidden min-h-0 min-w-0">

@@ -22,7 +22,7 @@ function initPostsIndex() {
   }
 
   const articleDescriptionDiv = unwrap(
-    document.querySelector<HTMLElement>(`#article-description`),
+    document.querySelector<HTMLElement>(`#article-description > div:first-child`),
     "#article-description 요소가 없습니다."
   );
 
