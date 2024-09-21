@@ -3,6 +3,13 @@ ul.tt_category {
   display: block;
   position: relative;
 
+  img[alt="N"] {
+    padding: 0 !important;
+    width: 12px !important;
+    height: 12px !important;
+    @apply flex-shrink-0 flex-grow-0;
+  }
+
   > li {
     width: 100%;
     display: block;
@@ -62,6 +69,10 @@ ul.tt_category {
 
           .c_cnt {
             @apply inline-flex flex-grow-0 flex-shrink-0;
+          }
+
+          > img[alt="N"] {
+            margin-top: 4px;
           }
         }
 
