@@ -155,18 +155,6 @@ export function SideBar() {
                   </li>
                 </s_sidebar_element>
                 <s_sidebar_element>
-                  <tt_html_comment>[small] 글 작성 페이지 버튼</tt_html_comment>
-                  <li className="group w-full flex fle-wrap relative box-border">
-                    <SmallSymbolButton
-                      id="side-bar-manage-post-a"
-                      href="/manage/post"
-                      aClassName="hover:bg-murky-color-4 group-[.menu-active]:bg-murky-color-4"
-                      icon={<Plus className="text-murky-color-4 group-hover/side-item-a:text-white/80 transition-all" />}
-                      hoverTitle={"글 작성"}
-                    />
-                  </li>
-                </s_sidebar_element>
-                <s_sidebar_element>
                   <tt_html_comment>[small] 구분 선 (divider)</tt_html_comment>
                   <li className="w-full block relative box-border">
                     <SmallSideBarDivider />
@@ -182,6 +170,18 @@ export function SideBar() {
                       icon={<Settings className="text-murky-color-4 group-hover/side-item-a:text-white/80 transition-all" />}
                       hoverTitle={"블로그 관리"}
                       isHoverMinimumActive={true}
+                    />
+                  </li>
+                </s_sidebar_element>
+                <s_sidebar_element>
+                  <tt_html_comment>[small] 글 작성 페이지 버튼</tt_html_comment>
+                  <li className="group w-full flex fle-wrap relative box-border">
+                    <SmallSymbolButton
+                      id="side-bar-manage-post-a"
+                      href="/manage/post"
+                      aClassName="hover:bg-murky-color-4 group-[.menu-active]:bg-murky-color-4"
+                      icon={<Plus className="text-murky-color-4 group-hover/side-item-a:text-white/80 transition-all" />}
+                      hoverTitle={"글 작성"}
                     />
                   </li>
                 </s_sidebar_element>
