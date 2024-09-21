@@ -15,11 +15,11 @@ export function Posts() {
           Var["[##_var_list_grid_detail_detatime_display_flag_##]"],
           // ""
           "flex list_display_type_grid:grid",
-          "gap-6 xs:list_display_type_grid:gap-4",
+          "gap-6 xs:list_display_type_grid:gap-4 list_display_type_row:gap-2",
 
           // "list_display_type_grid:items-stretch",
           "list_display_type_grid:px-content-area-padding",
-          "pt-0 has-[li]:pt-5 tt-body-page:pt-0",
+          "pt-0 has-[li]:pt-5 tt-body-page:pt-0 list_display_type_row:pt-2",
 
           "list_display_type_grid:list_grid_max_col_4:grid-cols-1",
           "xs:list_display_type_grid:list_grid_max_col_4:grid-cols-2",
