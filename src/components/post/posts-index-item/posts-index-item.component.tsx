@@ -58,8 +58,11 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                   <div
                     className={cn(
                       "other/post-index-thumbnail",
-                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
-                      "absolute top-0 right-0",
+                      "aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+
+                      "w-full list_display_type_row:w-[80px]",
+                      "relative list_display_type_row:absolute",
+                      "list_display_type_row:top-0 list_display_type_row:right-0",
 
                       "list_display_type_grid:order-3"
                       // "",
@@ -79,8 +82,11 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                   <div
                     className={cn(
                       "other/post-index-thumbnail",
-                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
-                      "absolute top-0 right-0",
+                      "aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+
+                      "w-full list_display_type_row:w-[80px]",
+                      "relative list_display_type_row:absolute",
+                      "list_display_type_row:top-0 list_display_type_row:right-0",
 
                       "list_display_type_grid:order-3"
                       // "",
@@ -100,8 +106,11 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                   <div
                     className={cn(
                       "other/post-index-thumbnail",
-                      "w-[80px] aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
-                      "absolute top-0 right-0",
+                      "aspect-square block flex-shrink-0 bg-light-color-1 rounded-xl overflow-hidden",
+
+                      "w-full list_display_type_row:w-[80px]",
+                      "relative list_display_type_row:absolute",
+                      "list_display_type_row:top-0 list_display_type_row:right-0",
 
                       "list_display_type_grid:order-3"
                       // "",
@@ -132,36 +141,40 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
 
             {/* 1 */}
             <div
-              data-title="article-summary"
               className={cn(
-                "w-full",
-                "flex relative items-start text-sm",
-                "flex-col lg:flex-row",
-                "gap-0 lg:gap-2",
-                "other-exist-[post-index-thumbnail]:pr-[92px]",
+                "flex-grow-0 flex-shrink-0",
+                "flex flex-wrap items-center",
+                "text-xs lg:text-sm",
+                // "other-exist-[post-index-thumbnail]:pr-[92px]",
 
-                "list_display_type_grid:order-1"
+                "max-w-[100px]"
                 // ""
               )}
             >
-              <div className={cn("flex-grow-0 flex-shrink-0", "flex flex-wrap items-center")}>
-                <span className="text-light-color-4 font-medium max-w-[80px] overflow-hidden min-w-0 text-ellipsis whitespace-nowrap">
-                  {`[##_${replacer_prefix}_rep_author_##]`}
-                </span>
-                <span className={cn("text-light-color-3 font-medium", "hidden lg:inline-block")}>:</span>
-              </div>
-              <div
-                className={cn(
-                  "text-light-color-3/80 whitespace-nowrap overflow-hidden article-rep-summary relative",
-                  "min-w-0",
-                  "w-full lg:w-auto",
-                  "overflow-ellipsis",
-                  "flex-grow flex-shrink",
-                  "text-xs lg:text-sm"
-                )}
-              >
-                {postType === "protected" ? "보호글 입니다." : `[##_${replacer_prefix}_rep_summary_##]`}
-              </div>
+              <span className="text-light-color-4 font-medium max-w-[80px] overflow-hidden min-w-0 text-ellipsis whitespace-nowrap">
+                {`[##_${replacer_prefix}_rep_author_##]`}
+              </span>
+              <span className={cn("text-light-color-3 font-medium", "hidden lg:inline-block")}>:</span>
+            </div>
+
+            {/* 5 */}
+            <div
+              className={cn(
+                "text-light-color-3/80 whitespace-nowrap overflow-hidden article-rep-summary relative",
+                "min-w-0",
+                "other-exist-[post-index-thumbnail]:pr-[92px]",
+
+                "flex-grow",
+                "flex-1",
+
+                "overflow-ellipsis",
+                // "flex-grow flex-shrink",
+                "text-xs lg:text-sm",
+
+                "list_display_type_grid:order-5"
+              )}
+            >
+              {postType === "protected" ? "보호글 입니다." : `[##_${replacer_prefix}_rep_summary_##]`}
             </div>
 
             {/* 4 */}
@@ -169,17 +182,22 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
               data-title="article-extra-info"
               className={cn(
                 "w-full",
-                "flex gap-2 relative items-start text-sm",
+                "flex gap-2 items-start text-sm",
                 "mt-1 lg:mt-0",
                 "other-exist-[post-index-thumbnail]:pr-[92px]",
 
                 "list_display_type_grid:order-4"
-                // "",
+                // "relative",
               )}
             >
               <ul
                 data-title="article-extra-info-list"
-                className={cn("w-full flex flex-wrap relative", "flex-col lg:flex-row", "gap-1 lg:gap-5")}
+                className={cn(
+                  "w-full flex flex-wrap",
+                  "flex-col lg:flex-row",
+                  "gap-1 lg:gap-5"
+                  // "relative",
+                )}
               >
                 <s_ad_div>
                   <li
@@ -219,10 +237,25 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                   </>
                 )}
 
-                <li className={cn("inline-flex gap-2 relative text-light-color-3/50", "items-start lg:items-center", "text-xs lg:text-sm")}>
+                <li
+                  className={cn(
+                    "inline-flex gap-2 text-light-color-3/50",
+                    "items-start lg:items-center",
+                    "text-xs lg:text-sm",
+
+                    "list_display_type_grid:absolute",
+                    "list_display_type_grid:top-0 list_display_type_grid:right-0"
+                    // "relative"
+                  )}
+                >
                   {/* <div>{">"}</div> */}
                   <div className={cn("inline-flex relative", "flex-col lg:flex-row", "gap-0 lg:gap-2")}>
-                    <span>
+                    <span
+                      className={cn(
+                        "list_display_type_grid:hidden"
+                        // ""
+                      )}
+                    >
                       {`[##_${replacer_prefix}_rep_date_year_##]-[##_${replacer_prefix}_rep_date_month_##]-[##_${replacer_prefix}_rep_date_day_##]`}{" "}
                       {`[##_${replacer_prefix}_rep_date_hour_##]:[##_${replacer_prefix}_rep_date_minute_##]:[##_${replacer_prefix}_rep_date_second_##]`}
                     </span>

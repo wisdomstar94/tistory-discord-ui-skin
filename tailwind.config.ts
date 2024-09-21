@@ -24,6 +24,7 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("tt-body-guestbook", ["#tt-body-guestbook &", "#tt-body-guestbook&"]);
   addVariant("tt-body-location", ["#tt-body-location &", "#tt-body-location&"]);
 
+  addVariant("list_display_type_row", [".list_display_type_row &", ".list_display_type_row&"]);
   addVariant("list_display_type_grid", [".list_display_type_grid &", ".list_display_type_grid&"]);
 
   addVariant("list_grid_max_col_2", [".list_grid_max_col_2 &", ".list_grid_max_col_2&"]);
