@@ -189,7 +189,7 @@ export function PostsIndexItem(props: IPostsIndexItem.Props) {
                 "text-light-color-3/80 overflow-hidden article-rep-summary relative",
                 "min-w-0 overflow-hidden box-border",
                 "list_display_type_row:other-exist-[post-index-thumbnail]:pr-[92px]",
-                "other-exist-[post-index-thumbnail]:hidden",
+                "list_display_type_grid:other-exist-[post-index-thumbnail]:hidden",
 
                 "flex-grow",
                 "flex-1",
