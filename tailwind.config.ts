@@ -8,6 +8,8 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
   addVariant("notice-index-page", [".notice-index-page &", ".notice-index-page&"]);
   addVariant("modal-open", [".modal-open &", ".modal-open&"]);
   addVariant("modal-close", [".modal-close &", ".modal-close&"]);
+  addVariant("my-active", [".my-active &", ".my-active&"]);
+  addVariant("my-checked", [".my-checked &", ".my-checked&"]);
 
   // https://tistory.github.io/document-tistory-skin/common/global.html 참조
   addVariant("tt-body-index", ["#tt-body-index &", "#tt-body-index&"]);
@@ -96,6 +98,30 @@ const otherElementPlugin: PluginCreator = ({ matchVariant }) => {
     return [`.other\\/${extra.modifier}:has(${value}) ~ * &`, `.other\\/${extra.modifier}:has(${value}) ~ &`];
   });
 };
+
+// const cssVirtualSelectorVariantPlugin: PluginCreator = ({ matchUtilities }) => {
+//   matchUtilities(
+//     {
+//       "left-full-append": (value) => ({
+//         left: `calc(100% + ${value})`,
+//       }),
+//     },
+//     {
+//       values: {
+//         "1": "4px",
+//         "2": "8px",
+//         "3": "12px",
+//         "4": "16px",
+//         "5": "20px",
+//         "6": "24px",
+//         "7": "28px",
+//         "8": "32px",
+//         "9": "36px",
+//         "10": "40px",
+//       },
+//     }
+//   );
+// };
 
 const customScrollbarPlugin: PluginCreator = ({ addUtilities }) => {
   addUtilities({
@@ -502,5 +528,6 @@ export default {
     customScrollbarPlugin,
     sideBarPlugin,
     customColorExtendPlugin,
+    // cssVirtualSelectorVariantPlugin,
   ],
 } satisfies Config;
