@@ -107,3 +107,13 @@ function getLatestVersionCheckAtTime() {
 
   return number;
 }
+
+function goToSkinLatestPage(modalId: string) {
+  const modal = getModal(modalId);
+
+  window.open("https://github.com/wisdomstar94/tistory-discord-ui-skin/releases/latest", "_blank");
+  modal?.classList.remove("modal-open");
+  modal?.classList.add("modal-close");
+}
+
+(window as any).goToSkinLatestPage = goToSkinLatestPage;

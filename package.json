@@ -1,6 +1,6 @@
 {
   "name": "tistory-discord-ui-skin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "build": "torytis build",
     "build:variable": "torytis varbuild",

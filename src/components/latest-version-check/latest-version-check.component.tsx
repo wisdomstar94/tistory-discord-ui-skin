@@ -21,7 +21,7 @@ export function LatestVersionCheck() {
           </div>
         }
         cancelButtonOnClick={`negativeButtonClick('${modalId}');`}
-        okButtonOnClick={""}
+        okButtonOnClick={`goToSkinLatestPage('${modalId}');`}
       />
       <Script
         html={`
