@@ -44,16 +44,20 @@ ul.tt_category {
         a.link_item {
           width: calc(100% - (8px * 2));
           margin: 0 8px;
-          @apply relative font-medium flex flex-wrap box-border gap-2 px-3 py-1;
+          @apply relative font-medium flex box-border gap-2 px-3 py-1;
 
           &::before {
             content: "--";
-            @apply -mr-1;
+            @apply -mr-1 inline-flex items-start flex-grow-0 flex-shrink-0;
           }
 
           &.active,
           &:hover {
             @apply text-white/90;
+          }
+
+          .c_cnt {
+            @apply inline-flex flex-grow-0 flex-shrink-0;
           }
         }
 
