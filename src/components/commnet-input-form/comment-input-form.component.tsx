@@ -35,8 +35,9 @@ export function CommentInputForm(props: ICommentInputForm.Props) {
           "lg:bottom-content-area-padding",
           "relative lg:fixed",
           // "lg:bottom-0 lg:left-0",
-          "bg-murky-color-5 z-[2]",
-          "box-border px-4 py-1"
+          "bg-murky-color-5",
+          "box-border px-4 py-1",
+          "z-0 lg:z-[2]"
         )}
       >
         <MemberComp>

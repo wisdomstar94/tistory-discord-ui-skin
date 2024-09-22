@@ -21,6 +21,14 @@
 7. 디바이스 너비에 따른 [반응형](https://namu.wiki/w/%EB%B0%98%EC%9D%91%ED%98%95%20%EC%9B%B9) 처리를 지원합니다.
 8. 스킨의 최신버전을 자동으로 체크합니다.
 
+<br />
+
+## 업데이트 이력
+
+[CHANGELOG.md](./CHANGELOG.md) 파일에 업데이트 이력이 기재되어 있습니다.
+
+<br />
+
 ## 라이선스
 
 @wisdomstar94/tistory-discord-ui-skin 는 [MIT 라이선스](./LICENSE)가 적용됩니다.
