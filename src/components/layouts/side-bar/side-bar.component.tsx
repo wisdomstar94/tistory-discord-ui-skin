@@ -273,7 +273,7 @@ export function SideBar() {
                   <tt_html_comment>[big] 최근 댓글</tt_html_comment>
                   <li className="w-full relative px-2 flex flex-wrap gap-1.5 text-light-color-3/50">
                     <div className="text-sm w-full box-border px-2">최근 댓글</div>
-                    <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs">
+                    <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs other/recent-comment-list">
                       <s_rctrp_rep>
                         <li className="w-full flex flex-wrap gap-1 relative min-w-0 text-xs">
                           <a
@@ -291,6 +291,15 @@ export function SideBar() {
                         </li>
                       </s_rctrp_rep>
                     </ul>
+                    <div
+                      className={cn(
+                        "w-full relative text-xs text-light-color-3/30 px-2 box-border",
+                        "flex other-has-[li]/recent-comment-list:hidden"
+                        // ""
+                      )}
+                    >
+                      등록된 댓글이 없습니다.
+                    </div>
                   </li>
                 </s_sidebar_element>
                 <s_sidebar_element>
@@ -304,7 +313,7 @@ export function SideBar() {
                   <li className="w-full relative px-2 flex flex-wrap gap-1.5 text-light-color-3/50">
                     <s_rct_notice>
                       <div className="text-sm w-full box-border px-2">최근 공지</div>
-                      <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs">
+                      <ul className="w-full flex flex-wrap gap-2 relative box-border text-xs other/recent-notice-list">
                         <s_rct_notice_rep>
                           <li className="w-full flex flex-wrap gap-1 relative min-w-0 text-xs">
                             <a
@@ -316,6 +325,15 @@ export function SideBar() {
                           </li>
                         </s_rct_notice_rep>
                       </ul>
+                      <div
+                        className={cn(
+                          "w-full relative text-xs text-light-color-3/30 px-2 box-border",
+                          "flex other-has-[li]/recent-notice-list:hidden"
+                          // ""
+                        )}
+                      >
+                        등록된 공지가 없습니다.
+                      </div>
                     </s_rct_notice>
                   </li>
                 </s_sidebar_element>

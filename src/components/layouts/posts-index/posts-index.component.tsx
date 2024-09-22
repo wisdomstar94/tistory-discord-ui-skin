@@ -38,8 +38,9 @@ export function PostsIndex() {
         <div className="w-full overflow-y-auto scrollbar-hidden min-h-0 min-w-0">
           <div className="hidden no-posts-index:flex text-light-color-3/40 text-xs p-4">표시할 목차가 없습니다.</div>
 
-          <ul className="w-full flex-wrap gap-2 relative box-border px-4 py-2" data-title="posts-index-list"></ul>
+          <ul className="w-full flex flex-wrap gap-1 relative box-border px-4 py-2" data-title="posts-index-list"></ul>
 
+          {/* template */}
           <ul className="w-full flex-wrap gap-2 relative box-border px-4 py-2 hidden" data-title="posts-index-li-template-list">
             <li
               className="w-full text-sm text-light-color-3/50 hover:text-light-color-3/80 flex gap-1 relative min-w-0 box-border items-center cursor-pointer"

@@ -12,3 +12,9 @@
 #entry3Comment {
   @apply w-full;
 }
+
+[data-title="rp-list"] {
+  li.tt_more_preview_comments_wrap {
+    @apply text-light-color-3/50 text-sm mx-2 mb-2 px-4 py-1.5 bg-murky-color-1 rounded-lg hover:text-light-color-3/80;
+  }
+}

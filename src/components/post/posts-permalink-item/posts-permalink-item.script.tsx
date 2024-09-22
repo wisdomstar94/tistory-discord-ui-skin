@@ -1,6 +1,30 @@
+import { unwrap } from "@wisdomstar94/vanilla-js-util";
 import copy from "copy-to-clipboard";
 
 window.addEventListener("load", () => {
+  // 코드 블럭 관련 처리
+  initialCodeBlock();
+  // 다른 카테고리 글 관련 처리
+  initialAnotherCategoryPosts();
+});
+
+function initialAnotherCategoryPosts() {
+  const anotherCategory = document.querySelector<HTMLElement>(`#tt-body-page .another_category`);
+  if (anotherCategory === null) return;
+
+  const trs = anotherCategory.querySelectorAll<HTMLElement>("table tbody tr");
+  if (trs.length === 0) return;
+
+  trs.forEach((tr) => {
+    tr.addEventListener("click", () => {
+      const a = unwrap(tr.querySelector<HTMLElement>("a[href]"), "a[href] 요소가 없습니다.");
+      const href = unwrap(a.getAttribute("href"), "href 가 없습니다.");
+      location.href = href;
+    });
+  });
+}
+
+function initialCodeBlock() {
   const codes = document.querySelectorAll<HTMLElement>("#article-description pre code");
   // console.log("@codes", codes);
   codes.forEach((code) => {
@@ -40,7 +64,7 @@ window.addEventListener("load", () => {
       }
     });
   });
-});
+}
 
 function isContain(code: HTMLElement, event: MouseEvent) {
   const padding = 16;

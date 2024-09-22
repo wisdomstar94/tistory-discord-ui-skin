@@ -41,6 +41,13 @@ function initPostsIndex() {
   headTags.forEach((headTag, index) => {
     headTag.setAttribute("data-index", index.toString());
 
+    if (typeof headTag.textContent !== "string") {
+      return;
+    }
+    if (headTag.textContent.trim() === "") {
+      return;
+    }
+
     const liTemplateList = unwrap(
       document.querySelector<HTMLElement>('[data-title="posts-index-li-template-list"]'),
       `[data-title="posts-index-li-template-list"] 요소가 없습니다.`
