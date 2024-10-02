@@ -177,7 +177,8 @@
     }
 
     *[style*="color: #000000;"],
-    *[style*="color: #1f2328;"] {
+    *[style*="color: #1f2328;"],
+    *[style*="color: #333333;"] {
       // @apply bg-transparent;
       color: inherit !important;
     }
