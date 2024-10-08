@@ -21,12 +21,12 @@ function initPostsIndex() {
     return;
   }
 
-  const articleDescriptionDiv = unwrap(
-    document.querySelector<HTMLElement>(`#article-description > div:first-child`),
-    "#article-description 요소가 없습니다."
+  const articleDiv = unwrap(
+    document.querySelector<HTMLElement>(`#article-description .contents_style`),
+    "#article-description .contents_style 요소가 없습니다."
   );
 
-  const headTags = articleDescriptionDiv.querySelectorAll<HTMLElement>("h2, h3, h4");
+  const headTags = articleDiv.querySelectorAll<HTMLElement>("h2, h3, h4");
   if (headTags.length === 0) {
     document.body.classList.add("no-posts-index");
     return;
