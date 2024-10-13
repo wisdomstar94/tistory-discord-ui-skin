@@ -1,12 +1,11 @@
+import "./index.scss";
 import { SideBar } from "@/components/layouts/side-bar/side-bar.component";
 import { version } from "../package.json";
-import "./index.scss";
 import { TopBar } from "./components/layouts/top-bar/top-bar.component";
 import { ContentArea } from "./components/layouts/content-area/content-area.component";
 import { AdArea } from "./components/layouts/ad-area/ad-area.component";
 import { Posts } from "./components/post/posts/posts.component";
 import { Pagination } from "./components/pagination/pagination.component";
-import { Lists } from "./list/lists/lists.component";
 import { GuestBook } from "./components/guest-book/guest-book.component";
 import { LatestVersionCheck } from "./components/latest-version-check/latest-version-check.component";
 import { Tags } from "./components/tags/tags.component";
@@ -36,21 +35,21 @@ export default function App() {
           "scrollbar-murky"
         )}
       >
-        {/* <s_t3> */}
-        <SideBar />
-        <TopBar />
-        <ContentArea>
-          <AdArea upper />
-          <Posts />
-          {/* <Lists /> */}
-          <GuestBook />
-          <Tags />
-          <Pagination />
-          <AdArea lower />
-          <LatestVersionCheck />
-        </ContentArea>
-        <PostsIndex />
-        {/* </s_t3> */}
+        <s_t3>
+          <SideBar />
+          <TopBar />
+          <ContentArea>
+            <AdArea upper />
+            <Posts />
+            {/* <Lists /> */}
+            <GuestBook />
+            <Tags />
+            <Pagination />
+            <AdArea lower />
+            <LatestVersionCheck />
+          </ContentArea>
+          <PostsIndex />
+        </s_t3>
       </body>
     </html>
   );

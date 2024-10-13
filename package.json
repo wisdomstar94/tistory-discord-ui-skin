@@ -1,37 +1,44 @@
 {
   "name": "tistory-discord-ui-skin",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "scripts": {
     "build": "torytis build",
     "build:variable": "torytis varbuild",
-    "dev": "torytis dev --port=3000",
+    "dev": "concurrently \"torytis dev\" \"wait-on http://127.0.0.1:3000 && node ./script/watch.mjs\"",
     "tsc": "tsc",
     "type:check": "tsc --noEmit",
     "tailwindcss": "tailwindcss",
-    "torytis": "torytis"
+    "torytis": "torytis",
+    "vite": "vite",
+    "package:update": "ncu -u"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
-    "@wisdomstar94/torytis": "^1.4.1",
+    "@wisdomstar94/torytis": "^1.5.4",
     "autoprefixer": "^10.4.20",
     "clsx": "^2.1.1",
+    "concurrently": "^9.0.1",
+    "express": "^4.21.1",
+    "npm-check-updates": "^17.1.3",
     "postcss-modules": "^6",
     "react": "^18",
     "react-dom": "^18",
     "sass-embedded": "^1",
-    "tailwind-merge": "^2.5.2",
+    "socket.io": "^4.8.0",
+    "tailwind-merge": "^2.5.3",
     "tailwindcss": "^3",
     "typescript": "^5",
-    "vite": "^5.4.3"
+    "vite": "^5.4.8",
+    "wait-on": "^8.0.1"
   },
   "dependencies": {
-    "@wisdomstar94/vanilla-js-util": "^0.0.11",
+    "@wisdomstar94/vanilla-js-util": "^0.0.12",
     "axios": "^1.7.7",
     "copy-to-clipboard": "^3.3.3",
-    "lucide-react": "^0.439.0",
+    "lucide-react": "^0.452.0",
     "uuid": "^10.0.0"
   }
 }
