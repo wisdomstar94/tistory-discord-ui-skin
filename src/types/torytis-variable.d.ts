@@ -13,5 +13,7 @@ declare namespace JSX {
 		's_not_var_list_grid_detail_detatime_display_flag': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 		's_if_var_posts_index_default_display': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 		's_not_var_posts_index_default_display': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+		's_if_var_pagination_display_horizontal_align': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+		's_not_var_pagination_display_horizontal_align': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 	}
 }

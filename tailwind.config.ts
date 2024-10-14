@@ -46,6 +46,19 @@ const sideBarPlugin: PluginCreator = ({ addVariant }) => {
     ".list_grid_detail_detatime_display_flag_visible &",
     ".list_grid_detail_detatime_display_flag_visible&",
   ]);
+
+  addVariant("pagination_display_horizontal_align_left", [
+    ".pagination_display_horizontal_align_left &",
+    ".pagination_display_horizontal_align_left&",
+  ]);
+  addVariant("pagination_display_horizontal_align_center", [
+    ".pagination_display_horizontal_align_center &",
+    ".pagination_display_horizontal_align_center&",
+  ]);
+  addVariant("pagination_display_horizontal_align_right", [
+    ".pagination_display_horizontal_align_right &",
+    ".pagination_display_horizontal_align_right&",
+  ]);
 };
 
 const textShadowPlugin: PluginCreator = ({ matchUtilities, theme }) => {

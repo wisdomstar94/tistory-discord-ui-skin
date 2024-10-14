@@ -89,7 +89,7 @@
             {"name":"list_display_type_grid", "label":"그리드", "value":"list_display_type_grid"}
           ]
         ]]></option>
-        <default>list_display_type_grid</default>
+        <default>list_display_type_row</default>
       </variable>
       <variable>
         <name>list_grid_max_col_count</name>
@@ -138,6 +138,24 @@
           ]
         ]]></option>
         <default>posts_index_default_display_hide</default>
+      </variable>
+    </variablegroup>
+    <variablegroup name="페이지네이션 설정">
+      <variable>
+        <name>pagination_display_horizontal_align</name>
+        <label>
+          <![CDATA[ 페이지네이션 표시 위치 (수평 기준) ]]>
+        </label>
+        <description>하단에 표시되는 페이지네이션의 수평 표시 위치를 설정합니다.</description>
+        <type>SELECT</type>
+        <option><![CDATA[
+          [
+            {"name":"pagination_display_horizontal_align_left", "label":"왼쪽", "value":"pagination_display_horizontal_align_left"},
+            {"name":"pagination_display_horizontal_align_center", "label":"중앙", "value":"pagination_display_horizontal_align_center"},
+            {"name":"pagination_display_horizontal_align_right", "label":"오른쪽", "value":"pagination_display_horizontal_align_right"}
+          ]
+        ]]></option>
+        <default>pagination_display_horizontal_align_left</default>
       </variable>
     </variablegroup>
   </variables>

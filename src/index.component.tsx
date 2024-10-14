@@ -32,7 +32,8 @@ export default function App() {
         className={cn(
           "bg-murky-color-3 overflow-x-hidden shadow-murky-color-1/20",
           Var["[##_var_posts_index_default_display_##]"],
-          "scrollbar-murky"
+          "scrollbar-murky",
+          Var["[##_var_pagination_display_horizontal_align_##]"]
         )}
       >
         <s_t3>
