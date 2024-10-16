@@ -158,5 +158,15 @@
         <default>pagination_display_horizontal_align_left</default>
       </variable>
     </variablegroup>
+    <variablegroup name="본문 글 설정">
+      <variable>
+        <name>post_permalink_text_line_height</name>
+        <label>
+          <![CDATA[ 본문 글 텍스트 줄 간격 (px, % 등 가능) ]]>
+        </label>
+        <description>본문 글의 텍스트 줄 간격을 설정합니다.</description>
+        <type>STRING</type>
+      </variable>
+    </variablegroup>
   </variables>
 </skin>

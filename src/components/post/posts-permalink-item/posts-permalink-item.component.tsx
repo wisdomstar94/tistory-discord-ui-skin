@@ -6,6 +6,8 @@ import { ContentDivider } from "@/components/content-divider/content-divider.com
 import { CommentList } from "@/components/commnet-list/commnet-list.component";
 import { SmallDatetimeInline } from "@/small-datetime-inline/small-datetime-inline.component";
 import { CommentInputForm } from "@/components/commnet-input-form/comment-input-form.component";
+import { Style } from "@/components/style/style.component";
+import { Var } from "@/consts/torytis-variable-object";
 
 export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
   const { postType } = props;
@@ -19,6 +21,19 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
 
   return (
     <>
+      <s_if_var_post_permalink_text_line_height>
+        <Style
+          html={`
+            #article-description {
+              line-height: ${Var["[##_var_post_permalink_text_line_height_##]"]};
+
+              p, h1, h2, h3, h4, h5, h6 {
+                line-height: ${Var["[##_var_post_permalink_text_line_height_##]"]};
+              }
+            }
+          `}
+        />
+      </s_if_var_post_permalink_text_line_height>
       <li className="w-full flex flex-wrap gap-3 relative pt-content-area-padding">
         <div className="w-full flex flex-wrap relative px-content-area-padding box-border">
           <div className="bg-murky-color-1 rounded-full p-3">

@@ -2,6 +2,7 @@ import { isAdmin } from "@/common/functions";
 import { compareVersion } from "@wisdomstar94/vanilla-js-util";
 import { version } from "../../../package.json";
 import axios from "axios";
+import { isIframe } from "@/utils/is-iframe";
 
 function getModal(modalId: string) {
   return document.querySelector<HTMLElement>(`#${modalId}`);
@@ -9,6 +10,10 @@ function getModal(modalId: string) {
 
 function latestVersionCheck(modalId: string) {
   if (!isAdmin()) {
+    return;
+  }
+
+  if (isIframe()) {
     return;
   }
 
