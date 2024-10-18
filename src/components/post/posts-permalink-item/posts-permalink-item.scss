@@ -176,6 +176,11 @@
       background-color: transparent !important;
     }
 
+    *[style*="background-color: #f8f8f8;"] {
+      // @apply bg-transparent;
+      background-color: transparent !important;
+    }
+
     *[style*="color: #000000;"],
     *[style*="color: #1f2328;"],
     *[style*="color: #333333;"] {
