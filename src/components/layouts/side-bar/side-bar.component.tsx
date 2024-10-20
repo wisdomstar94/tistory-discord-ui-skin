@@ -21,8 +21,9 @@ export function SideBar() {
       />
 
       <aside
+        id="aside-side-bar"
         className={cn(
-          "w-side-bar-width h-full fixed top-0 flex flex-nowrap bg-murky-color-1 z-[2]",
+          "w-side-bar-width h-screen fixed top-0 flex flex-nowrap bg-murky-color-1 z-[2]",
           "transition-all duration-300",
           "-left-side-bar-width lg:left-0 side-bar-open:left-0 side-bar-close:-left-side-bar-inner-small-bar-width"
         )}

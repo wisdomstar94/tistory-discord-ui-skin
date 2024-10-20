@@ -66,6 +66,8 @@ window.addEventListener("load", () => {
   //   scrollEndedHideDelay: 100,
   //   scrollBarClassName: "bg-murky-color-1 rounded-full",
   // });
+
+  unwrap(document.querySelector<HTMLElement>(`#aside-side-bar`), "sidebar 요소가 없습니다.").style.height = "100vh";
 });
 
 function checkActiveCategory() {

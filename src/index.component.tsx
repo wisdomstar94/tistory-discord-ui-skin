@@ -24,6 +24,13 @@ export default function App() {
         />
         <meta property="og:title" content="[##_page_title_##] :: [##_title_##]" />
         <title>[##_page_title_##] :: [##_title_##]</title>
+        {/* <s_if_var_google_adsense_client_key>
+          <script
+            defer
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${Var["[##_var_google_adsense_client_key_##]"]}`}
+            crossOrigin="anonymous"
+          ></script>
+        </s_if_var_google_adsense_client_key> */}
       </head>
       <body
         id="[##_body_id_##]"

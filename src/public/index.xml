@@ -168,5 +168,15 @@
         <type>STRING</type>
       </variable>
     </variablegroup>
+    <!-- <variablegroup name="구글 애드센스 설정">
+      <variable>
+        <name>google_adsense_client_key</name>
+        <label>
+          <![CDATA[ 구글 애드센스 client key ]]>
+        </label>
+        <description>구글 애드센스의 client key 를 입력합니다.</description>
+        <type>STRING</type>
+      </variable>
+    </variablegroup> -->
   </variables>
 </skin>
