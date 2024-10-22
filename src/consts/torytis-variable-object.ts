@@ -9,4 +9,5 @@ export const Var = {
 	"[##_var_posts_index_default_display_##]": "[##_var_posts_index_default_display_##]",
 	"[##_var_pagination_display_horizontal_align_##]": "[##_var_pagination_display_horizontal_align_##]",
 	"[##_var_post_permalink_text_line_height_##]": "[##_var_post_permalink_text_line_height_##]",
+	"[##_var_post_permalink_codeblock_text_line_height_##]": "[##_var_post_permalink_codeblock_text_line_height_##]",
 };

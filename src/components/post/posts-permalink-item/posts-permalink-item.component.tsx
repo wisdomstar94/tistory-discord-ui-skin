@@ -34,6 +34,17 @@ export function PostsPermalinkItem(props: IPostsPermalinkItem.Props) {
           `}
         />
       </s_if_var_post_permalink_text_line_height>
+      <s_if_var_post_permalink_codeblock_text_line_height>
+        <Style
+          html={`
+            #article-description {
+              code {
+                line-height: ${Var["[##_var_post_permalink_codeblock_text_line_height_##]"]};
+              }
+            }
+          `}
+        />
+      </s_if_var_post_permalink_codeblock_text_line_height>
       <li className="w-full flex flex-wrap gap-3 relative pt-content-area-padding">
         <div className="w-full flex flex-wrap relative px-content-area-padding box-border">
           <div className="bg-murky-color-1 rounded-full p-3">

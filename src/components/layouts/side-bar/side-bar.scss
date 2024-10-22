@@ -119,9 +119,9 @@ ul.tt_category {
 }
 
 #aside-side-bar {
+  height: 100vh !important;
+
   .adsbygoogle {
     width: 220px;
   }
-
-  height: 100vh !important;
 }

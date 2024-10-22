@@ -167,6 +167,14 @@
         <description>본문 글의 텍스트 줄 간격을 설정합니다.</description>
         <type>STRING</type>
       </variable>
+      <variable>
+        <name>post_permalink_codeblock_text_line_height</name>
+        <label>
+          <![CDATA[ 코드블럭 텍스트 줄 간격 (px, % 등 가능) ]]>
+        </label>
+        <description>코드블럭 텍스트 줄 간격을 설정합니다.</description>
+        <type>STRING</type>
+      </variable>
     </variablegroup>
     <!-- <variablegroup name="구글 애드센스 설정">
       <variable>
