@@ -22,7 +22,7 @@ export function PostsIndex() {
           className="w-14 h-10 absolute top-16 -left-14 cursor-pointer bg-murky-color-1 pr-4 hover:bg-murky-color-6 box-border"
           tt-onclick="postsIndexToggleButtonClick()"
         >
-          <button className="w-full h-full flex items-center justify-center">
+          <button className="w-full h-full flex items-center justify-center cursor-pointer">
             <IndentDecrease className="flex text-light-color-3/60 posts-index-open:hidden" />
             <IndentIncrease className="hidden text-light-color-3/60 posts-index-open:flex" />
           </button>
