@@ -58,6 +58,20 @@ export default function App() {
           </ContentArea>
           <PostsIndex />
         </s_t3>
+        <div className="hidden text-light-color-1" />
+        <div className="hidden text-light-color-2" />
+        <div className="hidden text-light-color-3" />
+        <div className="hidden text-light-color-4" />
+        <div className="hidden text-light-color-5" />
+        <div className="hidden text-light-color-6" />
+        <div className="hidden text-light-color-7" />
+        <div className="hidden text-murky-color-1" />
+        <div className="hidden text-murky-color-2" />
+        <div className="hidden text-murky-color-3" />
+        <div className="hidden text-murky-color-4" />
+        <div className="hidden text-murky-color-5" />
+        <div className="hidden text-murky-color-6" />
+        <div className="hidden text-murky-color-7" />
       </body>
     </html>
   );

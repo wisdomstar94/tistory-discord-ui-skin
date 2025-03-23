@@ -260,7 +260,7 @@
     }
 
     *[class*="filename"] {
-      color: color-mix(in hsl, var(--tds-light-color-3) 80%, transparent) !important;
+      color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent) !important;
     }
 
     // 제목

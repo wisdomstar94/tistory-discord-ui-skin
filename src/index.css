@@ -7,7 +7,7 @@
   --spacing-side-bar-inner-small-bar-width: 72px;
   --spacing-side-bar-inner-big-bar-width: 240px;
   --spacing-side-bar-width: calc(var(--spacing-side-bar-inner-small-bar-width) + var(--spacing-side-bar-inner-big-bar-width));
-  --spacing-top-bar-width: calc(100% - var(--tds-side-bar-width));
+  --spacing-top-bar-width: calc(100% - var(--spacing-side-bar-width));
   --spacing-top-bar-height: 48px;
   --spacing-content-area-padding: 16px;
   --spacing-posts-index-width: 320px;
@@ -182,18 +182,19 @@
   }
 }
 
-@utility scrollbar-murky {
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: color-mix(in hsl, var(--color-light-color-3) 10%, transparent),
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--color-murky-color-1),
+@layer components {
+  .scrollbar-murky {
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: color-mix(in hsl, var(--color-light-color-3) 10%, transparent);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-murky-color-1);
+    }
   }
 }
-
 
 .article-rep-summary br {
   display: none;
