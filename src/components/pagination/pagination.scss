@@ -3,10 +3,18 @@
     font-size: 0;
 
     > span {
-      @apply text-sm inline-flex px-2 py-1.5 text-light-color-3/60 hover:bg-murky-color-1 rounded-lg;
+      font-size: 14px;
+      display: inline-flex;
+      padding: 6px 8px;
+      color: color-mix(in srgb, var(--color-light-color-3) 60%, transparent);
+      border-radius: 8px;
+
+      &:hover {
+        background-color: var(--color-murky-color-1);
+      }
 
       &.selected {
-        @apply bg-murky-color-1;
+        background-color: var(--color-murky-color-1);
       }
     }
   }

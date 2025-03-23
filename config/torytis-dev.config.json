@@ -101,11 +101,7 @@
   "posts": [
     {
       "category_name": "공지사항",
-      "tag_list": [
-        "react",
-        "angular",
-        "node.js"
-      ],
+      "tag_list": ["react", "angular", "node.js"],
       "author": "홍길동",
       "post_id": "1",
       "post_type": "Notice",
@@ -146,11 +142,7 @@
     },
     {
       "category_name": "카테고리3",
-      "tag_list": [
-        "tag1",
-        "tag2",
-        "tag3"
-      ],
+      "tag_list": ["tag1", "tag2", "tag3"],
       "author": "홍길동",
       "post_id": "3",
       "post_type": "Normal",
@@ -175,11 +167,7 @@
         },
         {
           "type": "Codeblock",
-          "values": [
-            "function main() {",
-            "  console.log(\"안녕하세요!\");",
-            "}"
-          ]
+          "values": ["function main() {", "  console.log(\"안녕하세요!\");", "}"]
         },
         {
           "type": "H4",

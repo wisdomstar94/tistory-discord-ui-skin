@@ -3,18 +3,41 @@
     > div {
       &::before {
         content: "";
-        @apply w-5 h-3 mt-3 flex justify-end flex-grow-0 flex-shrink-0 relative border-b-2 border-b-light-color-3/20 border-l-2 border-l-light-color-3/20 rounded-bl-lg;
+        width: 20px;
+        height: 12px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 0;
+        flex-shrink: 0;
+        position: relative;
+        border-bottom-width: 2px;
+        border-bottom-color: color-mix(in srgb, var(--color-light-color-3) 20%, transparent);
+        border-left-width: 2px;
+        border-left-color: color-mix(in srgb, var(--color-light-color-3) 20%, transparent);
+        border-bottom-left-radius: 12px;
       }
     }
   }
 }
 
 #entry3Comment {
-  @apply w-full;
+  width: 100%;
 }
 
 [data-title="rp-list"] {
   li.tt_more_preview_comments_wrap {
-    @apply text-light-color-3/50 text-sm mx-2 mb-2 px-4 py-1.5 bg-murky-color-1 rounded-lg hover:text-light-color-3/80;
+    color: color-mix(in srgb, var(--color-light-color-3) 50%, transparent);
+    font-size: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 6px 20px;
+    background-color: var(--color-murky-color-1);
+    border-radius: 12px;
+
+    &:hover {
+      color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
+    }
   }
 }

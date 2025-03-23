@@ -1,57 +1,100 @@
 #tt-body-page {
   .another_category {
-    @apply border-0 m-0 p-0 relative box-border -ml-4 w-full-append-8;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: -16px;
+    width: calc(100% + 32px);
 
     h4 {
-      @apply w-full min-w-0 flex overflow-hidden whitespace-nowrap font-normal items-center text-light-color-3/50;
       border-bottom: 0 !important;
+      width: 100%;
+      min-width: 0;
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 400;
+      align-items: center;
+      color: color-mix(in hsl, var(--color-light-color-3) 50%, transparent);
 
       &,
       * {
-        // @apply text-light-color-3/50;
-        color: color-mix(in hsl, var(--tds-light-color-3) 50%, transparent) !important;
+        color: color-mix(in hsl, var(--color-light-color-3) 50%, transparent) !important;
       }
 
       &::before,
       &::after {
         content: "";
-        @apply w-full flex h-[1px] bg-light-color-3/10 flex-1 flex-grow flex-shrink;
+        width: 100%;
+        display: flex;
+        height: 1px;
+        background-color: color-mix(in srgb, var(--color-light-color-3) 10%, transparent);
       }
 
       &::before {
-        @apply mr-1;
+        margin-right: 4px;
       }
 
       &::after {
-        @apply ml-1;
+        margin-left: 4px;
       }
 
       a {
-        // @apply font-normal;
         font-weight: 400 !important;
       }
     }
 
     table {
-      @apply w-full block relative border-none;
+      width: 100%;
+      display: block;
+      position: relative;
+      border: none;
 
       tbody {
-        @apply w-full flex flex-wrap gap-2 relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        position: relative;
 
         tr {
-          @apply w-full flex flex-wrap gap-1 relative box-border rounded-lg bg-transparent p-3 px-content-area-padding cursor-pointer transition-all duration-300;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px;
+          position: relative;
+          box-sizing: border-box;
+          border-radius: 8px;
+          background-color: transparent;
+          padding: 12px;
+          padding-left: var(--spacing-content-area-padding);
+          padding-right: var(--spacing-content-area-padding);
+          cursor: pointer;
+          transition: all 0.3s;
 
           &:hover {
-            @apply -translate-y-0.5 shadow-murky-color-1 shadow-[0px_2px_12px];
+            transform: translateY(-2px);
+            box-shadow: 0px 2px 12px var(--color-murky-color-1);
           }
 
           th {
-            @apply w-full flex justify-start items-center m-0;
             padding: 0 !important;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 0;
           }
 
           td {
-            @apply w-full flex justify-start items-center m-0 border-none;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 0;
+            border: none;
             padding: 0 !important;
           }
         }
@@ -61,7 +104,17 @@
 
   .container_postbtn {
     .btn_post {
-      @apply p-0 px-2 py-0 flex items-center bg-murky-color-1 rounded-md text-light-color-3/80 cursor-pointer hover:bg-murky-color-2;
+      padding: 0 8px;
+      display: flex;
+      align-items: center;
+      background-color: var(--color-murky-color-1);
+      border-radius: 8px;
+      color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-murky-color-2);
+      }
 
       .ico_like {
         margin: 0;
@@ -71,68 +124,89 @@
     .postbtn_like {
       float: none;
       border: 0;
-      @apply flex gap-2 relative;
+      display: flex;
+      gap: 8px;
+      position: relative;
 
       [data-tistory-react-app] {
-        @apply inline-flex;
+        display: inline-flex;
       }
 
       .wrap_btn {
         float: none;
 
         .uoc-icon {
-          @apply flex items-center gap-1;
+          display: flex;
+          align-items: center;
+          gap: 4px;
         }
       }
     }
   }
 
   [data-tistory-react-app="Namecard"] + div {
-    @apply w-full block relative;
+    width: 100%;
+    display: block;
+    position: relative;
   }
 
   blockquote[data-ke-style="style1"] {
-    @apply text-light-color-3/80;
+    color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
   }
 
   blockquote[data-ke-style="style2"] {
-    @apply flex min-w-0 items-stretch;
+    display: flex;
+    min-width: 0;
+    align-items: stretch;
 
     &::before {
       content: "";
-      @apply inline-flex w-[4px] bg-light-color-3/80 mr-4 flex-grow-0 flex-shrink-0;
+      display: inline-flex;
+      width: 4px;
+      background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
+      margin-right: 16px;
+      flex-grow: 0;
+      flex-shrink: 0;
     }
   }
 
   blockquote[data-ke-style="style3"] {
-    @apply flex min-w-0 items-stretch bg-transparent relative border-0 text-light-color-3/80;
+    display: flex;
+    min-width: 0;
+    align-items: stretch;
+    background-color: transparent;
+    position: relative;
+    border: 0;
+    color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
 
     &::before {
       content: "";
-      @apply w-full h-[4px] bg-light-color-3/80 absolute top-0 left-0;
+      width: 100%;
+      height: 4px;
+      background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     &::after {
       content: "";
-      @apply w-full h-[4px] bg-light-color-3/80 absolute bottom-0 left-0;
+      width: 100%;
+      height: 4px;
+      background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
-
-    // &::before {
-    //   content: "";
-    //   @apply w-[16px] h-[16px] border-t-4 border-t-light-color-3/80 border-l-4 border-l-light-color-3/80 absolute top-0 left-0;
-    // }
-
-    // &::after {
-    //   content: "";
-    //   @apply w-[16px] h-[16px] border-b-4 border-b-light-color-3/80 border-r-4 border-r-light-color-3/80 absolute bottom-0 right-0;
-    // }
   }
 
   figure {
-    @apply text-light-color-3/80;
+    color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
 
     &.fileblock {
-      @apply hover:bg-murky-color-1/70;
+      &:hover {
+        background-color: color-mix(in srgb, var(--color-murky-color-1) 70%, transparent);
+      }
 
       .image {
         background-image: none;
@@ -140,7 +214,7 @@
         mask-repeat: no-repeat;
         mask-position: center center;
         mask-size: 24px 24px;
-        @apply bg-light-color-3/80;
+        background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
       }
 
       a {
@@ -150,7 +224,7 @@
           mask-repeat: no-repeat;
           mask-position: center center;
           mask-size: 24px 24px;
-          @apply bg-light-color-3/80;
+          background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
         }
       }
     }
@@ -160,7 +234,7 @@
         &.og-text {
           p {
             &.og-title {
-              @apply text-light-color-3/80;
+              color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
             }
           }
         }
@@ -172,66 +246,89 @@
 #article-description {
   > div {
     *[style*="background-color: #ffffff;"] {
-      // @apply bg-transparent;
       background-color: transparent !important;
     }
 
     *[style*="background-color: #f8f8f8;"] {
-      // @apply bg-transparent;
       background-color: transparent !important;
     }
 
     *[style*="color: #000000;"],
     *[style*="color: #1f2328;"],
     *[style*="color: #333333;"] {
-      // @apply bg-transparent;
       color: inherit !important;
     }
 
     *[class*="filename"] {
-      // @apply bg-transparent;
       color: color-mix(in hsl, var(--tds-light-color-3) 80%, transparent) !important;
     }
 
     // 제목
     h1 {
-      @apply text-5xl mt-6 mb-4;
+      font-size: 48px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
     h2 {
-      @apply text-4xl mt-6 mb-4;
+      font-size: 36px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
     h3 {
-      @apply text-3xl mt-6 mb-4;
+      font-size: 30px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
     h4 {
-      @apply text-2xl mt-6 mb-4;
+      font-size: 24px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
     h5 {
-      @apply text-xl mt-6 mb-4;
+      font-size: 20px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
     h6 {
-      @apply text-lg mt-6 mb-4;
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 16px;
       scroll-margin: 60px;
     }
 
     // 코드블럭
     li code {
-      @apply bg-murky-color-1 p-1 box-border rounded-md text-light-color-3/50 relative opacity-100;
+      background-color: var(--color-murky-color-1);
+      padding: 4px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      color: color-mix(in hsl, var(--color-light-color-3) 50%, transparent);
+      position: relative;
+      opacity: 100%;
     }
 
     pre {
       code {
-        @apply bg-murky-color-1 p-5 box-border rounded-lg text-light-color-3/50 mt-1 mb-3 relative opacity-100 block;
-        // visibility: visible;
+        background-color: var(--color-murky-color-1);
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        color: color-mix(in hsl, var(--color-light-color-3) 50%, transparent);
+        margin-top: 4px;
+        margin-bottom: 12px;
+        position: relative;
+        opacity: 100%;
+        display: block;
       }
 
       &:has(code) {
-        @apply block relative;
+        display: block;
+        position: relative;
 
         &::after {
           content: "";
@@ -239,12 +336,19 @@
           mask-repeat: no-repeat;
           mask-position: center center;
           mask-size: 24px 24px;
-          @apply w-[24px] h-[24px] inline-flex bg-light-color-3/50 cursor-pointer absolute top-4 right-4;
+          width: 24px;
+          height: 24px;
+          display: inline-flex;
+          background-color: color-mix(in srgb, var(--color-light-color-3) 50%, transparent);
+          cursor: pointer;
+          position: absolute;
+          top: 16px;
+          right: 16px;
         }
 
         &.my-active {
           &::after {
-            @apply bg-light-color-3/80;
+            background-color: color-mix(in srgb, var(--color-light-color-3) 80%, transparent);
           }
         }
 
@@ -259,12 +363,17 @@
     // 테이블
     table {
       width: 100%;
-      @apply border-light-color-3/50 border-t border-l;
+      border-color: color-mix(in srgb, var(--color-light-color-3) 50%, transparent);
+      border-top: 1px solid;
+      border-left: 1px solid;
 
       thead {
         tr {
           th {
-            @apply border-light-color-3/50 border-r border-b px-2 py-1;
+            border-color: color-mix(in srgb, var(--color-light-color-3) 50%, transparent);
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            padding: 4px 8px;
           }
         }
       }
@@ -272,7 +381,10 @@
       tbody {
         tr {
           td {
-            @apply border-light-color-3/50 border-r border-b px-2 py-0.5;
+            border-color: color-mix(in srgb, var(--color-light-color-3) 50%, transparent);
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+            padding: 2px 8px;
           }
         }
       }
@@ -283,17 +395,17 @@
         thead {
           tr {
             th {
-              @apply border-b-2;
+              border-bottom: 2px solid;
             }
           }
         }
 
-        tbody {
-          tr {
-            td {
-            }
-          }
-        }
+        // tbody {
+        //   tr {
+        //     td {
+        //     }
+        //   }
+        // }
       }
 
       &[data-ke-style="style4"],
@@ -304,7 +416,7 @@
           tr {
             &:nth-child(2n) {
               td {
-                @apply bg-light-color-3/5;
+                background-color: color-mix(in srgb, var(--color-light-color-3) 5%, transparent);
               }
             }
           }
@@ -315,12 +427,13 @@
       &[data-ke-style="style9"],
       &[data-ke-style="style10"],
       &[data-ke-style="style11"] {
-        @apply border-l-0;
+        border-left-width: 0;
 
         thead {
           tr {
             th {
-              @apply border-r-0 border-b-2;
+              border-right-width: 0;
+              border-bottom: 2px solid;
             }
           }
         }
@@ -328,7 +441,7 @@
         tbody {
           tr {
             td {
-              @apply border-r-0;
+              border-right-width: 0;
             }
           }
         }
@@ -341,7 +454,7 @@
         thead {
           tr {
             th {
-              @apply bg-murky-color-1;
+              background-color: var(--color-murky-color-1);
             }
           }
         }
@@ -355,10 +468,10 @@
             }
 
             td {
-              @apply bg-transparent;
+              background-color: transparent;
 
               &:first-child {
-                @apply bg-light-color-3/5;
+                background-color: color-mix(in srgb, var(--color-light-color-3) 5%, transparent);
               }
             }
           }
@@ -366,12 +479,14 @@
       }
 
       &[data-ke-style="style16"] {
-        @apply border-l-0 border-t-0;
+        border-left-width: 0;
+        border-top-width: 0;
 
         thead {
           tr {
             th {
-              @apply border-r-0 border-b-0;
+              border-right-width: 0;
+              border-bottom-width: 0;
             }
           }
         }
@@ -379,7 +494,8 @@
         tbody {
           tr {
             td {
-              @apply border-r-0 border-b-0;
+              border-right-width: 0;
+              border-bottom-width: 0;
             }
           }
         }
@@ -389,10 +505,12 @@
     // 리스트
     ul,
     ol {
-      @apply pl-5 my-1;
+      padding-left: 20px;
+      margin-top: 4px;
+      margin-bottom: 4px;
 
-      li {
-      }
+      // li {
+      // }
     }
 
     ul {
@@ -405,16 +523,21 @@
 
     // 인용
     blockquote {
-      @apply text-light-color-3/80;
+      color: color-mix(in hsl, var(--color-light-color-3) 80%, transparent);
     }
 
     // 링크
     a[href] {
-      @apply text-light-color-4/70 hover:text-light-color-4;
+      color: color-mix(in hsl, var(--color-light-color-4) 70%, transparent);
+
+      &:hover {
+        color: color-mix(in hsl, var(--color-light-color-4) 100%, transparent);
+      }
     }
 
     figure {
-      @apply mt-1 mb-4;
+      margin-top: 4px;
+      margin-bottom: 16px;
     }
   }
 }

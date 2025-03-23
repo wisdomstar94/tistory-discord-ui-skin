@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 import { SideBar } from "@/components/layouts/side-bar/side-bar.component";
 import { version } from "../package.json";
 import { TopBar } from "./components/layouts/top-bar/top-bar.component";
