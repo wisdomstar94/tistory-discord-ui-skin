@@ -97,9 +97,6 @@ function checkActiveCategory() {
       }
     });
   } else if (categoryType === "sub-categpry") {
-    console.log("@categoryName", categoryName);
-    console.log("@subCategoryName", subCategoryName);
-
     const linkItems = unwrap(ul.querySelectorAll<HTMLElement>("a.link_item"), "a.link_item 요소가 없습니다.");
     linkItems.forEach((item) => {
       // const html = item.innerHTML.replace("\n", "");
@@ -115,8 +112,6 @@ function checkActiveCategory() {
         const copyItem2 = item2.cloneNode(true) as HTMLElement;
         copyItem2.querySelector<HTMLElement>(".c_cnt")?.remove();
         const renderedChildCategoryName = copyItem2.textContent?.trim() ?? "";
-        console.log("@renderedChildCategoryName", renderedChildCategoryName);
-
         if (renderedParentCategoryName.length >= 27) {
           if (categoryName?.startsWith(renderedParentCategoryName.slice(0, renderedParentCategoryName.length - 2))) {
             if (renderedChildCategoryName.length >= 27) {
