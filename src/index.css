@@ -143,8 +143,8 @@
   }
 }
 
-@custom-variant side-bar-open (.side-bar-open &);
-@custom-variant side-bar-close (.side-bar-close &);
+@custom-variant side-bar-open (.side-bar-open &, .side-bar-open&);
+@custom-variant side-bar-close (.side-bar-close &, .side-bar-close&);
 @custom-variant list-empty (.list-empty &, .list-empty&);
 @custom-variant notice-index-page (.notice-index-page &, .notice-index-page&);
 @custom-variant modal-open (.modal-open &, .modal-open&);
