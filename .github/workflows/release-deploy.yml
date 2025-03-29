@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 22
+      - run: rm -rf ./package-lock.json
       - run: npm install
       - run: npm run build
       - run: mv ./.torytis ./tistory_discord_ui_skin_${{ github.ref_name }}

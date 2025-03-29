@@ -10,8 +10,7 @@
     "tailwindcss": "tailwindcss",
     "torytis": "torytis",
     "vite": "vite",
-    "package:update": "ncu -u",
-    "postinstall": "npm install @rollup/rollup-linux-x64-gnu @tailwindcss/oxide-linux-x64-gnu --save-optional"
+    "package:update": "ncu -u"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.17",
