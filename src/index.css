@@ -4,6 +4,7 @@
 @plugin "../tailwind-plugins/my-plugin.ts";
 
 @theme {
+  --spacing-top-bottom-move-floating-button-width: 100px;
   --spacing-side-bar-inner-small-bar-width: 72px;
   --spacing-side-bar-inner-big-bar-width: 240px;
   --spacing-side-bar-width: calc(var(--spacing-side-bar-inner-small-bar-width) + var(--spacing-side-bar-inner-big-bar-width));
@@ -12,13 +13,14 @@
   --spacing-content-area-padding: 16px;
   --spacing-posts-index-width: 320px;
   --spacing-content-area-inner-padding: calc(var(--spacing-content-area-padding) + 12px);
-  --spacing-comment-input-form-width-with-sidebar: calc(100% - var(--spacing-side-bar-width) - (var(--spacing-content-area-padding) * 2));
+  --spacing-comment-input-form-width-with-sidebar: calc(100% - var(--spacing-side-bar-width) - (var(--spacing-content-area-padding) * 2) - var(--spacing-top-bottom-move-floating-button-width));
   --spacing-comment-input-form-width-with-sidebar-with-posts-index: calc(
     100% - var(--spacing-side-bar-width) - (var(--spacing-content-area-padding) * 2) - var(--spacing-posts-index-width)
   );
   --spacing-comment-input-form-width: calc(100% - (var(--spacing-content-area-padding) * 2));
   --spacing-comment-input-form-left-with-sidebar: calc(var(--spacing-side-bar-width) + var(--spacing-content-area-padding));
   --spacing-comment-input-form-left: var(--spacing-content-area-padding);
+  
 }
 
 @theme {

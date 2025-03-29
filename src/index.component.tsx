@@ -12,6 +12,7 @@ import { Tags } from "./components/tags/tags.component";
 import { PostsIndex } from "./components/layouts/posts-index/posts-index.component";
 import { cn } from "./utils/cn";
 import { Var } from "./consts/torytis-variable-object";
+import { TopBottomMoveFloatingButton } from "./components/top-bottom-move-floating-button/top-bottom-move-floating-button.component";
 
 export default function App() {
   return (
@@ -56,6 +57,7 @@ export default function App() {
             <AdArea lower />
             <LatestVersionCheck />
           </ContentArea>
+          <TopBottomMoveFloatingButton />
           <PostsIndex />
         </s_t3>
         <div className="hidden text-light-color-1" />

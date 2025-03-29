@@ -13,13 +13,13 @@
     "package:update": "ncu -u"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.14",
+    "@tailwindcss/vite": "^4.0.14",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/uuid": "^10.0.0",
     "@wisdomstar94/torytis": "^1.5.8",
-    "@tailwindcss/postcss": "^4.0.14",
-    "@tailwindcss/vite": "^4.0.14",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
@@ -41,6 +41,7 @@
     "axios": "^1.8.4",
     "copy-to-clipboard": "^3.3.3",
     "lucide-react": "^0.483.0",
+    "react-icons": "^5.5.0",
     "uuid": "^11.1.0"
   }
 }
