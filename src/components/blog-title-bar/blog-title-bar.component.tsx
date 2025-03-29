@@ -12,7 +12,7 @@ export function BlogTitleBar() {
           <div
             className={cn(
               "w-[calc(100%-24px)]",
-              "text-shadow",
+              "[text-shadow:2px_2px_4px_var(--color-murky-color-1)]",
               "shadow-murky-color-1 text-sm font-bold text-white relative whitespace-nowrap overflow-ellipsis overflow-hidden"
             )}
           >

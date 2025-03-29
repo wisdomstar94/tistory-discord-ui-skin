@@ -1,4 +1,4 @@
-import { getCategoryPathnameInfo, getPathname } from "@/common/functions";
+import { getCategoryPathnameInfo } from "@/common/functions";
 import { getInfoByScroll, unwrap } from "@wisdomstar94/vanilla-js-util";
 
 window.addEventListener("load", () => {
@@ -71,7 +71,6 @@ window.addEventListener("load", () => {
 });
 
 function checkActiveCategory() {
-  const pathname = getPathname();
   const ul = unwrap(document.querySelector<HTMLElement>("ul.tt_category"), "ul.tt_category 요소가 없습니다.");
 
   const { isCategoryPath, categoryType, categoryName, subCategoryName } = getCategoryPathnameInfo();
@@ -83,28 +82,65 @@ function checkActiveCategory() {
   } else if (categoryType === "category") {
     const linkItems = unwrap(ul.querySelectorAll<HTMLElement>("a.link_item"), "a.link_item 요소가 없습니다.");
     linkItems.forEach((item) => {
-      const html = item.innerHTML.replace("\n", "");
-      const htmlSplit = html.split('<span class="').map((x) => x.trim());
+      const copyItem = item.cloneNode(true) as HTMLElement;
+      copyItem.querySelector<HTMLElement>(".c_cnt")?.remove();
+      const renderedCategoryName = copyItem.textContent?.trim() ?? "";
 
-      if (htmlSplit[0] === categoryName) {
-        item.classList.add("active");
+      if (renderedCategoryName.length >= 27) {
+        if (categoryName?.startsWith(renderedCategoryName.slice(0, renderedCategoryName.length - 2))) {
+          item.classList.add("active");
+        }
+      } else {
+        if (renderedCategoryName === categoryName) {
+          item.classList.add("active");
+        }
       }
     });
   } else if (categoryType === "sub-categpry") {
+    console.log("@categoryName", categoryName);
+    console.log("@subCategoryName", subCategoryName);
+
     const linkItems = unwrap(ul.querySelectorAll<HTMLElement>("a.link_item"), "a.link_item 요소가 없습니다.");
     linkItems.forEach((item) => {
-      const html = item.innerHTML.replace("\n", "");
-      const htmlSplit = html.split('<span class="').map((x) => x.trim());
-      const parentCategoryName = htmlSplit[0];
+      // const html = item.innerHTML.replace("\n", "");
+      // const htmlSplit = html.split('<span class="').map((x) => x.trim());
+      const copyItem = item.cloneNode(true) as HTMLElement;
+      copyItem.querySelector<HTMLElement>(".c_cnt")?.remove();
+      const renderedParentCategoryName = copyItem.textContent?.trim() ?? "";
 
       const subLinkItems = unwrap(item.parentElement?.querySelectorAll<HTMLElement>("a.link_sub_item"), "a.link_sub_item 요소가 없습니다.");
-      subLinkItems.forEach((item) => {
-        const html = item.innerHTML.replace("\n", "");
-        const htmlSplit = html.split('<span class="').map((x) => x.trim());
-        const childCategoryName = htmlSplit[0];
+      subLinkItems.forEach((item2) => {
+        // const html = item2.innerHTML.replace("\n", "");
+        // const htmlSplit = html.split('<span class="').map((x) => x.trim());
+        const copyItem2 = item2.cloneNode(true) as HTMLElement;
+        copyItem2.querySelector<HTMLElement>(".c_cnt")?.remove();
+        const renderedChildCategoryName = copyItem2.textContent?.trim() ?? "";
+        console.log("@renderedChildCategoryName", renderedChildCategoryName);
 
-        if (parentCategoryName === categoryName && childCategoryName === subCategoryName) {
-          item.classList.add("active");
+        if (renderedParentCategoryName.length >= 27) {
+          if (categoryName?.startsWith(renderedParentCategoryName.slice(0, renderedParentCategoryName.length - 2))) {
+            if (renderedChildCategoryName.length >= 27) {
+              if (subCategoryName?.startsWith(renderedChildCategoryName.slice(0, renderedChildCategoryName.length - 2))) {
+                item2.classList.add("active");
+              }
+            } else {
+              if (renderedChildCategoryName === subCategoryName) {
+                item2.classList.add("active");
+              }
+            }
+          }
+        } else {
+          if (renderedParentCategoryName === categoryName) {
+            if (renderedChildCategoryName.length >= 27) {
+              if (subCategoryName?.startsWith(renderedChildCategoryName.slice(0, renderedChildCategoryName.length - 2))) {
+                item2.classList.add("active");
+              }
+            } else {
+              if (renderedChildCategoryName === subCategoryName) {
+                item2.classList.add("active");
+              }
+            }
+          }
         }
       });
     });

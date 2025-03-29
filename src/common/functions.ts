@@ -15,11 +15,11 @@ export function getCategoryPathnameInfo() {
     const urlSplit = pathname.split("/"); // ex) ['', 'category', '1', '2'];
     if (urlSplit.length === 4) {
       categoryType = "sub-categpry";
-      categoryName = urlSplit[urlSplit.length - 2];
-      subCategoryName = urlSplit[urlSplit.length - 1];
+      categoryName = decodeURIComponent(urlSplit[urlSplit.length - 2]);
+      subCategoryName = decodeURIComponent(urlSplit[urlSplit.length - 1]);
     } else if (urlSplit.length === 3) {
       categoryType = "category";
-      categoryName = urlSplit[urlSplit.length - 1];
+      categoryName = decodeURIComponent(urlSplit[urlSplit.length - 1]);
     } else if (urlSplit.length === 2) {
       categoryType = "all";
     }
