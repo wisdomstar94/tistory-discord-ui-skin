@@ -10,7 +10,8 @@
     "tailwindcss": "tailwindcss",
     "torytis": "torytis",
     "vite": "vite",
-    "package:update": "ncu -u"
+    "package:update": "ncu -u",
+    "postinstall": "npm install @rollup/rollup-linux-x64-gnu --save-optional"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.17",
@@ -43,5 +44,8 @@
     "lucide-react": "^0.483.0",
     "react-icons": "^5.5.0",
     "uuid": "^11.1.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.37.0"
   }
 }
